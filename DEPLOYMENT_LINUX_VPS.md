@@ -1,139 +1,111 @@
-# Ubuntu Linux VPS Deployment Guide (Docker & Docker Compose)
+# Ubuntu Linux VPS Deployment Guide — Host Port 9600
+### Production Multi-Container Environment Guide
 
-This guide walks you through deploying the **Ottobon Templates Hub** on an Ubuntu Linux VPS Server using Docker and Docker Compose.
+This guide ensures safe, production deployment of **Ottobon Templates** on **Host Port 9600** on an existing Ubuntu Linux VPS without disturbing or modifying any other running applications or containers.
 
 ---
 
-## 1. Quickstart (One-Liner Deployment)
+## 1. Pre-Deployment Safety Checks (Confirm Port 9600 is Free)
 
-On your Ubuntu VPS, run the following commands:
+Before running anything, verify that host port **9600** is available and not in use by any other process or container:
 
 ```bash
-# 1. Update packages & install Docker + Compose (if not already installed)
-sudo apt update && sudo apt install -y docker.io docker-compose-v2 git
+# Check if any host process is listening on port 9600
+sudo ss -tulpn | grep :9600
 
-# 2. Add your user to the docker group (optional, avoids typing sudo)
-sudo usermod -aG docker $USER
-newgrp docker
+# Check if any Docker container already maps to port 9600
+docker ps --format "table {{.Names}}\t{{.Ports}}" | grep 9600
+```
+*If both commands return empty, port 9600 is 100% free to use.*
 
-# 3. Clone your repository
+---
+
+## 2. Clone & Setup Repository
+
+```bash
+# 1. Clone into your VPS applications directory
 git clone https://github.com/Ottobon-INC/Templates.git
 cd Templates
 
-# 4. (Optional) Configure custom port in .env (defaults to 3000)
+# 2. Copy the production environment file (pre-configured for HOST_PORT=9600)
 cp .env.example .env
+```
 
-# 5. Build and launch the container in detached mode
+---
+
+## 3. Build & Launch Container
+
+Run Docker Compose to build the image and start the container in isolated detached mode:
+
+```bash
 docker compose up -d --build
 ```
 
-That's it! Your dashboard is now live and accessible at:
-```
-http://YOUR_VPS_PUBLIC_IP:3000
+> **Safety Guarantee**:
+> - Does **NOT** stop, restart, or modify any other containers.
+> - Runs in an isolated Docker network (`ottobon-net`).
+> - Uses container name `ottobon-templates`.
+> - Maps **Host Port 9600 -> Internal Port 3000** (`0.0.0.0:9600->3000/tcp`).
+
+---
+
+## 4. Verification & Health Probes
+
+```bash
+# 1. Confirm container is running and healthy
+docker ps --filter "name=ottobon-templates" --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+
+# Expected Output:
+# NAMES               STATUS                    PORTS
+# ottobon-templates   Up (healthy)              0.0.0.0:9600->3000/tcp, [::]:9600->3000/tcp
+
+# 2. Test local HTTP response on port 9600
+curl -I http://localhost:9600
+
+# 3. Test internal health probe
+curl -s http://localhost:9600/health
+
+# 4. Inspect container logs
+docker logs --tail 50 ottobon-templates
 ```
 
 ---
 
-## 2. Verify Container Health & Logs
+## 5. Firewall Configuration (UFW)
 
-Check if the container is running and healthy:
+Only add a rule for port 9600 without touching any other existing firewall rules:
 
 ```bash
-# Check container status (should show 'Up' and 'healthy')
-docker compose ps
+# Check current UFW status
+sudo ufw status
 
-# Check the built-in health endpoint
-curl -i http://localhost:3000/health
+# If UFW is active, allow incoming TCP traffic ONLY on port 9600
+sudo ufw allow 9600/tcp
 
-# View live container logs
-docker compose logs -f
+# Reload UFW (does not disrupt active connections)
+sudo ufw reload
+```
+*(Note: If your VPS is hosted on AWS, GCP, Azure, DigitalOcean, or Hetzner, ensure port 9600 is also allowed in your Cloud Provider's Security Group / Inbound Firewall rules).*
+
+---
+
+## 6. Access Public Dashboard
+
+The templates dashboard is immediately accessible at:
+```
+http://YOUR_SERVER_IP:9600
 ```
 
 ---
 
-## 3. Configure Ubuntu UFW Firewall
+## 7. Isolated Management Cheatsheet
 
-Ensure your VPS firewall allows HTTP traffic on your selected port:
+All commands target **only** `ottobon-templates` and never affect other containers:
 
-```bash
-# Allow port 3000 (or whichever port you configured in .env)
-sudo ufw allow 3000/tcp
-
-# If mapping directly to port 80 / 443
-sudo ufw allow 80/tcp
-sudo ufw allow 443/tcp
-
-# Enable firewall (if not already active)
-sudo ufw enable
-```
-
----
-
-## 4. (Optional) Expose Directly on Port 80
-
-If you want the dashboard accessible directly on standard HTTP (`http://YOUR_VPS_PUBLIC_IP/`) without typing `:3000`:
-
-Edit `.env`:
-```bash
-HOST_PORT=80
-```
-Then restart the compose service:
-```bash
-docker compose up -d
-```
-
----
-
-## 5. (Optional) Production Setup with Nginx & Free SSL (Let's Encrypt)
-
-If you have a domain name (e.g. `templates.yourdomain.com`):
-
-### Step 1: Install Nginx & Certbot
-```bash
-sudo apt install -y nginx certbot python3-certbot-nginx
-```
-
-### Step 2: Configure Nginx Reverse Proxy
-Create `/etc/nginx/sites-available/templates.conf`:
-```nginx
-server {
-    server_name templates.yourdomain.com;
-
-    location / {
-        proxy_pass http://127.0.0.1:3000;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_cache_bypass $http_upgrade;
-    }
-}
-```
-
-Enable the site:
-```bash
-sudo ln -s /etc/nginx/sites-available/templates.conf /etc/nginx/sites-enabled/
-sudo nginx -t
-sudo systemctl reload nginx
-```
-
-### Step 3: Install Free SSL Certificate
-```bash
-sudo certbot --nginx -d templates.yourdomain.com
-```
-
----
-
-## 6. Daily Management Cheatsheet
-
-| Task | Command |
+| Action | Command |
 | :--- | :--- |
+| **View live logs** | `docker compose logs -f` |
 | **Pull updates & rebuild** | `git pull && docker compose up -d --build` |
-| **Stop service** | `docker compose down` |
-| **Restart service** | `docker compose restart` |
-| **Inspect live logs** | `docker compose logs -f --tail=100` |
-| **Check container resource usage** | `docker stats ottobon-templates` |
-| **Run command inside container** | `docker compose exec templates-hub sh` |
+| **Restart application** | `docker compose restart` |
+| **Stop application** | `docker compose down` |
+| **Container resource stats** | `docker stats ottobon-templates --no-stream` |
