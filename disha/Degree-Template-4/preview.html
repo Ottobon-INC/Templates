@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northstar Institute of Higher Education — Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #7C3AED;
+      --primary-dark: #6D28D9;
+      --ivory: #FAF9F6;
+      --text: #1E1B4B;
+      --muted: #64748B;
+      --border: #E2E8F0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--ivory);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .font-serif { font-family: 'DM Serif Display', serif; }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 48px;
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .brand { font-size: 1.4rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; font-size: 0.9rem; font-weight: 600; }
+    .nav-links a { color: var(--muted); text-decoration: none; }
+    .nav-links a:hover { color: var(--primary); }
+    .btn-apply {
+      padding: 10px 24px;
+      border-radius: 9999px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .hero {
+      padding: 70px 48px;
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .kicker {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      line-height: 1.1;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--primary); }
+    .hero p { font-size: 1.1rem; color: var(--muted); margin-bottom: 32px; }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .stat-val { font-size: 2rem; font-weight: 800; color: var(--primary); }
+    .stat-lbl { font-size: 0.8rem; color: var(--muted); }
+
+    .hero-box {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 16px 32px rgba(124, 58, 237, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .stream-tile {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      background: var(--ivory);
+      border-radius: 12px;
+    }
+    .stream-tile i { font-size: 1.5rem; color: var(--primary); }
+    .stream-tile h4 { font-size: 1rem; font-weight: 700; }
+    .stream-tile p { font-size: 0.8rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="brand"><i class="fa-solid fa-compass"></i> NORTHSTAR INSTITUTE</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Postgraduate Courses</a></li>
+      <li><a href="#campus">Campus</a></li>
+    </ul>
+    <a href="#apply" class="btn-apply">Enroll Now</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="kicker">DISCOVER WHAT YOU CAN BECOME</div>
+        <h1 class="font-serif">Premier Center for <span>Graduate</span> & Research Studies</h1>
+        <p>Northstar Institute of Higher Education equips emerging researchers, technologists, and entrepreneurs with interdisciplinary skills, global fellowships, and industry mentorship.</p>
+
+        <div style="display: flex; gap: 14px; margin-bottom: 40px;">
+          <a href="#apply" class="btn-apply">Apply for Admission</a>
+          <a href="#courses" class="btn-apply" style="background: white; color: var(--text); border: 1px solid var(--border);">Course Catalog</a>
+        </div>
+
+        <div class="stats-row">
+          <div><div class="stat-val">45+</div><div class="stat-lbl">Graduate Degrees</div></div>
+          <div><div class="stat-val">12,000+</div><div class="stat-lbl">Global Alumni</div></div>
+          <div><div class="stat-val">NAAC A++</div><div class="stat-lbl">Top Accreditation</div></div>
+        </div>
+      </div>
+
+      <div class="hero-box">
+        <div class="stream-tile">
+          <i class="fa-solid fa-microchip"></i>
+          <div>
+            <h4>Master of Science in AI & Robotics</h4>
+            <p>2-Year Advanced Degree • Supercomputing Labs</p>
+          </div>
+        </div>
+        <div class="stream-tile">
+          <i class="fa-solid fa-chart-pie"></i>
+          <div>
+            <h4>MBA International Business</h4>
+            <p>Dual Degree Program with European Universities</p>
+          </div>
+        </div>
+        <div class="stream-tile">
+          <i class="fa-solid fa-dna"></i>
+          <div>
+            <h4>M.Tech Bio-Computational Engineering</h4>
+            <p>Full Scholarships for Meritorious Applicants</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

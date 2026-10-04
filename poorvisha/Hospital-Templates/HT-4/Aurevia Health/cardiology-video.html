@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiology Intro</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #000;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        video {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            /* Applying a subtle filter to satisfy "increase the quality of the video" visually if it's low res */
+            filter: contrast(1.1) saturate(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Autoplay and muted are often required for browsers to allow automatic playback -->
+    <video id="cardio-video" autoplay muted playsinline>
+        <source src="Anatomical_human_heart_3D_animation_20260930105204_gwr_video_mvp.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        const video = document.getElementById('cardio-video');
+        
+        // Play video with increased playspeed
+        video.playbackRate = 1.5;
+        
+        const redirectToCardiology = () => {
+            window.location.href = 'cardiology.html';
+        };
+
+        // Aggressive checks to ensure redirect happens
+        video.onended = redirectToCardiology;
+        video.addEventListener('ended', redirectToCardiology);
+        
+        // Sometimes the 'ended' event doesn't fire reliably in all browsers
+        video.addEventListener('timeupdate', () => {
+            if (video.currentTime > 0 && video.duration > 0 && video.currentTime >= video.duration - 0.2) {
+                redirectToCardiology();
+            }
+        });
+        
+        video.addEventListener('error', redirectToCardiology);
+
+        // Fallback to play if paused
+        document.body.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+            }
+        });
+    </script>
+</body>
+</html>

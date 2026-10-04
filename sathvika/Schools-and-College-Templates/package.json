@@ -1,0 +1,10 @@
+{
+  "name": "school-templates",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

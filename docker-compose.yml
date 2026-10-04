@@ -1,0 +1,35 @@
+# ==============================================================================
+# Ottobon Templates Hub — Docker Compose Configuration
+# For Ubuntu Linux VPS Server Deployment
+# ==============================================================================
+
+services:
+  templates-hub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ottobon-templates:latest
+    container_name: ottobon-templates
+    restart: unless-stopped
+    ports:
+      # Maps host port (default 3000, or from .env) to container port 3000
+      - "${HOST_PORT:-3000}:3000"
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+      - NODE_ENV=production
+    # Log rotation to prevent filling up the VPS disk
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    # Optional resource limits for shared VPS environments
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M

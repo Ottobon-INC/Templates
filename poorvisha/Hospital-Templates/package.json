@@ -1,0 +1,12 @@
+{
+  "name": "website-template-library",
+  "version": "1.0.0",
+  "description": "Local Website Template Launcher",
+  "main": "launcher/server.js",
+  "scripts": {
+    "start": "node launcher/server.js",
+    "dev": "node launcher/server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

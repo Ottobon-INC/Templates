@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibha Public School</title>
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        
+        /* Custom styles for precise tweaks */
+        .hero-gradient { background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%); }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: #f0a536; transition: width 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+        
+        /* Stats overlap */
+        .stats-overlap { transform: translateY(-50%); }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden">
+
+
+
+    <!-- MAIN NAVIGATION -->
+    <header class="bg-white py-4 px-4 md:px-8 border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-tri-green rounded-md flex items-center justify-center text-tri-yellow border-2 border-tri-yellow">
+                    <span class="font-serif font-bold text-2xl">V</span>
+                </div>
+                <div>
+                    <h1 class="font-serif text-2xl font-bold text-tri-green leading-none">VIBHA</h1>
+                    <p class="text-xs font-semibold tracking-[0.2em] text-gray-500 mt-1">PUBLIC SCHOOL</p>
+                </div>
+            </a>
+            
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-gray-800">
+                <a href="#home" class="nav-link text-tri-green">HOME</a>
+                <a href="#about" class="nav-link">ABOUT US</a>
+                <a href="#academics" class="nav-link">ACADEMICS</a>
+                <a href="#facilities" class="nav-link">FACILITIES</a>
+
+                <a href="#contact" class="nav-link">CONTACT US</a>
+            </nav>
+            
+            <div class="flex items-center gap-4">
+                <button class="text-gray-600 hover:text-tri-green"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="lg:hidden text-gray-600"><i class="fa-solid fa-bars text-xl"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative h-[600px] w-full">
+        <!-- Background Image -->
+        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2000&auto=format&fit=crop" alt="Vibha Public School Campus" class="w-full h-full object-cover">
+        <div class="absolute inset-0 hero-gradient"></div>
+        
+        <!-- Hero Content -->
+        <div class="absolute inset-0 flex items-center">
+            <div class="max-w-7xl mx-auto px-4 md:px-8 w-full">
+                <div class="max-w-2xl">
+                    <h2 class="text-5xl md:text-6xl font-serif font-bold text-white leading-tight mb-4">
+                        Inspiring Excellence, <br>
+                        Building <span class="text-tri-yellow">Futures</span>
+                    </h2>
+                    <p class="text-white text-lg mb-8 font-light max-w-lg">
+                        At Vibha Public School, we nurture young minds with strong values, modern learning and boundless opportunities.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-tri-yellow text-tri-green-dark px-6 py-3 font-semibold text-sm flex items-center gap-2 hover:bg-yellow-400 transition">
+                            ADMISSION OPEN <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="bg-black/30 border border-white text-white px-6 py-3 font-semibold text-sm flex items-center gap-2 hover:bg-white hover:text-black transition">
+                            EXPLORE CAMPUS <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Arrows -->
+        <button class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 border border-white text-white rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+        <button class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 border border-white text-white rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
+        
+        <!-- Slider Dots -->
+        <div class="absolute bottom-24 w-full flex justify-center gap-2">
+            <div class="w-2 h-2 rounded-full bg-white"></div>
+            <div class="w-2 h-2 rounded-full bg-white/50"></div>
+            <div class="w-2 h-2 rounded-full bg-white/50"></div>
+            <div class="w-2 h-2 rounded-full bg-white/50"></div>
+        </div>
+    </section>
+
+    <!-- STATS / FEATURES BAR -->
+    <section class="max-w-7xl mx-auto px-4 md:px-8 relative z-10 stats-overlap">
+        <div class="bg-white rounded-lg shadow-xl p-6 grid grid-cols-2 md:grid-cols-5 gap-6 divide-x divide-gray-100">
+            <div class="flex items-start gap-4 px-2">
+                <div class="text-3xl text-tri-green"><i class="fa-solid fa-desktop"></i></div>
+                <div>
+                    <h4 class="font-bold text-sm text-gray-900">Smart Classrooms</h4>
+                    <p class="text-xs text-gray-500 mt-1">Technology-enabled learning for all</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 px-2 md:pl-6">
+                <div class="text-3xl text-tri-green"><i class="fa-solid fa-users"></i></div>
+                <div>
+                    <h4 class="font-bold text-sm text-gray-900">Experienced Faculty</h4>
+                    <p class="text-xs text-gray-500 mt-1">Qualified mentors who inspire</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 px-2 md:pl-6">
+                <div class="text-3xl text-tri-green"><i class="fa-solid fa-bus"></i></div>
+                <div>
+                    <h4 class="font-bold text-sm text-gray-900">Safe Transport</h4>
+                    <p class="text-xs text-gray-500 mt-1">GPS-enabled buses for secure travel</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 px-2 md:pl-6">
+                <div class="text-3xl text-tri-green"><i class="fa-solid fa-seedling"></i></div>
+                <div>
+                    <h4 class="font-bold text-sm text-gray-900">Holistic Development</h4>
+                    <p class="text-xs text-gray-500 mt-1">Mind • Body • Values Balanced growth</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 px-2 md:pl-6">
+                <div class="text-3xl text-tri-green"><i class="fa-solid fa-flask"></i></div>
+                <div>
+                    <h4 class="font-bold text-sm text-gray-900">Modern Labs</h4>
+                    <p class="text-xs text-gray-500 mt-1">Well-equipped labs for practical learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="max-w-7xl mx-auto px-4 md:px-8 py-12" id="about">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop" alt="Students at school" class="rounded-lg shadow-lg w-full object-cover h-[450px]">
+            </div>
+            <div>
+                <p class="text-tri-yellow font-bold text-xs tracking-[0.2em] uppercase mb-2">WELCOME TO</p>
+                <h2 class="text-4xl font-serif font-bold text-tri-green mb-6">Vibha Public School</h2>
+                <p class="text-gray-600 text-sm leading-relaxed mb-8">
+                    Vibha Public School is a premier co-educational institution dedicated to developing confident, compassionate and responsible global citizens. We blend academic excellence with character building to prepare students for a successful future.
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+                    <div>
+                        <h3 class="text-2xl font-serif font-bold text-gray-900">CBSE</h3>
+                        <p class="text-xs text-gray-500 mt-1">Affiliation</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-serif font-bold text-gray-900 flex items-center gap-2"><i class="fa-regular fa-user text-xl"></i> 1:20</h3>
+                        <p class="text-xs text-gray-500 mt-1">Teacher Ratio</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-serif font-bold text-gray-900">20+</h3>
+                        <p class="text-xs text-gray-500 mt-1">Years of Excellence</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-serif font-bold text-gray-900">100%</h3>
+                        <p class="text-xs text-gray-500 mt-1">Commitment</p>
+                    </div>
+                </div>
+                
+                <a href="#" class="bg-tri-green text-white px-6 py-3 font-semibold text-sm inline-flex items-center gap-2 rounded-md hover:bg-tri-green-dark transition">
+                    READ MORE ABOUT US <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACADEMICS SECTION -->
+    <section class="max-w-7xl mx-auto px-4 md:px-8 py-16" id="academics">
+        <div class="flex flex-col lg:flex-row gap-12 relative">
+            <div class="lg:w-2/3">
+                <p class="text-tri-yellow font-bold text-xs tracking-[0.2em] uppercase mb-2">ACADEMICS</p>
+                <h2 class="text-4xl font-serif font-bold text-tri-green mb-10">Explore. Learn. Excel.</h2>
+                
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-white border border-gray-100 rounded-lg p-6 shadow-sm text-center hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-tri-green mx-auto mb-4 text-xl">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h4 class="font-bold text-sm text-gray-900 mb-2">CBSE Curriculum</h4>
+                        <p class="text-xs text-gray-500">Comprehensive curriculum from Nursery to Class XII designed for holistic growth.</p>
+                    </div>
+                    <div class="bg-white border border-gray-100 rounded-lg p-6 shadow-sm text-center hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-tri-green mx-auto mb-4 text-xl">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <h4 class="font-bold text-sm text-gray-900 mb-2">Experienced Faculty</h4>
+                        <p class="text-xs text-gray-500">Our educators inspire, mentor and bring out the best in every child.</p>
+                    </div>
+                    <div class="bg-white border border-gray-100 rounded-lg p-6 shadow-sm text-center hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-tri-green mx-auto mb-4 text-xl">
+                            <i class="fa-regular fa-lightbulb"></i>
+                        </div>
+                        <h4 class="font-bold text-sm text-gray-900 mb-2">Innovative Learning</h4>
+                        <p class="text-xs text-gray-500">Activity-based, experiential and technology-integrated learning approach.</p>
+                    </div>
+                    <div class="bg-white border border-gray-100 rounded-lg p-6 shadow-sm text-center hover:shadow-md transition">
+                        <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-tri-green mx-auto mb-4 text-xl">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h4 class="font-bold text-sm text-gray-900 mb-2">Excellence Driven</h4>
+                        <p class="text-xs text-gray-500">Focus on academics, sports, arts and life skills for all-round development.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Circular floating image -->
+            <div class="lg:w-1/3 relative flex justify-center items-center mt-8 lg:mt-0">
+                <div class="relative w-80 h-80 rounded-full overflow-hidden border-8 border-white shadow-xl">
+                    <img src="./holistic.jpg" alt="Students" class="w-full h-full object-cover">
+                </div>
+                <!-- Badge overlapping -->
+                <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-tri-green text-white text-center py-4 px-10 rounded-lg shadow-xl w-[90%] whitespace-nowrap">
+                    <h3 class="font-serif italic text-2xl mb-1">Holistic Growth</h3>
+                    <p class="text-xs tracking-widest uppercase">Mind • Body • Values</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITIES SECTION -->
+    <section class="bg-tri-gray py-16" id="facilities">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <p class="text-tri-yellow font-bold text-xs tracking-[0.2em] uppercase mb-2">FACILITIES</p>
+                    <h2 class="text-4xl font-serif font-bold text-tri-green">World-Class Infrastructure</h2>
+                </div>
+                <a href="#" class="border border-gray-300 bg-white text-gray-700 px-6 py-2.5 text-sm font-semibold flex items-center gap-2 hover:bg-gray-50 transition rounded">
+                    VIEW ALL FACILITIES <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Facility 1 -->
+                <div class="bg-white rounded-b-lg shadow-sm border-x border-b border-gray-100 overflow-visible relative">
+                    <div class="h-48 overflow-hidden rounded-t-lg">
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=600&auto=format&fit=crop" alt="Smart Classrooms" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pt-8 relative">
+                        <div class="absolute -top-6 left-6 w-12 h-12 bg-tri-green rounded-full flex items-center justify-center text-white border-4 border-white shadow-sm">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Smart Classrooms</h4>
+                        <p class="text-xs text-gray-500">Digital classrooms with smart boards and audio-visual aids.</p>
+                    </div>
+                </div>
+                <!-- Facility 2 -->
+                <div class="bg-white rounded-b-lg shadow-sm border-x border-b border-gray-100 overflow-visible relative">
+                    <div class="h-48 overflow-hidden rounded-t-lg">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=600&auto=format&fit=crop" alt="Science Laboratories" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pt-8 relative">
+                        <div class="absolute -top-6 left-6 w-12 h-12 bg-tri-green rounded-full flex items-center justify-center text-white border-4 border-white shadow-sm">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Science Laboratories</h4>
+                        <p class="text-xs text-gray-500">Well-equipped labs to encourage curiosity and innovation.</p>
+                    </div>
+                </div>
+                <!-- Facility 3 -->
+                <div class="bg-white rounded-b-lg shadow-sm border-x border-b border-gray-100 overflow-visible relative">
+                    <div class="h-48 overflow-hidden rounded-t-lg">
+                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=600&auto=format&fit=crop" alt="Library" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pt-8 relative">
+                        <div class="absolute -top-6 left-6 w-12 h-12 bg-tri-green rounded-full flex items-center justify-center text-white border-4 border-white shadow-sm">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Library</h4>
+                        <p class="text-xs text-gray-500">A rich collection of books to nurture reading and research.</p>
+                    </div>
+                </div>
+                <!-- Facility 4 -->
+                <div class="bg-white rounded-b-lg shadow-sm border-x border-b border-gray-100 overflow-visible relative">
+                    <div class="h-48 overflow-hidden rounded-t-lg">
+                        <img src="./bus.jpg" alt="Transport" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pt-8 relative">
+                        <div class="absolute -top-6 left-6 w-12 h-12 bg-tri-green rounded-full flex items-center justify-center text-white border-4 border-white shadow-sm">
+                            <i class="fa-solid fa-bus"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">Transport</h4>
+                        <p class="text-xs text-gray-500">Safe, reliable and GPS-enabled transport across routes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-tri-green text-white pt-16 pb-6 border-t-[10px] border-tri-yellow">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <!-- Column 1 -->
+            <div class="md:col-span-1">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 bg-transparent border-2 border-tri-yellow rounded-sm flex items-center justify-center text-tri-yellow">
+                        <span class="font-serif font-bold text-lg">V</span>
+                    </div>
+                    <div>
+                        <h1 class="font-serif text-lg font-bold text-white leading-none">VIBHA</h1>
+                        <p class="text-[8px] font-semibold tracking-[0.2em] text-white mt-0.5">PUBLIC SCHOOL</p>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-300 mb-6 font-light">Nurturing young minds with strong values, academic excellence and holistic development.</p>
+                <div class="flex gap-3">
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-500 flex items-center justify-center hover:bg-tri-yellow hover:border-tri-yellow hover:text-tri-green transition"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-500 flex items-center justify-center hover:bg-tri-yellow hover:border-tri-yellow hover:text-tri-green transition"><i class="fa-brands fa-instagram text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-500 flex items-center justify-center hover:bg-tri-yellow hover:border-tri-yellow hover:text-tri-green transition"><i class="fa-brands fa-youtube text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-500 flex items-center justify-center hover:bg-tri-yellow hover:border-tri-yellow hover:text-tri-green transition"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+                </div>
+            </div>
+            
+            <!-- Column 2 -->
+            <div>
+                <h4 class="font-bold text-sm mb-6 uppercase text-tri-yellow tracking-wider">QUICK LINKS</h4>
+                <ul class="space-y-3 text-xs text-gray-300 font-light">
+                    <li><a href="#" class="hover:text-tri-yellow transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-tri-yellow transition">Academics</a></li>
+                    <li><a href="#" class="hover:text-tri-yellow transition">Facilities</a></li>
+                    <li><a href="#" class="hover:text-tri-yellow transition">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Column 4 -->
+            <div>
+                <h4 class="font-bold text-sm mb-6 uppercase text-tri-yellow tracking-wider">CONTACT US</h4>
+                <ul class="space-y-4 text-xs text-gray-300 font-light">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot mt-1 text-gray-400"></i>
+                        <span>Complex main road,<br>Parvathipuram</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-gray-400"></i>
+                        <span>+91 7984573201</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-gray-400"></i>
+                        <span>info@vibhapublicschool.com</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-regular fa-clock text-gray-400"></i>
+                        <span>Mon – Sat: 8:00 AM – 4:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Column 5 -->
+            <div class="md:col-span-1">
+                <h4 class="font-bold text-sm mb-6 uppercase text-tri-yellow tracking-wider">NEWSLETTER</h4>
+                <p class="text-xs text-gray-300 font-light mb-4">Subscribe to our newsletter for latest updates and events.</p>
+                <div class="flex">
+                    <input type="email" placeholder="Enter your email" class="bg-tri-green-dark border border-gray-600 text-white px-3 py-2 w-full text-xs outline-none focus:border-tri-yellow">
+                    <button class="bg-white text-tri-green px-3 py-2 hover:bg-tri-yellow transition"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="max-w-7xl mx-auto px-4 md:px-8 border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-400 font-light">
+            <p>&copy; 2025 Vibha Public School. All Rights Reserved.</p>
+            <div class="flex gap-4 mt-2 md:mt-0">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <span>|</span>
+                <a href="#" class="hover:text-white transition">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

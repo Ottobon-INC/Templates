@@ -1,0 +1,147 @@
+:root {
+  --color-indigo: #17183B;
+  --color-coral: #E85D5A;
+  --color-mint: #A8D5BA;
+  --color-yellow: #F2C14E;
+  --color-cream: #F8F4EA;
+  --color-dark: #151515;
+  --color-white: #FFFFFF;
+
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-accent: 'DM Serif Display', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-indigo);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Typography Variables */
+.heading-hero {
+  font-size: clamp(40px, 6vw, 64px);
+  letter-spacing: -0.02em;
+}
+
+.heading-major {
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: -0.02em;
+}
+
+.heading-sub {
+  font-size: clamp(26px, 4vw, 30px);
+}
+
+.text-body {
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.6;
+}
+
+.text-nav {
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 500;
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--color-coral);
+  color: var(--color-white);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-coral);
+  color: var(--color-white);
+  padding: 16px 32px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background-color: #d14d4a;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-indigo);
+  padding: 16px 32px;
+  border-radius: 100px;
+  border: 1px solid var(--color-indigo);
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-indigo);
+  color: var(--color-white);
+}
+
+.btn-light {
+  background-color: var(--color-white);
+  color: var(--color-indigo);
+  padding: 16px 32px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: var(--color-cream);
+}

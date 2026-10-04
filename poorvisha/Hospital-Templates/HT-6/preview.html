@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediPulse 3D Interactive Medical Care — Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root { --teal: #0D9488; --teal-dark: #0F766E; --text: #0F172A; --muted: #64748B; --border: #E2E8F0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text); background: #FFFFFF; line-height: 1.6; }
+    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 18px 48px; border-bottom: 1px solid var(--border); }
+    .logo { font-size: 1.4rem; font-weight: 800; color: var(--teal); display: flex; align-items: center; gap: 8px; }
+    .btn-teal { padding: 10px 22px; border-radius: 8px; background: var(--teal); color: white; text-decoration: none; font-weight: 700; }
+    .hero { padding: 60px 48px; max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .hero h1 { font-size: 3.2rem; line-height: 1.1; font-weight: 800; margin-bottom: 20px; }
+    .hero h1 span { color: var(--teal); }
+    .video-box { border-radius: 20px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 16px 32px rgba(13, 148, 136, 0.15); background: #000; }
+    .video-box video { width: 100%; height: auto; display: block; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-cube"></i> MEDIPULSE 3D</div>
+    <div style="display:flex; gap:24px; font-weight:600; color:var(--muted);">
+      <span>Virtual Tours</span><span>Surgical Simulations</span><span>Robotic Suite</span>
+    </div>
+    <a href="#" class="btn-teal">Explore 3D Theater</a>
+  </nav>
+  <main>
+    <section class="hero">
+      <div>
+        <span style="font-size:0.8rem; font-weight:700; color:var(--teal); text-transform:uppercase; letter-spacing:0.1em; display:inline-block; margin-bottom:12px;">Next-Gen Surgical Visualization</span>
+        <h1>Interactive <span>3D Medical</span> Care & Virtual Anatomy</h1>
+        <p style="color:var(--muted); font-size:1.1rem; margin-bottom:30px;">Step inside ultra-high-definition interactive medical simulations, procedural rehearsals, and robotic surgical suite walkthroughs.</p>
+        <div style="display:flex; gap:14px;">
+          <a href="#" class="btn-teal">Experience Simulation</a>
+          <a href="#" class="btn-teal" style="background:white; color:var(--text); border:1px solid var(--border);">Consult Specialist</a>
+        </div>
+      </div>
+      <div class="video-box">
+        <video controls autoplay muted loop playsinline>
+          <source src="Create_3D_healthcare_animation_1080p_20260930111852_gwr_video_mvp.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

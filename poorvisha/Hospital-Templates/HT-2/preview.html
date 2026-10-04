@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metro Care Specialty Clinic — Hospital Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #10B981;
+      --primary-dark: #059669;
+      --primary-light: #ECFDF5;
+      --text-dark: #0F172A;
+      --text-muted: #64748B;
+      --bg-light: #F8FAFC;
+      --border: #E2E8F0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FFFFFF;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    .top-emergency-bar {
+      background: #064E3B;
+      color: #A7F3D0;
+      font-size: 0.8rem;
+      padding: 8px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 48px;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+    .logo i { color: var(--primary); font-size: 1.6rem; }
+    .nav-links { display: flex; gap: 28px; list-style: none; font-size: 0.9rem; font-weight: 600; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .btn-appointment {
+      padding: 10px 22px;
+      border-radius: 8px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+      transition: background 0.2s;
+    }
+    .btn-appointment:hover { background: var(--primary-dark); }
+
+    /* Hero */
+    .hero {
+      padding: 70px 48px;
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: 3.4rem;
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--primary); }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .hero-ctas { display: flex; gap: 14px; margin-bottom: 40px; }
+    .btn-secondary {
+      padding: 10px 22px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+    }
+    .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--text-dark); }
+    .stat-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+
+    /* Hero Card Display */
+    .hero-card-box {
+      background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+      border: 1px solid #A7F3D0;
+      border-radius: 24px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-shadow: 0 16px 32px rgba(16, 185, 129, 0.1);
+    }
+    .feature-tile {
+      background: white;
+      border-radius: 14px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    }
+    .tile-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .tile-info h4 { font-size: 0.98rem; font-weight: 700; margin-bottom: 2px; }
+    .tile-info p { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* Services Section */
+    .section { padding: 80px 48px; max-width: 1280px; margin: 0 auto; }
+    .section-title-wrap { text-align: center; margin-bottom: 48px; }
+    .section-title-wrap h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; }
+    .section-title-wrap p { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.25s;
+    }
+    .service-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+    }
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+    .service-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+    .service-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <div class="top-emergency-bar">
+    <span><i class="fa-solid fa-truck-medical"></i> 24/7 Emergency Line: +1 (800) 456-7890</span>
+    <span>Hours: Mon - Sun 24 Hours • Bandra West, Mumbai</span>
+  </div>
+
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-heart-pulse"></i>
+      <span>METROCARE</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#doctors">Specialists</a></li>
+      <li><a href="#insurance">Insurance</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#book" class="btn-appointment">Book Consultation</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <span class="badge-pill"><i class="fa-solid fa-check-circle"></i> Certified Specialty Healthcare</span>
+        <h1>Advanced Care for <span>Your Health</span> & Well-being</h1>
+        <p>Combining world-class medical specialists, state-of-the-art diagnostic facilities, and compassionate personalized outpatient care.</p>
+        
+        <div class="hero-ctas">
+          <a href="#book" class="btn-appointment">Schedule Appointment</a>
+          <a href="#services" class="btn-secondary"><i class="fa-solid fa-list-check"></i> Explore Specialties</a>
+        </div>
+
+        <div class="hero-stat-row">
+          <div><div class="stat-num">50+</div><div class="stat-label">Senior Specialists</div></div>
+          <div><div class="stat-num">99.4%</div><div class="stat-label">Patient Satisfaction</div></div>
+          <div><div class="stat-num">15+</div><div class="stat-label">Clinical Departments</div></div>
+        </div>
+      </div>
+
+      <div class="hero-card-box">
+        <div class="feature-tile">
+          <div class="tile-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="tile-info">
+            <h4>Cardiology & Heart Care</h4>
+            <p>Non-invasive diagnostics, ECG, and echocardiography.</p>
+          </div>
+        </div>
+        <div class="feature-tile">
+          <div class="tile-icon"><i class="fa-solid fa-brain"></i></div>
+          <div class="tile-info">
+            <h4>Neurology Center</h4>
+            <p>Comprehensive brain, nerve, and spine consultations.</p>
+          </div>
+        </div>
+        <div class="feature-tile">
+          <div class="tile-icon"><i class="fa-solid fa-bone"></i></div>
+          <div class="tile-info">
+            <h4>Orthopedics & Joint Care</h4>
+            <p>Minimally invasive arthroscopy and rehabilitation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-title-wrap">
+        <h2>Specialized Medical Departments</h2>
+        <p>Comprehensive medical treatments led by board-certified physicians and specialized surgical teams.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-stethoscope"></i></div>
+          <h3>Primary & Family Medicine</h3>
+          <p>Preventative wellness checkups, routine diagnostics, chronic illness management, and lifestyle counseling.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-baby"></i></div>
+          <h3>Pediatrics & Child Health</h3>
+          <p>Vaccination programs, pediatric development screening, and gentle compassionate care for newborns to adolescents.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-shield-virus"></i></div>
+          <h3>Diagnostics & Pathology</h3>
+          <p>High-speed digital radiology, ultrasound, MRI/CT reporting, and accredited automated pathology laboratories.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

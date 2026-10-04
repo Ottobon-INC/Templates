@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orthopedics | Aurevia Health</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .specialty-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(to bottom, var(--color-background), var(--color-surface));
+            text-align: center;
+        }
+        .specialty-icon {
+            width: 80px; height: 80px;
+            margin: 0 auto 24px;
+            color: var(--color-primary);
+            background: white;
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 12px 32px rgba(23,63,53,0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .specialty-features {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 64px;
+        }
+        .feature-card {
+            padding: 32px;
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="videoOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #000; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease;">
+        <video id="introVideo" style="width: 100%; height: 100vh; object-fit: cover;" autoplay muted playsinline>
+            <source src="ortho_video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Aurevia Health</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Our Services</a></li>
+                    <li><a href="index.html#appointment" class="nav-link">Specialists</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="specialty-hero fade-in-up">
+        <div class="container">
+            <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:40px; height:40px;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path></svg>
+            </div>
+            <span class="eyebrow">Department of</span>
+            <h1 style="font-size: 3.5rem; margin-bottom: 24px;">Orthopedics</h1>
+            <p class="text-muted" style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Specialized joint, bone, and muscle care aimed at restoring mobility and getting you back to the active lifestyle you love.</p>
+        </div>
+    </section>
+
+    <section class="section bg-white fade-in-up" style="animation-delay: 0.2s;">
+        <div class="container">
+            <div class="section-header center">
+                <h2 class="section-title">Complete Musculoskeletal Care</h2>
+            </div>
+            <div class="specialty-features">
+                <div class="feature-card">
+                    <h3 style="margin-bottom: 12px;">Joint Replacement</h3>
+                    <p class="text-muted">Advanced robotic-assisted hip and knee replacement surgeries designed for faster recovery and greater precision.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="margin-bottom: 12px;">Sports Medicine</h3>
+                    <p class="text-muted">Targeted treatment for athletic injuries, including ACL reconstruction, rotator cuff repair, and intensive physical therapy programs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="margin-bottom: 12px;">Spine Care</h3>
+                    <p class="text-muted">Comprehensive solutions for back and neck pain, ranging from non-surgical physical therapies to minimally invasive spine surgery.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="margin-bottom: 12px;">Fracture & Trauma</h3>
+                    <p class="text-muted">Rapid response care for bone fractures and complex orthopedic trauma, ensuring optimal healing and structural integrity.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 64px;">
+                <a href="index.html#appointment" class="btn btn-primary btn-glow">Schedule an Orthopedics Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="logo footer-logo">Aurevia Health</div>
+            <div class="footer-contact">
+                <p>123 Medical Blvd, Health District</p>
+                <p>Booking: +1 (800) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Video Overlay Logic
+        const videoOverlay = document.getElementById('videoOverlay');
+        const introVideo = document.getElementById('introVideo');
+        if (introVideo) {
+            introVideo.playbackRate = 1.5; // Increase speed slightly
+            
+            const hideOverlay = () => {
+                videoOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    videoOverlay.style.display = 'none';
+                }, 500);
+            };
+
+            introVideo.onended = hideOverlay;
+            introVideo.onerror = hideOverlay; // Hide if file is missing
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

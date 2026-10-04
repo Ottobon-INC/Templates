@@ -1,0 +1,40 @@
+# ==============================================================================
+# Docker Ignore - Ottobon Templates Hub
+# Prevents large, redundant, and development-only files from entering the image
+# ==============================================================================
+
+# Version Control
+.git/
+.gitignore
+.gitattributes
+.github/
+.agents/
+
+# Nested dependency directories (sub-template node_modules)
+**/node_modules/
+node_modules/
+
+# Framework build caches & temp directories
+**/.next/
+**/.turbo/
+**/.cache/
+dist_tmp/
+
+# Logs & debugging files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Windows scripts & system files
+*.bat
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

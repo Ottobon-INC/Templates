@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'Inter', sans-serif;
+  }
+  body {
+    background-color: #ffffff;
+    color: #333333;
+    overflow-x: hidden;
+  }
+}
+
+/* MJC Exact Theme Buttons & Classes */
+.bg-primary {
+  background-color: #172b54 !important;
+}
+
+.bg-dark {
+  background-color: #111827 !important;
+}
+
+.bg-222222 {
+  background-color: #222222 !important;
+}
+
+.text-primary {
+  color: #172b54 !important;
+}
+
+.btn-yellow {
+  background-color: #f6a800;
+  color: #172b54;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.25s ease-in-out;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-yellow:hover {
+  background-color: #e59b00;
+  color: #0d1b34;
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ffffff;
+  color: #172b54;
+}
+
+.btn-simple-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f6a800;
+  transition: all 0.2s ease;
+}
+
+.btn-simple-arrow:hover {
+  color: #ffffff;
+  gap: 12px;
+}
+
+.btn-simple-arrow.hover-yellow:hover {
+  color: #f6a800;
+}
+
+/* Custom MJC Burger Icon */
+.burger-menu-item {
+  width: 26px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burger-menu-item span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-menu-item.open span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.burger-menu-item.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu-item.open span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* Common Section Overlays */
+.common-section-overlay {
+  position: relative;
+}
+
+.section-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}

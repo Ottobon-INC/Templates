@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicky College | Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap logo-icon"></i>
+                <h2>VICKY SCHOOL</h2>
+            </div>
+            <nav class="nav-links">
+                <a href="#home" class="active">HOME</a>
+                <a href="#about">ABOUT US</a>
+                <a href="#academics">ACADEMICS</a>
+                <a href="#courses">COURSES</a>
+                <a href="#faculty">FACULTY</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-slider" id="home">
+        
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <div class="hero-overlay"></div>
+            <div class="slide-content container text-center">
+                <h1>Welcome to <br><span>Vicky College</span></h1>
+                <p>We provide a supportive learning environment where students can grow, discover their potential and build a brighter future.</p>
+                <div class="hero-buttons center-btns">
+                    <a href="#" class="btn btn-primary">Contact Us &rarr;</a>
+                    <a href="#" class="btn btn-outline">About Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <div class="hero-overlay"></div>
+            <div class="slide-content container text-center">
+                <h1 style="font-size: 3rem; text-transform: uppercase;">CONSISTENT TOP RANKS IN<br><span>COMPETITIVE EXAMS</span></h1>
+                <p>Over 98% pass rate in Intermediate Public Examinations with exceptional selections in premier engineering, medical, and commerce institutions nationwide.</p>
+                <div class="hero-buttons center-btns">
+                    <a href="#" class="btn btn-primary" style="border-radius: 4px; background: #3b5998; border-color: #3b5998;">DISCOVER STREAMS</a>
+                    <a href="#" class="btn btn-outline" style="border-radius: 4px;">ADMISSION ENQUIRY</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <div class="hero-overlay"></div>
+            <div class="slide-content container text-center">
+                <h1>Achieve Your<br><span>Highest Potential</span></h1>
+                <p>Our expert faculty and state-of-the-art facilities ensure you are ready to conquer the world.</p>
+                <div class="hero-buttons center-btns">
+                    <a href="#" class="btn btn-primary">Our Faculty &rarr;</a>
+                    <a href="#" class="btn btn-outline">Campus Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="hero-controls-bottom">
+            <div class="slider-dots-wide">
+                <span class="dot-wide active" onclick="currentSlide(0)"></span>
+                <span class="dot-wide" onclick="currentSlide(1)"></span>
+                <span class="dot-wide" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Students Group Study">
+            </div>
+            <div class="about-text">
+                <span class="section-tag">&mdash; ABOUT OUR COLLEGE</span>
+                <h2>Vicky College</h2>
+                <p>Vicky College is dedicated to providing quality education, modern facilities and a supportive environment for students to achieve their academic and career goals. We believe in holistic development and preparing our students for a successful future.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Programs Section -->
+    <section id="academics" class="academics section-padding bg-light">
+        <div class="container text-center">
+            <span class="section-tag">&mdash; ACADEMIC GROUPS &mdash;</span>
+            <h2 class="section-title">Explore Our Academic Programs</h2>
+            <p class="section-desc">We offer a wide range of programs designed to help you build your skills and achieve your dreams.</p>
+            
+            <div class="grid cards-grid">
+                <!-- Program 1 -->
+                <div class="program-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="MPC">
+                        <div class="icon-circle bg-blue"><i class="fas fa-book-open"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>MPC</h3>
+                        <p>Maths, Physics, Chemistry</p>
+                    </div>
+                </div>
+                <!-- Program 2 -->
+                <div class="program-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="BiPC">
+                        <div class="icon-circle bg-purple"><i class="fas fa-flask"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>BiPC</h3>
+                        <p>Biology, Physics, Chemistry</p>
+                    </div>
+                </div>
+                <!-- Program 3 -->
+                <div class="program-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="MEC">
+                        <div class="icon-circle bg-teal"><i class="fas fa-chart-line"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>MEC</h3>
+                        <p>Maths, Economics, Commerce</p>
+                    </div>
+                </div>
+                <!-- Program 4 -->
+                <div class="program-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="CEC">
+                        <div class="icon-circle bg-pink"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>CEC</h3>
+                        <p>Civics, Economics, Commerce</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Courses Section -->
+    <section id="courses" class="courses section-padding bg-dark">
+        <div class="container">
+            <div class="courses-header">
+                <div class="courses-header-text">
+                    <span class="section-tag">&mdash; POPULAR COURSES</span>
+                    <h2 class="text-white">Learn Today, Build Tomorrow</h2>
+                    <p class="text-gray">Explore our most popular courses designed to give you the right skills<br>for a successful future.</p>
+                </div>
+            </div>
+
+            <div class="grid courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="IT / CS">
+                        <div class="course-icon"><i class="fas fa-code"></i></div>
+                    </div>
+                    <div class="course-body">
+                        <h3>IT / CS</h3>
+                        <p>Build your programming and tech skills for the future.</p>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="NEET">
+                        <div class="course-icon"><i class="fas fa-stethoscope"></i></div>
+                    </div>
+                    <div class="course-body">
+                        <h3>NEET</h3>
+                        <p>Prepare for your medical career with expert guidance.</p>
+                    </div>
+                </div>
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="EAMCET">
+                        <div class="course-icon"><i class="fas fa-chart-bar"></i></div>
+                    </div>
+                    <div class="course-body">
+                        <h3>EAMCET</h3>
+                        <p>Get ready for engineering and agriculture admissions.</p>
+                    </div>
+                </div>
+                <!-- Course 4 -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="BITSAT">
+                        <div class="course-icon"><i class="fas fa-graduation-cap"></i></div>
+                    </div>
+                    <div class="course-body">
+                        <h3>BITSAT</h3>
+                        <p>Achieve your goals with focused preparation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section id="faculty" class="teachers section-padding">
+        <div class="container text-center">
+            <span class="section-tag">&mdash; OUR TEACHERS &mdash;</span>
+            <h2 class="section-title">Learn from the Best</h2>
+            <p class="section-desc">Our experienced and passionate teachers are here to guide, support and inspire you.</p>
+
+            <div class="grid teachers-grid">
+                <div class="teacher-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Anita Sharma">
+                    <div class="teacher-info">
+                        <h4>Anita Sharma</h4>
+                        <p>Mathematics</p>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Rohit Kumar">
+                    <div class="teacher-info">
+                        <h4>Rohit Kumar</h4>
+                        <p>Physics</p>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Priya Nair" style="object-position: right center;">
+                    <div class="teacher-info">
+                        <h4>Priya Nair</h4>
+                        <p>Chemistry</p>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Suresh Reddy">
+                    <div class="teacher-info">
+                        <h4>Suresh Reddy</h4>
+                        <p>Biology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section / Footer -->
+    <footer id="contact" class="bg-dark section-padding" style="text-align: center; color: white;">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p style="color: #94a3b8; margin: 15px 0 30px;">Get in touch for admissions and general enquiries.</p>
+            <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; flex-wrap: wrap;">
+                <div><i class="fas fa-map-marker-alt text-blue"></i> 123 College Avenue, City, State</div>
+                <div><i class="fas fa-phone text-blue"></i> +1 234 567 8900</div>
+                <div><i class="fas fa-envelope text-blue"></i> info@vickycollege.edu</div>
+            </div>
+            <p style="color: #64748b; font-size: 0.9rem;">&copy; 2026 Vicky College. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        let slides = document.querySelectorAll(".slide");
+        let dots = document.querySelectorAll(".dot-wide");
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+                dots[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex - 1].classList.add("active");
+            dots[slideIndex - 1].classList.add("active");
+            slideTimeout = setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+        
+        function currentSlide(n) {
+            clearTimeout(slideTimeout); // Stop current timer when manually clicked
+            slideIndex = n;
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+                dots[i].classList.remove("active");
+            }
+            slides[slideIndex].classList.add("active");
+            dots[slideIndex].classList.add("active");
+            slideTimeout = setTimeout(showSlides, 5000); // Restart timer
+        }
+
+        let slideTimeout = setTimeout(showSlides, 5000); // Start slider
+    </script>
+</body>
+</html>

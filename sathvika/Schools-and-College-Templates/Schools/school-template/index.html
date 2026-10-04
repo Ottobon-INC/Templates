@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brightwood International School</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <div class="logo-icon-wrap">B</div>
+        <div class="logo-text">
+          <strong>BRIGHTWOOD</strong>
+          <span>INTERNATIONAL SCHOOL</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT US</a></li>
+          <li><a href="#academics">ACADEMICS</a></li>
+          <li><a href="#admissions">ADMISSIONS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <a href="#" onclick="openApplyModal(event)" class="btn btn-yellow">APPLY NOW</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero" style="background-image: url('public/new_hero_students.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content-wrapper">
+      <div class="hero-text-box">
+        <h1 class="hero-title">Inspiring Minds.<br><span class="text-yellow">Shaping Futures.</span></h1>
+        <p class="hero-subtitle">A nurturing environment where students learn, grow, and thrive to become tomorrow's leaders.</p>
+        <div class="hero-buttons">
+          <a href="#about" class="btn btn-navy">DISCOVER OUR SCHOOL <i data-lucide="arrow-right"></i></a>
+          <a href="#" class="btn btn-white"><i data-lucide="play-circle"></i> EXPLORE THE SCHOOL</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features Banner -->
+  <section class="features-banner">
+    <div class="container features-grid">
+      <div class="feature-item">
+        <i data-lucide="graduation-cap"></i>
+        <div>
+          <h4>Holistic Education</h4>
+          <p>Nurturing academic, emotional & social growth.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i data-lucide="users"></i>
+        <div>
+          <h4>Expert Educators</h4>
+          <p>Passionate teachers dedicated to excellence.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i data-lucide="book-open"></i>
+        <div>
+          <h4>Innovative Learning</h4>
+          <p>Modern facilities & creative teaching methods.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i data-lucide="globe"></i>
+        <div>
+          <h4>Global Perspective</h4>
+          <p>Preparing students for a global future.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i data-lucide="shield-check"></i>
+        <div>
+          <h4>Safe & Supportive</h4>
+          <p>A secure environment where every child thrives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container about-layout">
+      <div class="about-text">
+        <span class="section-tag">ABOUT OUR SCHOOL</span>
+        <h2 class="section-title">Excellence in Education<br><span class="text-yellow">Character for Life</span></h2>
+        <p>At Brightwood International School, we believe in developing curious minds, strong values, and confident individuals ready to make a difference in the world.</p>
+        <ul class="about-list">
+          <li><i data-lucide="check-circle"></i> World-class facilities</li>
+          <li><i data-lucide="check-circle"></i> Experienced faculty</li>
+          <li><i data-lucide="check-circle"></i> Holistic development</li>
+        </ul>
+        <a href="#" class="btn btn-navy" style="margin-top: 10px;">LEARN MORE ABOUT US <i data-lucide="arrow-right"></i></a>
+      </div>
+      <div class="about-image-collage">
+        <img src="public/new_about_building.jpg" alt="School Building" class="img-main" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Academics Section -->
+  <section id="academics" class="academics-section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">ACADEMICS</span>
+        <h2 class="section-title">Discover Our Programs</h2>
+        <p class="section-subtitle">A comprehensive curriculum designed to inspire and challenge every learner.</p>
+      </div>
+
+      <div class="programs-grid-5">
+        <!-- Module 1 -->
+        <div class="module-card">
+          <div class="module-img" style="background-image: url('early_years.jpg');"></div>
+          <div class="module-content">
+            <h4>Early Years</h4>
+            <p>A nurturing start for lifelong learners.</p>
+            <span class="module-badge">Ages 3-5</span>
+          </div>
+        </div>
+        <!-- Module 2 -->
+        <div class="module-card">
+          <div class="module-img" style="background-image: url('primary_school.jpg');"></div>
+          <div class="module-content">
+            <h4>Primary School</h4>
+            <p>Building strong foundations for the future.</p>
+            <span class="module-badge">Grades 1-5</span>
+          </div>
+        </div>
+        <!-- Module 3 -->
+        <div class="module-card">
+          <div class="module-img" style="background-image: url('middle_school.jpg');"></div>
+          <div class="module-content">
+            <h4>Middle School</h4>
+            <p>Encouraging curiosity and critical thinking.</p>
+            <span class="module-badge">Grades 6-8</span>
+          </div>
+        </div>
+        <!-- Module 4 -->
+        <div class="module-card">
+          <div class="module-img" style="background-image: url('secondary_school.jpg');"></div>
+          <div class="module-content">
+            <h4>High School</h4>
+            <p>Preparing leaders for college and beyond.</p>
+            <span class="module-badge">Grades 9-12</span>
+          </div>
+        </div>
+        <!-- Module 5 -->
+        <div class="module-card">
+          <div class="module-img" style="background-image: url('public/new_cocurricular.jpg');"></div>
+          <div class="module-content">
+            <h4>Co-Curricular</h4>
+            <p>Explore talents beyond the classroom.</p>
+            <span class="module-badge">Clubs & Activities</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-navy">VIEW ALL PROGRAMS <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Big Stats Section -->
+  <section class="big-stats-section">
+    <div class="container stats-grid-5">
+      <div class="stat-item">
+        <i data-lucide="building"></i>
+        <div>
+          <h3>25+</h3>
+          <p>Years of Excellence</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <i data-lucide="users"></i>
+        <div>
+          <h3>1500+</h3>
+          <p>Students Enrolled</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <i data-lucide="user-check"></i>
+        <div>
+          <h3>120+</h3>
+          <p>Qualified Teachers</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <i data-lucide="award"></i>
+        <div>
+          <h3>100+</h3>
+          <p>Awards Won</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <i data-lucide="graduation-cap"></i>
+        <div>
+          <h3>98%</h3>
+          <p>University Acceptance Rate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions Section -->
+  <section id="admissions" class="admissions-section">
+    <div class="container admissions-layout">
+      <div class="admissions-image" style="background-image: url('public/new_admissions.jpg');"></div>
+      <div class="admissions-content">
+        <span class="section-tag">ADMISSIONS</span>
+        <h2 class="section-title">Begin Your Journey<br>Toward a Bright Future</h2>
+        <p>Join a community where your child will be inspired, supported, and empowered to achieve their dreams.</p>
+        <div class="hero-buttons">
+          <a href="#" onclick="openApplyModal(event)" class="btn btn-yellow">APPLY NOW <i data-lucide="arrow-right"></i></a>
+          <a href="#" class="btn btn-outline-navy"><i data-lucide="calendar"></i> SCHEDULE A TOUR</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <div class="logo-icon-wrap">B</div>
+          <div class="logo-text">
+            <strong>BRIGHTWOOD</strong>
+            <span>INTERNATIONAL SCHOOL</span>
+          </div>
+        </div>
+        <p class="mt-3">Inspiring minds, shaping futures.<br>Building a better tomorrow.</p>
+        <div class="social-links mt-3">
+          <a href="#"><i data-lucide="facebook"></i></a>
+          <a href="#"><i data-lucide="instagram"></i></a>
+          <a href="#"><i data-lucide="twitter"></i></a>
+          <a href="#"><i data-lucide="linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>QUICK LINKS</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#academics">Academic</a></li>
+          <li><a href="#admissions">Admission</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT US</h4>
+        <ul class="contact-list">
+          <li><i data-lucide="map-pin"></i> 123 Education Lane,<br>Knowledge City, KC 12345</li>
+          <li><i data-lucide="phone"></i> +1 (555) 123-4567</li>
+          <li><i data-lucide="mail"></i> info@brightwood.edu</li>
+        </ul>
+      </div>
+      <div class="footer-col newsletter-col">
+        <h4>NEWSLETTER</h4>
+        <p>Stay updated with our latest news and events.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit"><i data-lucide="send"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2027 Brightwood International School. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Apply Modal -->
+  <div id="applyModal" class="apply-modal">
+    <div class="apply-modal-content">
+      <span class="apply-modal-close" onclick="closeApplyModal()">&times;</span>
+      <h2>Apply Now</h2>
+      <form onsubmit="submitApplyForm(event)">
+        <div class="form-group">
+          <label for="applyName">Name</label>
+          <input type="text" id="applyName" required>
+        </div>
+        <div class="form-group">
+          <label for="applyEmail">Email</label>
+          <input type="email" id="applyEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="applyPhone">Phone Number</label>
+          <input type="tel" id="applyPhone" required>
+        </div>
+        <button type="submit" class="btn btn-yellow" style="width: 100%; border: none; font-size: 16px; cursor: pointer;">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function openApplyModal(e) {
+      e.preventDefault();
+      document.getElementById('applyModal').style.display = 'flex';
+    }
+    function closeApplyModal() {
+      document.getElementById('applyModal').style.display = 'none';
+    }
+    function submitApplyForm(e) {
+      e.preventDefault();
+      alert("Application submitted successfully!");
+      closeApplyModal();
+    }
+  </script>
+</body>
+</html>

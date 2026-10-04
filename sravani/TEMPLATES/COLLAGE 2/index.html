@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nalanda Intermediate &amp; Junior College | Quality Intermediate Education</title>
+  <meta name="description" content="Nalanda Intermediate & Junior College offering premier MPC, BiPC, and MEC streams with esteemed faculty, state-of-the-art laboratories, and vibrant campus life.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ===================================================
+       EDUALL UNIVERSITY & COLLEGE - MASTER DESIGN RECREATION
+       =================================================== */
+    :root {
+      --primary-blue: #0066ff;
+      --primary-blue-hover: #0052cc;
+      --accent-gold: #ffb800;
+      --accent-green: #10b981;
+      --dark-navy: #0b1325;
+      --dark-heading: #111827;
+      --text-muted: #64748b;
+      --light-bg: #f8fafc;
+      --card-border: #e2e8f0;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-title: 'Outfit', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: #334155;
+      background-color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------------------------------------------------
+       1. NAVIGATION HEADER
+       --------------------------------------------------- */
+    .edu-header {
+      background: #ffffff;
+      border-bottom: 1px solid #edf2f7;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      gap: 20px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .edu-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-title);
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .edu-logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #0066ff, #0052cc);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 18px;
+    }
+
+    .edu-logo span {
+      color: var(--primary-blue);
+    }
+
+    .btn-categories {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #334155;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-categories:hover {
+      background: #e2e8f0;
+    }
+
+    .edu-nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+    }
+
+    .nav-item a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #334155;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 0.2s;
+    }
+
+    .nav-item a:hover, .nav-item.active a {
+      color: var(--primary-blue);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-search {
+      position: relative;
+    }
+
+    .header-search input {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 50px;
+      padding: 9px 16px 9px 36px;
+      font-size: 13.5px;
+      outline: none;
+      width: 170px;
+      transition: all 0.2s;
+    }
+
+    .header-search input:focus {
+      border-color: var(--primary-blue);
+      width: 210px;
+      background: #ffffff;
+    }
+
+    .header-search i {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    .user-profile-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      transition: all 0.2s;
+    }
+
+    .user-profile-btn:hover {
+      background: var(--primary-blue);
+      color: #ffffff;
+    }
+
+    /* ---------------------------------------------------
+       2. HERO SECTION (Graduates Banner)
+       --------------------------------------------------- */
+    .edu-hero {
+      position: relative;
+      background-color: var(--dark-navy);
+      background-image: linear-gradient(90deg, rgba(11, 19, 37, 0.94) 0%, rgba(11, 19, 37, 0.75) 45%, rgba(11, 19, 37, 0.45) 100%), url('./images/hero_graduates.jpg');
+      background-size: cover;
+      background-position: center top;
+      color: #ffffff;
+      padding: 100px 0 140px;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 620px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 20px;
+    }
+
+    .hero-tagline i {
+      font-size: 14px;
+    }
+
+    .hero-title {
+      font-family: var(--font-title);
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 22px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-title .accent-gold {
+      color: var(--accent-gold);
+    }
+
+    .hero-desc {
+      font-size: 15.5px;
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 34px;
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .btn-apply {
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 15px rgba(0, 102, 255, 0.4);
+    }
+
+    .btn-apply:hover {
+      background-color: var(--primary-blue-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-video {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .play-btn-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ff5722;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      box-shadow: 0 4px 14px rgba(255, 87, 34, 0.45);
+      transition: transform 0.2s;
+    }
+
+    .btn-video:hover .play-btn-circle {
+      transform: scale(1.1);
+    }
+
+    /* Floating slider arrow badges */
+    .hero-slider-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .slider-arrow-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      pointer-events: auto;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .slider-arrow-btn:hover {
+      background: #ffffff;
+      color: #0f172a;
+    }
+
+    /* ---------------------------------------------------
+       3. THREE FLOATING FEATURE CARDS
+       --------------------------------------------------- */
+    .features-float-wrapper {
+      margin-top: -65px;
+      position: relative;
+      z-index: 10;
+      margin-bottom: 70px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px 26px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+      border: 1px solid #edf2f7;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .feature-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .feature-card.card-blue .feature-icon-box {
+      background: #eff6ff;
+      color: var(--primary-blue);
+    }
+
+    .feature-card.card-peach .feature-icon-box {
+      background: #fff7ed;
+      color: #ea580c;
+    }
+
+    .feature-card.card-green .feature-icon-box {
+      background: #f0fdf4;
+      color: var(--accent-green);
+    }
+
+    .feature-info h3 {
+      font-family: var(--font-title);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark-heading);
+      margin-bottom: 6px;
+    }
+
+    .feature-info p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ---------------------------------------------------
+       4. ABOUT UNIVERSITY US SECTION
+       --------------------------------------------------- */
+    .about-uni-section {
+      padding: 30px 0 80px;
+    }
+
+    .about-uni-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    /* Staggered photo collage */
+    .about-collage-wrap {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+    }
+
+    .collage-img-main {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .collage-img-secondary {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Floating 26K+ Active Badge */
+    .badge-26k {
+      position: absolute;
+      top: -15px;
+      right: 15px;
+      background: #10b981;
+      color: #ffffff;
+      padding: 16px 22px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+      z-index: 5;
+    }
+
+    .badge-26k-number {
+      font-family: var(--font-title);
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .badge-26k-label {
+      font-size: 11.5px;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+
+    .badge-avatars {
+      display: flex;
+      margin-top: 8px;
+    }
+
+    .badge-avatar-dot {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid #10b981;
+      background: #ffffff;
+      margin-left: -6px;
+    }
+
+    .badge-avatar-dot:first-child {
+      margin-left: 0;
+    }
+
+    /* Content Right */
+    .badge-pill-light {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary-blue);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .about-uni-title {
+      font-family: var(--font-title);
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--dark-heading);
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .about-uni-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.68;
+      margin-bottom: 28px;
+    }
+
+    .programs-2x2-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .program-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid #edf2f7;
+    }
+
+    .program-icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+    }
+
+    .program-item:nth-child(1) .program-icon-box { background: #eff6ff; color: var(--primary-blue); }
+    .program-item:nth-child(2) .program-icon-box { background: #fff7ed; color: #ea580c; }
+    .program-item:nth-child(3) .program-icon-box { background: #fef2f2; color: #ef4444; }
+    .program-item:nth-child(4) .program-icon-box { background: #f0fdf4; color: var(--accent-green); }
+
+    .program-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--dark-heading);
+    }
+
+    .program-mode {
+      font-size: 11.5px;
+      color: #94a3b8;
+    }
+
+    .btn-readmore {
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 12px 26px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.2s;
+    }
+
+    .btn-readmore:hover {
+      background-color: var(--primary-blue-hover);
+    }
+
+    /* ---------------------------------------------------
+       5. CAMPUS HIGHLIGHTS (Large Video Showcase)
+       --------------------------------------------------- */
+    .campus-highlights-section {
+      padding: 60px 0 80px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .section-eyebrow-center {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary-blue);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading-center {
+      font-family: var(--font-title);
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--dark-heading);
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle-center {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    .campus-video-frame {
+      position: relative;
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      aspect-ratio: 16 / 9;
+      background: #0b1325;
+      border: 3px solid #1e293b;
+    }
+
+    .campus-video-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .video-switch-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .video-switch-btn {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+      font-family: var(--font-body);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .video-switch-btn:hover {
+      background: #eff6ff;
+      border-color: #93c5fd;
+      color: var(--primary-blue);
+      transform: translateY(-2px);
+    }
+
+    .video-switch-btn.active {
+      background: var(--primary-blue);
+      border-color: var(--primary-blue);
+      color: #ffffff;
+      box-shadow: 0 6px 18px rgba(0, 102, 255, 0.35);
+    }
+
+    /* ---------------------------------------------------
+       6. STATISTICS COUNTER STRIP
+       --------------------------------------------------- */
+    .stats-strip-section {
+      padding: 20px 0 80px;
+    }
+
+    .stats-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .stat-strip-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px 24px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid #edf2f7;
+      transition: transform 0.2s;
+    }
+
+    .stat-strip-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .stat-strip-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .stat-strip-card:nth-child(1) .stat-strip-icon { background: #eff6ff; color: var(--primary-blue); }
+    .stat-strip-card:nth-child(2) .stat-strip-icon { background: #fff7ed; color: #ea580c; }
+    .stat-strip-card:nth-child(3) .stat-strip-icon { background: #f0fdf4; color: var(--accent-green); }
+    .stat-strip-card:nth-child(4) .stat-strip-icon { background: #faf5ff; color: #a855f7; }
+
+    .stat-strip-number {
+      font-family: var(--font-title);
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--dark-heading);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .stat-strip-label {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ---------------------------------------------------
+       7. TOP LISTED FACULTY SECTION (6 Faculty Grid)
+       --------------------------------------------------- */
+    .faculty-section {
+      padding: 60px 0 90px;
+      background: #f8fafc;
+    }
+
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .faculty-card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid #edf2f7;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .faculty-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .faculty-card-img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .faculty-card-body {
+      padding: 22px;
+      text-align: center;
+    }
+
+    .faculty-name {
+      font-family: var(--font-title);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark-heading);
+      margin-bottom: 4px;
+    }
+
+    .faculty-dept {
+      font-size: 13px;
+      color: var(--primary-blue);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .faculty-socials {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .faculty-socials a {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      transition: all 0.2s;
+    }
+
+    .faculty-socials a:hover {
+      background: var(--primary-blue);
+      color: #ffffff;
+    }
+
+    /* ---------------------------------------------------
+       8. ACADEMIC HIGHLIGHT CALLOUT
+       --------------------------------------------------- */
+    .callout-section {
+      padding: 70px 0;
+      background: #ffffff;
+    }
+
+    .callout-card-split {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+      border: 1px solid #edf2f7;
+    }
+
+    .callout-left {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 50px 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .callout-left h3 {
+      font-family: var(--font-title);
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+
+    .callout-left p {
+      font-size: 14.5px;
+      color: #94a3b8;
+      line-height: 1.7;
+      margin-bottom: 26px;
+    }
+
+    .callout-right {
+      background: #eff6ff;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .callout-right h4 {
+      font-family: var(--font-title);
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+
+    .fast-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .fast-links-list a {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: #ffffff;
+      border-radius: 6px;
+      border: 1px solid #dbeafe;
+      transition: all 0.2s;
+    }
+
+    .fast-links-list a:hover {
+      background: var(--primary-blue);
+      color: #ffffff;
+      transform: translateX(4px);
+    }
+
+    /* ---------------------------------------------------
+       9. MODERN DARK FOOTER
+       --------------------------------------------------- */
+    .edu-footer {
+      background-color: #0a1120;
+      color: #94a3b8;
+      font-size: 13.5px;
+      padding: 70px 0 28px;
+      border-top: 1px solid #1e293b;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-title);
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .footer-links-col {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .footer-links-col a {
+      color: #94a3b8;
+      transition: color 0.2s;
+    }
+
+    .footer-links-col a:hover {
+      color: #ffffff;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .newsletter-form input {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      padding: 10px 14px;
+      color: #ffffff;
+      font-size: 13px;
+      outline: none;
+      flex: 1;
+    }
+
+    .newsletter-form button {
+      background: var(--primary-blue);
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .newsletter-form button:hover {
+      background: var(--primary-blue-hover);
+    }
+
+    .footer-bottom-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12.5px;
+    }
+
+    /* ---------------------------------------------------
+       RESPONSIVE BREAKPOINTS
+       --------------------------------------------------- */
+    @media (max-width: 991px) {
+      .about-uni-grid,
+      .callout-card-split {
+        grid-template-columns: 1fr;
+      }
+
+      .features-grid,
+      .faculty-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-strip-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .edu-nav, .header-search {
+        display: none;
+      }
+
+      .features-grid,
+      .faculty-grid,
+      .stats-strip-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-title {
+        font-size: 34px;
+      }
+
+      .about-collage-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================================================
+       1. HEADER
+       =================================================== -->
+  <header class="edu-header">
+    <div class="container header-inner">
+      <div class="header-left">
+        <a href="index.html" class="edu-logo">
+          <div class="edu-logo-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          Nalanda<span>College</span>
+        </a>
+
+        <button class="btn-categories" type="button">
+          <i class="fa-solid fa-grip"></i>
+          Categories
+          <i class="fa-solid fa-chevron-down" style="font-size: 11px;"></i>
+        </button>
+      </div>
+
+      <nav aria-label="Main Navigation">
+        <ul class="edu-nav">
+          <li class="nav-item active"><a href="#home">Home <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a></li>
+          <li class="nav-item"><a href="#courses">Courses <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a></li>
+          <li class="nav-item"><a href="#about">Pages <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a></li>
+          <li class="nav-item"><a href="#highlights">Product <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a></li>
+          <li class="nav-item"><a href="#faculty">Blog <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <div class="header-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search courses...">
+        </div>
+        <a href="#login" class="user-profile-btn" aria-label="User Account">
+          <i class="fa-regular fa-user"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================
+       2. HERO SECTION
+       =================================================== -->
+  <section class="edu-hero" id="home">
+    <div class="hero-slider-nav">
+      <button class="slider-arrow-btn" aria-label="Previous Slide"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="slider-arrow-btn" aria-label="Next Slide"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tagline">
+          <i class="fa-solid fa-book-open"></i> Elevate Your Learning
+        </div>
+        <h1 class="hero-title">
+          Engaging<br>
+          Personalities,<br>
+          <span class="accent-gold">Molding</span> Fates
+        </h1>
+        <p class="hero-desc">
+          Welcome to Nalanda Intermediate &amp; Junior College, where learning knows no bounds. Experience premier MPC, BiPC, and MEC streams with integrated entrance coaching and renowned faculty.
+        </p>
+        <div class="hero-actions">
+          <a href="#courses" class="btn-apply">
+            Apply Now <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 12px;"></i>
+          </a>
+          <a href="#highlights" class="btn-video" style="text-decoration: none;">
+            <div class="play-btn-circle">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <span>Watch Campus Video</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       3. THREE FLOATING FEATURE CARDS
+       =================================================== -->
+  <div class="features-float-wrapper">
+    <div class="container">
+      <div class="features-grid">
+        <!-- Feature 1: Scholarship -->
+        <div class="feature-card card-blue">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="feature-info">
+            <h3>Scholarship Facility</h3>
+            <p>These facilities provide students with an inspiring academic atmosphere and merit-based financial aid.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2: Faculty -->
+        <div class="feature-card card-peach">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-chalkboard-user"></i>
+          </div>
+          <div class="feature-info">
+            <h3>Esteemed Faculty</h3>
+            <p>Our university boasts a team of renowned faculty members with decades of academic and research excellence.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3: Programs -->
+        <div class="feature-card card-green">
+          <div class="feature-icon-box">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="feature-info">
+            <h3>Diverse Programs</h3>
+            <p>From intermediate MPC/BiPC to undergraduate degrees and postgraduate research opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================
+       4. ABOUT UNIVERSITY US SECTION
+       =================================================== -->
+  <section class="about-uni-section" id="about">
+    <div class="container about-uni-grid">
+      <!-- Left: Staggered collage + 26K Badge -->
+      <div class="about-collage-wrap">
+        <div class="badge-26k">
+          <div class="badge-26k-number">26K+</div>
+          <div class="badge-26k-label">Students Active At Nalanda</div>
+          <div class="badge-avatars">
+            <div class="badge-avatar-dot"></div>
+            <div class="badge-avatar-dot"></div>
+            <div class="badge-avatar-dot"></div>
+            <div class="badge-avatar-dot"></div>
+          </div>
+        </div>
+
+        <img src="./images/about_students.jpg" alt="EduAll Students Studying" class="collage-img-main">
+        <img src="./images/hero_students.jpg" alt="EduAll Campus Discussion" class="collage-img-secondary">
+      </div>
+
+      <!-- Right: Content -->
+      <div class="about-uni-content">
+        <div class="badge-pill-light">
+          <i class="fa-solid fa-book-bookmark"></i> About University Us
+        </div>
+        <h2 class="about-uni-title">
+          Our Commitment to Diversity<br>
+          Leadership and Governance
+        </h2>
+        <p class="about-uni-desc">
+          We embrace innovation and creativity as catalysts for positive change, driving forward-thinking research, teaching methodologies, and world-class academic governance.
+        </p>
+
+        <!-- 4 Grid Items -->
+        <div class="programs-2x2-grid">
+          <div class="program-item">
+            <div class="program-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div>
+              <div class="program-name">Undergraduate</div>
+              <div class="program-mode"><i class="fa-regular fa-clock"></i> Onsite</div>
+            </div>
+          </div>
+
+          <div class="program-item">
+            <div class="program-icon-box"><i class="fa-solid fa-user-graduate"></i></div>
+            <div>
+              <div class="program-name">Graduate</div>
+              <div class="program-mode"><i class="fa-regular fa-clock"></i> Onsite</div>
+            </div>
+          </div>
+
+          <div class="program-item">
+            <div class="program-icon-box"><i class="fa-solid fa-award"></i></div>
+            <div>
+              <div class="program-name">Post Graduate</div>
+              <div class="program-mode"><i class="fa-regular fa-clock"></i> Onsite</div>
+            </div>
+          </div>
+
+          <div class="program-item">
+            <div class="program-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+            <div>
+              <div class="program-name">Online Education</div>
+              <div class="program-mode"><i class="fa-regular fa-clock"></i> Hybrid</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#courses" class="btn-readmore">
+          Read More <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 11px;"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       5. CAMPUS HIGHLIGHTS (Large Video Showcase)
+       =================================================== -->
+  <section class="campus-highlights-section" id="highlights">
+    <div class="container">
+      <div class="section-eyebrow-center">
+        <i class="fa-solid fa-university"></i> Campus Life
+      </div>
+      <h2 class="section-heading-center">Campus Highlights</h2>
+      <p class="section-subtitle-center">
+        Welcome to our vibrant campus, where learning comes to life in a dynamic, collaborative, and inspiring environment.
+      </p>
+
+      <div class="campus-video-frame">
+        <iframe 
+          id="campusVideoPlayer"
+          src="https://www.youtube.com/embed/ggA6D90i6pE?rel=0" 
+          title="Nalanda Intermediate &amp; Junior College Campus Tour Video" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Interactive Video Channel Switcher -->
+      <div class="video-switch-bar">
+        <button type="button" class="video-switch-btn active" data-vid="ggA6D90i6pE">
+          <i class="fa-brands fa-youtube" style="color: #ff0000;"></i> 360° Campus Tour
+        </button>
+        <button type="button" class="video-switch-btn" data-vid="rT9q2VwG0nU">
+          <i class="fa-solid fa-flask-vial"></i> Academic &amp; Science Labs
+        </button>
+        <button type="button" class="video-switch-btn" data-vid="4dJ4K-e_v_w">
+          <i class="fa-solid fa-graduation-cap"></i> Student Life &amp; Campus Tour
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       6. STATISTICS COUNTER STRIP
+       =================================================== -->
+  <section class="stats-strip-section">
+    <div class="container">
+      <div class="stats-strip-grid">
+        <div class="stat-strip-card">
+          <div class="stat-strip-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="stat-strip-number">1.6K</div>
+          <div class="stat-strip-label">Total Instructors</div>
+        </div>
+
+        <div class="stat-strip-card">
+          <div class="stat-strip-icon"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="stat-strip-number">55.6K</div>
+          <div class="stat-strip-label">Students till date</div>
+        </div>
+
+        <div class="stat-strip-card">
+          <div class="stat-strip-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+          <div class="stat-strip-number">45.8K</div>
+          <div class="stat-strip-label">Satisfaction Rate</div>
+        </div>
+
+        <div class="stat-strip-card">
+          <div class="stat-strip-icon"><i class="fa-solid fa-school"></i></div>
+          <div class="stat-strip-number">500+</div>
+          <div class="stat-strip-label">Total Campuses</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       7. TOP LISTED FACULTY SECTION (6 Cards)
+       =================================================== -->
+  <section class="faculty-section" id="faculty">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 44px;">
+        <div class="section-eyebrow-center">
+          <i class="fa-solid fa-chalkboard-user"></i> 25+ Expert Mentors
+        </div>
+        <h2 class="section-heading-center">Top Listed Faculty</h2>
+        <p class="section-subtitle-center">
+          Learn directly from acclaimed academicians, research pioneers, and industry specialists.
+        </p>
+      </div>
+
+      <div class="faculty-grid">
+        <!-- Faculty 1 -->
+        <div class="faculty-card">
+          <img src="./images/teacher_anil.jpg" alt="Dr. Anil Kumar" class="faculty-card-img">
+          <div class="faculty-card-body">
+            <h3 class="faculty-name">Dr. Anil Kumar</h3>
+            <div class="faculty-dept">Dean of Physical Sciences</div>
+            <div class="faculty-socials">
+              <a href="#linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 2 -->
+        <div class="faculty-card">
+          <img src="./images/teacher_priya.jpg" alt="Ms. Priya Sharma" class="faculty-card-img">
+          <div class="faculty-card-body">
+            <h3 class="faculty-name">Ms. Priya Sharma</h3>
+            <div class="faculty-dept">Head of Mathematics</div>
+            <div class="faculty-socials">
+              <a href="#linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 3 -->
+        <div class="faculty-card">
+          <img src="./images/teacher_rahul.jpg" alt="Mr. Rahul Varma" class="faculty-card-img">
+          <div class="faculty-card-body">
+            <h3 class="faculty-name">Mr. Rahul Varma</h3>
+            <div class="faculty-dept">Department of Chemistry</div>
+            <div class="faculty-socials">
+              <a href="#linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 4: Dr. K. Srinivas -->
+        <div class="faculty-card">
+          <img src="./images/faculty_srinivas.jpg" alt="Dr. K. Srinivas" class="faculty-card-img">
+          <div class="faculty-card-body">
+            <h3 class="faculty-name">Dr. K. Srinivas</h3>
+            <div class="faculty-dept">Dean of Engineering &amp; Physics</div>
+            <div class="faculty-socials">
+              <a href="#linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 5: Dr. Meera Iyer -->
+        <div class="faculty-card">
+          <img src="./images/faculty_meera.jpg" alt="Dr. Meera Iyer" class="faculty-card-img">
+          <div class="faculty-card-body">
+            <h3 class="faculty-name">Dr. Meera Iyer</h3>
+            <div class="faculty-dept">Head of Biological &amp; Life Sciences</div>
+            <div class="faculty-socials">
+              <a href="#linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty 6: Ms. Sarah Jenkins -->
+        <div class="faculty-card">
+          <img src="./images/faculty_sarah.jpg" alt="Ms. Sarah Jenkins" class="faculty-card-img">
+          <div class="faculty-card-body">
+            <h3 class="faculty-name">Ms. Sarah Jenkins</h3>
+            <div class="faculty-dept">Languages &amp; Ecology Studies</div>
+            <div class="faculty-socials">
+              <a href="#linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#twitter" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       8. ACADEMIC HIGHLIGHT CALLOUT (Split Card)
+       =================================================== -->
+  <section class="callout-section">
+    <div class="container">
+      <div class="callout-card-split">
+        <div class="callout-left">
+          <h3>We Provide a Useful, Innovative and Cross-Disciplinary Education</h3>
+          <p>
+            Experience hands-on laboratory learning, integrated competitive exam coaching (IIT-JEE, NEET, CA-CPT), and comprehensive student mentoring designed to propel you towards higher education triumph.
+          </p>
+          <div>
+            <a href="#apply" class="btn-apply">Get Started Today ↗</a>
+          </div>
+        </div>
+
+        <div class="callout-right">
+          <h4>Important Academic Fast Links</h4>
+          <ul class="fast-links-list">
+            <li><a href="#admissions"><span>Admissions Guidelines 2026</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="#scholarships"><span>Scholarship &amp; Fee Waiver Schemes</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="#syllabus"><span>Curriculum &amp; Exam Blueprints</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+            <li><a href="#hostel"><span>Campus Facilities &amp; Hostels</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       9. MODERN FOOTER
+       =================================================== -->
+  <footer class="edu-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: About Nalanda -->
+        <div class="footer-col">
+          <div class="edu-logo" style="color: #ffffff; margin-bottom: 14px;">
+            <div class="edu-logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            Nalanda<span>College</span>
+          </div>
+          <p style="font-size: 13.5px; line-height: 1.68; margin-bottom: 18px;">
+            Empowering students through accessible, high-standard intermediate and higher education, cutting-edge science labs, and values-driven pedagogy.
+          </p>
+          <div style="display: flex; gap: 12px;">
+            <a href="#facebook" style="color:#cbd5e1;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#twitter" style="color:#cbd5e1;"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#linkedin" style="color:#cbd5e1;"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#youtube" style="color:#cbd5e1;"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links-col">
+            <li><a href="#about">About Nalanda</a></li>
+            <li><a href="#courses">Academic Streams</a></li>
+            <li><a href="#faculty">Faculty Directory</a></li>
+            <li><a href="#highlights">Campus Tour</a></li>
+            <li><a href="#admissions">Admissions 2026</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Categories -->
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul class="footer-links-col">
+            <li><a href="#mpc">Mathematics &amp; Physical Sciences</a></li>
+            <li><a href="#bipc">Biological &amp; Medical Sciences</a></li>
+            <li><a href="#mec">Economics &amp; Commerce Studies</a></li>
+            <li><a href="#research">Integrated IIT &amp; NEET Coaching</a></li>
+            <li><a href="#online">Online Learning Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h4>Subscribe Newsletter</h4>
+          <p style="font-size: 13px; line-height: 1.6;">
+            Subscribe to our weekly newsletter to get the latest admission notices, scholarship updates, and college events.
+          </p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Nalanda updates!');">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Nalanda Intermediate &amp; Junior College. All rights reserved.</div>
+        <div>100% Royalty-Free Academic Website Template</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Video Tour Switcher -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var videoButtons = document.querySelectorAll('.video-switch-btn');
+      var player = document.getElementById('campusVideoPlayer');
+
+      videoButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          videoButtons.forEach(function(b) { b.classList.remove('active'); });
+          this.classList.add('active');
+          var vid = this.getAttribute('data-vid');
+          if (player && vid) {
+            player.src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1&rel=0';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

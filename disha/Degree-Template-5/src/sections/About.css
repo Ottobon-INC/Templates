@@ -1,0 +1,236 @@
+.about-section {
+  background-color: var(--color-mint);
+  padding: 120px 0;
+  min-height: 100vh;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.about-header .heading-sub {
+  margin-top: 16px;
+  color: var(--color-coral);
+}
+
+/* Timeline */
+.timeline-container {
+  display: flex;
+  gap: 64px;
+  margin-bottom: 120px;
+  align-items: stretch;
+}
+
+.timeline-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+  padding-left: 24px;
+  border-left: 2px solid rgba(23, 24, 59, 0.1);
+}
+
+.timeline-item {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -29px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-indigo);
+  transition: all 0.3s ease;
+}
+
+.timeline-item.active {
+  opacity: 1;
+}
+
+.timeline-item.active::before {
+  background-color: var(--color-coral);
+  transform: translateY(-50%) scale(1.5);
+}
+
+.timeline-year {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.timeline-item.active .timeline-year {
+  font-size: 64px;
+  color: var(--color-coral);
+}
+
+.timeline-title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.timeline-content {
+  flex: 2.5;
+}
+
+.timeline-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(23, 24, 59, 0.1);
+}
+
+.timeline-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+  background: linear-gradient(to top, rgba(23,24,59,0.9), transparent);
+  color: var(--color-white);
+}
+
+.timeline-desc p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Vision & Mission */
+.vm-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 120px;
+}
+
+.vm-flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.vm-flip-inner {
+  display: grid;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+.vm-flip-card:hover .vm-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.vm-flip-front, .vm-flip-back {
+  grid-area: 1 / 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vm-flip-back.vm-block {
+  transform: rotateY(180deg);
+  background-color: var(--color-indigo);
+  color: var(--color-white);
+}
+
+.vm-flip-back h3 {
+  color: var(--color-coral) !important;
+}
+
+.vm-block {
+  background-color: var(--color-cream);
+  padding: 64px 48px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.vm-block h3 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.vm-block p {
+  font-size: 24px;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+.vm-bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background-color: var(--color-coral);
+  top: -100px;
+  right: -100px;
+}
+
+.shape-2 {
+  width: 400px;
+  height: 400px;
+  background-color: var(--color-yellow);
+  bottom: -150px;
+  left: -100px;
+}
+
+
+
+@media (max-width: 900px) {
+  .timeline-container {
+    flex-direction: column;
+  }
+  
+  .timeline-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-left: none;
+    border-top: 2px solid rgba(23, 24, 59, 0.1);
+    padding-left: 0;
+    padding-top: 24px;
+  }
+  
+  .timeline-item::before {
+    top: -29px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item.active::before {
+    transform: translateX(-50%) scale(1.5);
+  }
+  
+  .vm-container {
+    grid-template-columns: 1fr;
+  }
+}

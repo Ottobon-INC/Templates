@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launching Website Template...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-ivory: #F8F5F0;
+            --color-charcoal: #242124;
+            --color-plum: #57354D;
+            --color-rose: #9A687A;
+            --color-terracotta: #C97968;
+            --color-champagne: #C6A56A;
+            --color-white: #FFFFFF;
+            --color-green: #10B981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--color-ivory);
+            color: var(--color-charcoal);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-plum);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            background: var(--color-white);
+            border-radius: 20px;
+            border: 1px solid rgba(154, 104, 122, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-3px);
+            border-color: var(--color-plum);
+        }
+
+        .launch-card {
+            background: var(--color-white);
+            border: 1px solid rgba(198, 165, 106, 0.4);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(36, 33, 36, 0.08);
+            width: 100%;
+            max-width: 520px;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .tag-pill {
+            display: inline-block;
+            background: rgba(87, 53, 77, 0.08);
+            color: var(--color-plum);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.9rem;
+            border-radius: 20px;
+            margin-bottom: 1.2rem;
+        }
+
+        .template-name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--color-plum);
+            margin-bottom: 0.4rem;
+        }
+
+        .template-subtitle {
+            font-size: 1.05rem;
+            color: var(--color-rose);
+            margin-bottom: 2.2rem;
+            line-height: 1.4;
+        }
+
+        /* Spinner & Progress */
+        .spinner-wrapper {
+            position: relative;
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 1.8rem;
+        }
+
+        .spinner-ring {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid rgba(87, 53, 77, 0.1);
+            border-top-color: var(--color-plum);
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .spinner-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--color-terracotta);
+            font-size: 1.5rem;
+        }
+
+        .progress-track {
+            height: 6px;
+            background: rgba(87, 53, 77, 0.08);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 15%;
+            background: linear-gradient(90deg, var(--color-plum), var(--color-terracotta));
+            border-radius: 3px;
+            transition: width 0.4s ease;
+            animation: pulse-width 2.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse-width {
+            0% { width: 25%; }
+            50% { width: 75%; }
+            100% { width: 90%; }
+        }
+
+        .status-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+            min-height: 1.5rem;
+        }
+
+        .detail-text {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 1.5rem;
+        }
+
+        .action-btn {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.85rem 1.5rem;
+            background-color: var(--color-plum);
+            color: var(--color-white);
+            border: none;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .action-btn:hover {
+            background-color: var(--color-charcoal);
+        }
+
+        .error-message {
+            display: none;
+            background: #FEE2E2;
+            color: #991B1B;
+            border: 1px solid #FCA5A5;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            text-align: left;
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="/" class="back-link">← Website Library</a>
+
+    <div class="launch-card">
+        <div class="tag-pill" id="badgeTag">Healthcare Template</div>
+        <h1 class="template-name" id="templateName">HTD-1</h1>
+        <p class="template-subtitle" id="templateSubtitle">Celestial Smiles Dental Clinic</p>
+
+        <div class="spinner-wrapper" id="spinnerWrapper">
+            <div class="spinner-ring" id="spinnerRing"></div>
+            <div class="spinner-icon" id="spinnerIcon">⚡</div>
+        </div>
+
+        <div class="progress-track" id="progressTrack">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <p class="status-text" id="statusText">Starting development server...</p>
+        <p class="detail-text" id="detailText">First launch may take a few seconds to compile.</p>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <a href="#" class="action-btn" id="openBtn" target="_blank">
+            Open Website <span class="arrow">→</span>
+        </a>
+        <button class="action-btn" id="retryBtn" style="background-color: var(--color-terracotta);">
+            Retry Launch
+        </button>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const pathSegments = window.location.pathname.split('/').filter(Boolean);
+        // Supports either /launch/HTD-1 or /launch?template=HTD-1
+        let template = urlParams.get('template') || (pathSegments.length >= 2 ? pathSegments[1] : '');
+
+        const badgeTag = document.getElementById('badgeTag');
+        const templateNameEl = document.getElementById('templateName');
+        const templateSubtitleEl = document.getElementById('templateSubtitle');
+        const statusText = document.getElementById('statusText');
+        const detailText = document.getElementById('detailText');
+        const progressBar = document.getElementById('progressBar');
+        const spinnerRing = document.getElementById('spinnerRing');
+        const spinnerIcon = document.getElementById('spinnerIcon');
+        const openBtn = document.getElementById('openBtn');
+        const retryBtn = document.getElementById('retryBtn');
+        const errorMessage = document.getElementById('errorMessage');
+
+        if (template) {
+            templateNameEl.textContent = template;
+            document.title = `Launching ${template}...`;
+        }
+
+        let pollCount = 0;
+        let isRedirecting = false;
+
+        async function init() {
+            // First fetch template info
+            try {
+                const res = await fetch(`/api/templates`);
+                if (res.ok) {
+                    const templates = await res.json();
+                    const info = templates.find(t => t.name.toLowerCase() === template.toLowerCase());
+                    if (info) {
+                        template = info.name;
+                        templateNameEl.textContent = info.displayName || info.name;
+                        if (info.title) templateSubtitleEl.textContent = info.title;
+                        if (info.category || info.type) {
+                            badgeTag.textContent = `${info.category || 'Website'} • ${(info.type || 'App').toUpperCase()}`;
+                        }
+                    }
+                }
+            } catch (e) {}
+
+            // Trigger start
+            try {
+                await fetch(`/api/start?template=${encodeURIComponent(template)}`);
+            } catch (e) {}
+
+            pollStatus();
+        }
+
+        async function pollStatus() {
+            if (isRedirecting) return;
+
+            try {
+                const res = await fetch(`/api/status?template=${encodeURIComponent(template)}`);
+                if (res.ok) {
+                    const data = await res.json();
+
+                    if (data.status === 'running' && data.url) {
+                        isRedirecting = true;
+                        progressBar.style.animation = 'none';
+                        progressBar.style.width = '100%';
+                        spinnerRing.style.borderTopColor = 'var(--color-green)';
+                        spinnerIcon.textContent = '✓';
+                        spinnerIcon.style.color = 'var(--color-green)';
+                        statusText.textContent = `Server ready at ${data.url}! Opening...`;
+                        detailText.textContent = 'Redirecting to your website...';
+
+                        openBtn.href = data.url;
+                        openBtn.style.display = 'inline-flex';
+
+                        setTimeout(() => {
+                            window.location.replace(data.url);
+                        }, 500);
+                        return;
+                    } else if (data.status === 'error') {
+                        progressBar.style.animation = 'none';
+                        progressBar.style.width = '0%';
+                        spinnerRing.style.display = 'none';
+                        statusText.textContent = 'Failed to start server';
+                        errorMessage.textContent = data.error || 'Server process exited unexpectedly.';
+                        errorMessage.style.display = 'block';
+                        retryBtn.style.display = 'inline-flex';
+                        return;
+                    } else if (data.status === 'starting') {
+                        pollCount++;
+                        if (pollCount > 3) {
+                            statusText.textContent = `Initializing dev server on port ${data.port || 3001}...`;
+                            detailText.textContent = 'Compiling application modules...';
+                        }
+                    }
+                }
+            } catch (e) {}
+
+            pollCount++;
+            if (pollCount > 70) { // 35s timeout
+                statusText.textContent = 'Startup took longer than expected';
+                detailText.textContent = 'Please check the terminal or try clicking below.';
+                openBtn.style.display = 'inline-flex';
+                retryBtn.style.display = 'inline-flex';
+                return;
+            }
+
+            setTimeout(pollStatus, 500);
+        }
+
+        retryBtn.addEventListener('click', () => {
+            errorMessage.style.display = 'none';
+            retryBtn.style.display = 'none';
+            spinnerRing.style.display = 'block';
+            statusText.textContent = 'Retrying server launch...';
+            pollCount = 0;
+            isRedirecting = false;
+            fetch(`/api/start?template=${encodeURIComponent(template)}`).then(() => {
+                pollStatus();
+            });
+        });
+
+        init();
+    </script>
+</body>
+</html>

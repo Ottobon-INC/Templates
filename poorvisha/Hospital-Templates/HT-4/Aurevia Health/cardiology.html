@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiology | Aurevia Health</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .specialty-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(to bottom, var(--color-background), var(--color-surface));
+            text-align: center;
+        }
+        .specialty-icon {
+            width: 80px; height: 80px;
+            margin: 0 auto 24px;
+            color: var(--color-primary);
+            background: white;
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 12px 32px rgba(23,63,53,0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .specialty-features {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 64px;
+        }
+        .feature-card {
+            padding: 32px;
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Aurevia Health</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link">Our Services</a></li>
+                    <li><a href="index.html#appointment" class="nav-link">Specialists</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="specialty-hero fade-in-up">
+        <div class="container">
+            <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:40px; height:40px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </div>
+            <span class="eyebrow">Department of</span>
+            <h1 style="font-size: 3.5rem; margin-bottom: 24px;">Cardiology</h1>
+            <p class="text-muted" style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Expert cardiovascular care delivered with precision and empathy, focusing on long-term heart health and vitality.</p>
+        </div>
+    </section>
+
+    <section class="section bg-white fade-in-up" style="animation-delay: 0.2s;">
+        <div class="container">
+            <div class="section-header center">
+                <h2 class="section-title">Specialized Heart Care</h2>
+            </div>
+            <div class="specialty-features">
+                <div class="feature-card">
+                    <h3 style="margin-bottom: 12px;">Cardiac Diagnostics</h3>
+                    <p class="text-muted">Comprehensive evaluation using ECG, Echocardiogram, and Stress Tests to accurately assess heart function and health.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="margin-bottom: 12px;">Interventional Cardiology</h3>
+                    <p class="text-muted">Advanced minimally invasive procedures, including angioplasty and stenting, to treat blockages and restore blood flow.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="margin-bottom: 12px;">Heart Failure Management</h3>
+                    <p class="text-muted">Targeted therapies and ongoing support plans for patients dealing with heart failure, focusing on improving quality of life.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="margin-bottom: 12px;">Preventive Cardiology</h3>
+                    <p class="text-muted">Personalized strategies focusing on diet, lifestyle changes, and medication to prevent cardiovascular diseases before they occur.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 64px;">
+                <a href="index.html#appointment" class="btn btn-primary btn-glow">Schedule a Cardiology Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="logo footer-logo">Aurevia Health</div>
+            <div class="footer-contact">
+                <p>123 Medical Blvd, Health District</p>
+                <p>Booking: +1 (800) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

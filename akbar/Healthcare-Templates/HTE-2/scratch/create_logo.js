@@ -1,0 +1,89 @@
+const sharp = require('sharp');
+const fs = require('fs');
+const path = require('path');
+
+const svgLogo = `
+<svg width="600" height="140" viewBox="0 0 600 140" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e3b64" />
+      <stop offset="100%" stop-color="#1380be" />
+    </linearGradient>
+    <linearGradient id="gradAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1380be" />
+      <stop offset="100%" stop-color="#00c0fa" />
+    </linearGradient>
+    <linearGradient id="gradRuby" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cd2653" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left: Eye Icon Emblem -->
+  <g transform="translate(15, 10)">
+    <!-- Outer Eyelid Arc -->
+    <path d="M 10 60 C 35 15, 95 15, 120 60 C 95 105, 35 105, 10 60 Z" 
+          fill="none" stroke="url(#gradPrimary)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Secondary Dynamic Arc -->
+    <path d="M 22 60 C 42 28, 88 28, 108 60" 
+          fill="none" stroke="url(#gradAccent)" stroke-width="4.5" stroke-linecap="round" opacity="0.85" />
+    
+    <!-- Iris Circle Outer -->
+    <circle cx="65" cy="60" r="30" fill="url(#gradPrimary)" />
+    
+    <!-- Iris Ring -->
+    <circle cx="65" cy="60" r="23" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.3" stroke-dasharray="4,2" />
+    
+    <!-- Inner Pupil with Ruby Core -->
+    <circle cx="65" cy="60" r="14" fill="#ffffff" />
+    <circle cx="65" cy="60" r="9" fill="url(#gradRuby)" />
+    
+    <!-- Shimmer Glint -->
+    <circle cx="60" cy="54" r="3.5" fill="#ffffff" />
+    
+    <!-- Subtle Crosshair Accent -->
+    <line x1="65" y1="20" x2="65" y2="28" stroke="url(#gradRuby)" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Right: Typography with explicit DEMO EYE HOSPITAL branding -->
+  <g transform="translate(160, 25)">
+    <!-- Main Hospital Brand Name -->
+    <text x="0" y="40" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="36" font-weight="900" fill="#0e3b64" letter-spacing="-0.5">
+      DEMO <tspan fill="#1380be">EYE HOSPITAL</tspan>
+    </text>
+
+    <!-- Subtitle / Specialty -->
+    <text x="2" y="66" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="700" fill="#475569" letter-spacing="2">
+      ADVANCED OPHTHALMOLOGY &amp; SURGERY
+    </text>
+
+    <!-- Micro Credential Line -->
+    <text x="2" y="86" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" fill="#cd2653" letter-spacing="1.5">
+      DEMO HEALTHCARE WEBSITE TEMPLATE
+    </text>
+  </g>
+</svg>
+`;
+
+async function generate() {
+  const targetDir = path.join(__dirname, '..', 'public', 'images', 'branding');
+  const targetPng = path.join(targetDir, 'logo.png');
+  const targetSvg = path.join(targetDir, 'logo.svg');
+  const targetDemoPng = path.join(targetDir, 'demo-logo.png');
+
+  // Save SVG
+  fs.writeFileSync(targetSvg, svgLogo.trim());
+
+  // Render high-res PNG with transparent background
+  const buf = await sharp(Buffer.from(svgLogo))
+    .png({ quality: 100 })
+    .toBuffer();
+
+  fs.writeFileSync(targetPng, buf);
+  fs.writeFileSync(targetDemoPng, buf);
+
+  console.log('Successfully generated clean DEMO EYE HOSPITAL logo at', targetPng, 'and', targetDemoPng);
+}
+
+generate().catch(console.error);

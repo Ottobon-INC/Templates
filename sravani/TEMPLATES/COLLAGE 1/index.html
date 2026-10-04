@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDEC Intermediate College | Quality Education for a Bright Future</title>
+  <meta name="description" content="EDEC Intermediate College in Parvathipuram, Andhra Pradesh offers premier MPC, BiPC, and MEC courses with expert faculty and proven academic excellence.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ===================================================
+       1:1 VISUAL RECREATION - EDEC INTERMEDIATE COLLEGE
+       Exact layout, proportions, colors & typography
+       =================================================== */
+    :root {
+      --primary-blue: #0071dc;
+      --primary-blue-hover: #005bb5;
+      --dark-text: #1d2129;
+      --gray-text: #667085;
+      --light-gray: #f4f6f8;
+      --border-color: #e5e7eb;
+      --topbar-bg: #111111;
+      --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-main);
+      color: #ffffff;
+      background-color: #3257b2;
+      background-image: url('./images/paper_plane.gif');
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-position: center center;
+      background-size: cover;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ---------------------------------------------------
+       1. TOP BLACK BAR
+       --------------------------------------------------- */
+    .top-bar {
+      background-color: var(--topbar-bg);
+      color: #bbbbbb;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 7px 0;
+      letter-spacing: 0.2px;
+    }
+
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .top-bar-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #cccccc;
+    }
+
+    .top-bar-item svg {
+      width: 12px;
+      height: 12px;
+      fill: currentColor;
+    }
+
+    .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .top-bar-social {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #cccccc;
+      transition: color 0.2s;
+    }
+
+    .top-bar-social:hover {
+      color: #ffffff;
+    }
+
+    .top-bar-social svg {
+      width: 12px;
+      height: 12px;
+      fill: currentColor;
+    }
+
+    /* ---------------------------------------------------
+       2. NAVIGATION
+       --------------------------------------------------- */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #f0f0f0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-icon-svg {
+      width: 38px;
+      height: 38px;
+      fill: var(--primary-blue);
+      flex-shrink: 0;
+    }
+
+    .logo-text-block {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #1a2233;
+    }
+
+    .logo-title span {
+      color: var(--primary-blue);
+    }
+
+    .logo-subtitle {
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #8892a0;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 26px;
+    }
+
+    .nav-link {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: #2b3340;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary-blue);
+    }
+
+    .btn-admission {
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      padding: 11px 22px;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    .btn-admission:hover {
+      background-color: var(--primary-blue-hover);
+    }
+
+    /* ---------------------------------------------------
+       3. HERO SECTION
+       --------------------------------------------------- */
+    .hero-section {
+      padding: 68px 0 80px 0;
+      background-color: transparent;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    /* Left side media composition - highly effective, framed & layered */
+    .hero-images-col {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-img-frame-top {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 5px solid #ffffff;
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.38), 0 4px 14px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      z-index: 1;
+    }
+
+    .hero-img-frame-top:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-img-top {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .hero-img-frame-top:hover .hero-img-top {
+      transform: scale(1.02);
+    }
+
+    .hero-img-frame-bottom {
+      position: relative;
+      width: 84%;
+      margin-top: -65px;
+      margin-left: auto;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 5px solid #ffffff;
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.45), 0 4px 16px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      z-index: 2;
+    }
+
+    .hero-img-frame-bottom:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 30px 65px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-img-bottom {
+      width: 100%;
+      height: 185px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .hero-img-frame-bottom:hover .hero-img-bottom {
+      transform: scale(1.03);
+    }
+
+    /* Floating prestige badge */
+    .hero-floating-badge {
+      position: absolute;
+      bottom: 20px;
+      left: -12px;
+      background: #ffffff;
+      color: #1e2532;
+      padding: 10px 18px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+      z-index: 3;
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      animation: floatBadge 3.5s ease-in-out infinite;
+    }
+
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .badge-icon-star {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+    }
+
+    .badge-text-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #1a2233;
+      line-height: 1.15;
+    }
+
+    .badge-text-sub {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Right text column - aligned neatly with increased font size */
+    .hero-content-col {
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .hero-small-tag {
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 16px;
+      letter-spacing: 0.2px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-main-title {
+      font-size: 54px;
+      font-weight: 800;
+      line-height: 1.14;
+      color: #ffffff;
+      margin: 0 0 24px 0;
+      letter-spacing: -0.02em;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-description {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.95);
+      line-height: 1.72;
+      margin-bottom: 32px;
+      max-width: 480px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-hero {
+      background-color: #ffffff;
+      color: var(--primary-blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 13px 32px;
+      border-radius: 4px;
+      display: inline-block;
+      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-hero:hover {
+      background-color: #f0f7ff;
+      color: var(--primary-blue-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+    }
+
+    /* ---------------------------------------------------
+       4. ABOUT US SECTION
+       --------------------------------------------------- */
+    .about-section {
+      padding: 60px 0 80px 0;
+      background-color: transparent;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-img {
+      width: 100%;
+      max-width: 420px;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .about-content {
+      padding-right: 15px;
+    }
+
+    .section-eyebrow {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #fde047;
+      margin-bottom: 12px;
+      display: block;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .about-title {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.18;
+      color: #ffffff;
+      margin-bottom: 18px;
+      letter-spacing: -0.4px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    }
+
+    .about-title .blue-phrase {
+      color: #7dd3fc;
+      display: block;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    }
+
+    .about-lead-bold {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 14px;
+      line-height: 1.4;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .about-desc {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.68;
+      margin-bottom: 30px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Percentage Indicators */
+    .percentage-indicators {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .indicator-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .progress-circle {
+      position: relative;
+      width: 68px;
+      height: 68px;
+      flex-shrink: 0;
+    }
+
+    .progress-circle svg {
+      width: 68px;
+      height: 68px;
+      transform: rotate(-90deg);
+    }
+
+    .progress-circle .circle-bg {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.25);
+      stroke-width: 5;
+    }
+
+    .progress-circle .circle-bar {
+      fill: none;
+      stroke: #38bdf8;
+      stroke-width: 5;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 1s ease;
+    }
+
+    .progress-circle .percent-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .indicator-info h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .indicator-info p {
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.5;
+    }
+
+    /* ---------------------------------------------------
+       5. WHY US SECTION
+       --------------------------------------------------- */
+    .whyus-section {
+      padding: 60px 0 80px 0;
+      background-color: transparent;
+    }
+
+    .whyus-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: stretch;
+    }
+
+    .whyus-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .whyus-title {
+      font-size: 38px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 16px;
+      letter-spacing: -0.4px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    }
+
+    .whyus-desc {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.68;
+      margin-bottom: 26px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .whyus-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .check-icon-circle {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #38bdf8;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .check-icon-circle svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Blue Statistics Box */
+    .stats-box {
+      background-color: var(--primary-blue);
+      border-radius: 6px;
+      padding: 38px 40px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      box-shadow: 0 10px 25px rgba(0, 113, 220, 0.18);
+    }
+
+    .stat-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 12px 0;
+    }
+
+    .stat-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stat-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: #ffffff;
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .stat-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-number {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    .stat-label {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      margin-top: 2px;
+    }
+
+    .stat-divider {
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.22);
+      width: 100%;
+    }
+
+    /* ---------------------------------------------------
+       6. OUR COURSES SECTION
+       --------------------------------------------------- */
+    .courses-section {
+      padding: 70px 0 80px 0;
+      background-color: transparent;
+    }
+
+    .section-header-center {
+      text-align: center;
+      margin-bottom: 46px;
+    }
+
+    .section-title-center {
+      font-size: 38px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .course-card {
+      background: #ffffff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+      border: 1px solid #edf0f5;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .course-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.09);
+    }
+
+    .course-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .course-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .course-badge {
+      position: absolute;
+      bottom: 0;
+      left: 18px;
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 800;
+      width: 48px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .course-content {
+      padding: 24px 22px 26px 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .course-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #1f2736;
+      margin-bottom: 10px;
+    }
+
+    .course-desc {
+      font-size: 13px;
+      color: #6a7687;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .course-link {
+      color: var(--primary-blue);
+      font-size: 13.5px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: gap 0.2s;
+    }
+
+    .course-link:hover {
+      gap: 8px;
+    }
+
+    /* ---------------------------------------------------
+       7. OUR TEACHERS SECTION
+       --------------------------------------------------- */
+    .teachers-section {
+      padding: 40px 0 90px 0;
+      background-color: transparent;
+    }
+
+    .teachers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .teacher-card {
+      background: #ffffff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+      border: 1px solid #edf0f5;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .teacher-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.09);
+    }
+
+    .teacher-img-wrap {
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      background-color: #f8fafc;
+    }
+
+    .teacher-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .teacher-info {
+      padding: 18px 20px 22px 20px;
+    }
+
+    .teacher-name {
+      font-size: 17px;
+      font-weight: 800;
+      color: #1f2736;
+      margin-bottom: 4px;
+    }
+
+    .star-rating {
+      color: #f5a623;
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .teacher-role {
+      font-size: 13px;
+      font-weight: 600;
+      color: #717d91;
+      margin-bottom: 8px;
+    }
+
+    .teacher-location {
+      font-size: 12px;
+      color: #9aa5b5;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .teacher-location svg {
+      width: 12px;
+      height: 12px;
+      fill: #9aa5b5;
+    }
+
+    /* ---------------------------------------------------
+       8. FOOTER
+       --------------------------------------------------- */
+    .site-footer {
+      background-color: #11141a;
+      color: #8f9ba8;
+      font-size: 13px;
+      padding: 40px 0 26px 0;
+      border-top: 1px solid #232833;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-logo-block {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-logo-text {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .footer-logo-text span {
+      color: var(--primary-blue);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: #9aa5b5;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #717d91;
+    }
+
+    /* ---------------------------------------------------
+       RESPONSIVE ADJUSTMENTS
+       --------------------------------------------------- */
+    @media (max-width: 991px) {
+      .hero-grid,
+      .about-grid,
+      .whyus-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .courses-grid,
+      .teachers-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-main-title {
+        font-size: 42px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      .nav-menu {
+        display: none; /* simple responsive fallback */
+      }
+
+      .courses-grid,
+      .teachers-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-main-title {
+        font-size: 34px;
+      }
+
+      .footer-inner,
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================================================
+       TOP BLACK BAR
+       =================================================== -->
+  <aside class="top-bar" aria-label="Top contact and social bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          <!-- Envelope Icon -->
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          info@edeccollege.com
+        </span>
+        <span class="top-bar-item">
+          <!-- Location Pin Icon -->
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Parvathipuram, Andhra Pradesh
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <!-- Facebook -->
+        <a href="#facebook" class="top-bar-social" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <!-- Twitter/X -->
+        <a href="#twitter" class="top-bar-social" aria-label="Twitter">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="#linkedin" class="top-bar-social" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================================================
+       WHITE NAVIGATION
+       =================================================== -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo-brand">
+        <!-- Graduation Cap Logo -->
+        <svg class="logo-icon-svg" viewBox="0 0 24 24">
+          <path d="M12 3L1 9L12 15L21 10.09V17H23V9M5 13.18V17.18C5 19.94 8.13 22 12 22C15.87 22 19 19.94 19 17.18V13.18L12 17L5 13.18Z"/>
+        </svg>
+        <div class="logo-text-block">
+          <div class="logo-title">EDEC</div>
+          <div class="logo-subtitle">Intermediate College</div>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">ABOUT</a></li>
+          <li><a href="#courses" class="nav-link">COURSES</a></li>
+          <li><a href="#teachers" class="nav-link">FACULTY</a></li>
+          <li><a href="#pricing" class="nav-link">PRICING</a></li>
+          <li><a href="#testimonial" class="nav-link">TESTIMONIAL</a></li>
+          <li><a href="#blog" class="nav-link">BLOG</a></li>
+          <li><a href="#contact" class="nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <a href="#admission" class="btn-admission">GET ADMISSION</a>
+    </div>
+  </header>
+
+  <!-- ===================================================
+       HERO SECTION
+       =================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <!-- Left side: Layered & Framed Image Composition -->
+      <div class="hero-images-col">
+        <div class="hero-img-frame-top">
+          <img src="./images/hero_students.jpg" alt="Students studying together with textbook" class="hero-img-top">
+        </div>
+        <div class="hero-img-frame-bottom">
+          <img src="./images/hero_desk.jpg" alt="Student study workspace with notes and headphone" class="hero-img-bottom">
+        </div>
+        <!-- Floating prestige badge -->
+        <div class="hero-floating-badge">
+          <div class="badge-icon-star">★</div>
+          <div>
+            <div class="badge-text-title">Top Intermediate College</div>
+            <div class="badge-text-sub">Admissions Open 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side: exact text & button -->
+      <div class="hero-content-col">
+        <div class="hero-small-tag">EDEC Intermediate College</div>
+        <h1 class="hero-main-title">
+          Perfect Place<br>
+          For Your<br>
+          Education
+        </h1>
+        <p class="hero-description">
+          Education is the foundation for a successful future. We provide quality intermediate education, experienced faculty, academic guidance and a supportive learning environment.
+        </p>
+        <a href="#courses" class="btn-hero">GET STARTED</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       ABOUT US SECTION
+       =================================================== -->
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <!-- Left side: Student Image -->
+      <div class="about-img-wrap">
+        <img src="./images/about_students.jpg" alt="EDEC Intermediate College graduates celebrating" class="about-img">
+      </div>
+
+      <!-- Right side: Content with 2 percentage indicators -->
+      <div class="about-content">
+        <span class="section-eyebrow">ABOUT US</span>
+        <h2 class="about-title">
+          Quality Education
+          <span class="blue-phrase">For A Bright Future</span>
+        </h2>
+        <div class="about-lead-bold">
+          Quality intermediate education tailored for board exams and competitive entrance success.
+        </div>
+        <p class="about-desc">
+          Our college provides a focused academic environment where students can develop strong subject knowledge, confidence and preparation for higher education.
+        </p>
+
+        <!-- Circular percentage indicators -->
+        <div class="percentage-indicators">
+          <!-- Indicator 1: 92% Teachers -->
+          <div class="indicator-row">
+            <div class="progress-circle">
+              <svg viewBox="0 0 68 68">
+                <circle class="circle-bg" cx="34" cy="34" r="28" />
+                <!-- 2 * PI * 28 = 175.9; 92% = 175.9 * (1 - 0.92) = 14 -->
+                <circle class="circle-bar" cx="34" cy="34" r="28" stroke-dasharray="176" stroke-dashoffset="14" />
+              </svg>
+              <span class="percent-text">92%</span>
+            </div>
+            <div class="indicator-info">
+              <h4>Teachers</h4>
+              <p>Education can take place in formal or informal settings and any experience that has a formative effect on the way one thinks.</p>
+            </div>
+          </div>
+
+          <!-- Indicator 2: 85% Courses -->
+          <div class="indicator-row">
+            <div class="progress-circle">
+              <svg viewBox="0 0 68 68">
+                <circle class="circle-bg" cx="34" cy="34" r="28" />
+                <!-- 2 * PI * 28 = 175.9; 85% = 175.9 * (1 - 0.85) = 26 -->
+                <circle class="circle-bar" cx="34" cy="34" r="28" stroke-dasharray="176" stroke-dashoffset="26" />
+              </svg>
+              <span class="percent-text">85%</span>
+            </div>
+            <div class="indicator-info">
+              <h4>Courses</h4>
+              <p>Education can take place in formal or informal settings and any experience that has a formative effect on the way one thinks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       WHY US SECTION
+       =================================================== -->
+  <section class="whyus-section" id="whyus">
+    <div class="container whyus-grid">
+      <!-- Left side: Text & Checklist -->
+      <div class="whyus-left">
+        <h2 class="whyus-title">Why Us</h2>
+        <p class="whyus-desc">
+          We focus on academic excellence, personal attention and student development. Our teaching approach helps students build strong fundamentals and prepare for higher education and competitive examinations.
+        </p>
+
+        <ul class="whyus-checklist">
+          <li class="checklist-item">
+            <span class="check-icon-circle">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            Strong Academic Foundation
+          </li>
+          <li class="checklist-item">
+            <span class="check-icon-circle">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            Experienced Faculty
+          </li>
+          <li class="checklist-item">
+            <span class="check-icon-circle">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            Regular Assessments
+          </li>
+          <li class="checklist-item">
+            <span class="check-icon-circle">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            Career Guidance
+          </li>
+          <li class="checklist-item">
+            <span class="check-icon-circle">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            Student Support
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right side: Large Blue Rectangular Statistics Box -->
+      <div class="stats-box">
+        <!-- Stat 1 -->
+        <div class="stat-row">
+          <div class="stat-icon">
+            <!-- Graduation Cap / Mortarboard SVG -->
+            <svg viewBox="0 0 24 24">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </div>
+          <div class="stat-text">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Students Enrolled</div>
+          </div>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <!-- Stat 2 -->
+        <div class="stat-row">
+          <div class="stat-icon">
+            <!-- Faculty / Users Icon -->
+            <svg viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="stat-text">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Expert Faculty</div>
+          </div>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <!-- Stat 3 -->
+        <div class="stat-row">
+          <div class="stat-icon">
+            <!-- Award / Programs Icon -->
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <div class="stat-text">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Academic Programs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       OUR COURSES SECTION
+       =================================================== -->
+  <section class="courses-section" id="courses">
+    <div class="container">
+      <div class="section-header-center">
+        <h2 class="section-title-center">Our Courses</h2>
+      </div>
+
+      <div class="courses-grid">
+        <!-- CARD 01 - MPC -->
+        <article class="course-card">
+          <div class="course-img-wrapper">
+            <img src="./images/course_mpc.jpg" alt="Students studying Mathematics, Physics and Chemistry">
+            <div class="course-badge">01</div>
+          </div>
+          <div class="course-content">
+            <h3 class="course-title">MPC</h3>
+            <p class="course-desc">Mathematics, Physics and Chemistry for students preparing for engineering and technical higher education.</p>
+            <a href="#mpc" class="course-link">Read More &gt;</a>
+          </div>
+        </article>
+
+        <!-- CARD 02 - BiPC -->
+        <article class="course-card">
+          <div class="course-img-wrapper">
+            <img src="./images/course_bipc.jpg" alt="Students studying Biology, Physics and Chemistry">
+            <div class="course-badge">02</div>
+          </div>
+          <div class="course-content">
+            <h3 class="course-title">BiPC</h3>
+            <p class="course-desc">Biology, Physics and Chemistry for students preparing for medicine, pharmacy and life sciences.</p>
+            <a href="#bipc" class="course-link">Read More &gt;</a>
+          </div>
+        </article>
+
+        <!-- CARD 03 - MEC -->
+        <article class="course-card">
+          <div class="course-img-wrapper">
+            <img src="./images/course_mec.jpg" alt="Students studying Mathematics, Economics and Commerce">
+            <div class="course-badge">03</div>
+          </div>
+          <div class="course-content">
+            <h3 class="course-title">MEC</h3>
+            <p class="course-desc">Mathematics, Economics and Commerce for students interested in business, finance and management.</p>
+            <a href="#mec" class="course-link">Read More &gt;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       OUR TEACHERS SECTION
+       =================================================== -->
+  <section class="teachers-section" id="teachers">
+    <div class="container">
+      <div class="section-header-center">
+        <h2 class="section-title-center">Our Teachers</h2>
+      </div>
+
+      <div class="teachers-grid">
+        <!-- TEACHER 01: Dr. Anil Kumar -->
+        <article class="teacher-card">
+          <div class="teacher-img-wrap">
+            <img src="./images/teacher_anil.jpg" alt="Dr. Anil Kumar - Physics Teacher">
+          </div>
+          <div class="teacher-info">
+            <h3 class="teacher-name">Dr. Anil Kumar</h3>
+            <div class="star-rating" aria-label="5 stars rating">★★★★★</div>
+            <div class="teacher-role">Physics Teacher</div>
+            <div class="teacher-location">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Parvathipuram
+            </div>
+          </div>
+        </article>
+
+        <!-- TEACHER 02: Ms. Priya Sharma -->
+        <article class="teacher-card">
+          <div class="teacher-img-wrap">
+            <img src="./images/teacher_priya.jpg" alt="Ms. Priya Sharma - Mathematics Teacher">
+          </div>
+          <div class="teacher-info">
+            <h3 class="teacher-name">Ms. Priya Sharma</h3>
+            <div class="star-rating" aria-label="5 stars rating">★★★★★</div>
+            <div class="teacher-role">Mathematics Teacher</div>
+            <div class="teacher-location">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Andhra Pradesh
+            </div>
+          </div>
+        </article>
+
+        <!-- TEACHER 03: Mr. Rahul Varma -->
+        <article class="teacher-card">
+          <div class="teacher-img-wrap">
+            <img src="./images/teacher_rahul.jpg" alt="Mr. Rahul Varma - Chemistry Teacher">
+          </div>
+          <div class="teacher-info">
+            <h3 class="teacher-name">Mr. Rahul Varma</h3>
+            <div class="star-rating" aria-label="5 stars rating">★★★★★</div>
+            <div class="teacher-role">Chemistry Teacher</div>
+            <div class="teacher-location">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Andhra Pradesh
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       FOOTER
+       =================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo-block">
+          <svg style="width:28px;height:28px;fill:var(--primary-blue);" viewBox="0 0 24 24">
+            <path d="M12 3L1 9L12 15L21 10.09V17H23V9M5 13.18V17.18C5 19.94 8.13 22 12 22C15.87 22 19 19.94 19 17.18V13.18L12 17L5 13.18Z"/>
+          </svg>
+          <div class="footer-logo-text">EDEC <span>INTERMEDIATE COLLEGE</span></div>
+        </div>
+
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#teachers">Faculty</a></li>
+          <li><a href="#whyus">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 EDEC Intermediate College, Parvathipuram, Andhra Pradesh. All rights reserved.</div>
+        <div>100% Royalty-Free Academic Website Template</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

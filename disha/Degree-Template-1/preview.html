@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumora College of Higher Education — Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --lumora-dark: #0B132B;
+      --lumora-card: #1C2541;
+      --lumora-purple: #8B5CF6;
+      --lumora-pink: #F43F5E;
+      --lumora-yellow: #F59E0B;
+      --lumora-blue: #38BDF8;
+      --lumora-white: #FFFFFF;
+      --lumora-muted: #94A3B8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--lumora-dark);
+      color: var(--lumora-white);
+      line-height: 1.6;
+    }
+    .font-serif { font-family: 'DM Serif Display', serif; }
+    .font-grotesk { font-family: 'Space Grotesk', sans-serif; }
+    
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 48px;
+      position: sticky;
+      top: 0;
+      background: rgba(11, 19, 43, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 50;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--lumora-white);
+    }
+    .logo span { color: var(--lumora-pink); }
+    .nav-links { display: flex; gap: 32px; list-style: none; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a { color: var(--lumora-white); opacity: 0.8; text-decoration: none; transition: all 0.2s; }
+    .nav-links a:hover { opacity: 1; color: var(--lumora-pink); }
+    .btn-apply {
+      padding: 10px 24px;
+      border-radius: 9999px;
+      background: var(--lumora-pink);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      box-shadow: 0 4px 14px rgba(244, 63, 94, 0.35);
+      transition: transform 0.2s;
+    }
+    .btn-apply:hover { transform: translateY(-2px); }
+
+    /* Hero */
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding: 60px 48px;
+      max-width: 1300px;
+      margin: 0 auto;
+      gap: 60px;
+    }
+    .hero-content { flex: 1.2; }
+    .kicker {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--lumora-yellow);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .hero-title {
+      font-size: 4rem;
+      line-height: 1.05;
+      font-weight: 800;
+      margin-bottom: 24px;
+      letter-spacing: -0.03em;
+    }
+    .hero-title .highlight { color: var(--lumora-purple); }
+    .hero-desc {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
+    .hero-actions { display: flex; gap: 16px; align-items: center; margin-bottom: 48px; }
+    .btn-outline {
+      padding: 12px 28px;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--lumora-purple); color: var(--lumora-purple); }
+
+    /* Stats Grid */
+    .stats-box {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.04);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+    .stat-val { font-size: 2rem; font-weight: 800; line-height: 1.1; margin-bottom: 4px; }
+    .stat-lbl { font-size: 0.75rem; text-transform: uppercase; color: var(--lumora-muted); letter-spacing: 0.05em; }
+
+    /* Visual Showcase */
+    .hero-visual {
+      flex: 0.8;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(244, 63, 94, 0.2) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    .visual-card {
+      background: var(--lumora-card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .visual-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    .visual-info h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 2px; }
+    .visual-info p { font-size: 0.8rem; color: var(--lumora-muted); }
+
+    /* Programmes Section */
+    .section-pad { padding: 80px 48px; max-width: 1300px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-header h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 12px; }
+    .programmes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .prog-card {
+      background: var(--lumora-card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 32px;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .prog-card:hover { transform: translateY(-6px); border-color: var(--lumora-pink); }
+    .prog-card h3 { font-size: 1.35rem; margin-bottom: 12px; }
+    .prog-card p { font-size: 0.9rem; color: var(--lumora-muted); margin-bottom: 24px; }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(139, 92, 246, 0.2);
+      color: var(--lumora-purple);
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo font-grotesk">LUMORA<span>.</span>EDU</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#academics">Programmes</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#admissions">Admissions</a></li>
+      <li><a href="#campus">Campus Life</a></li>
+    </ul>
+    <a href="#admissions" class="btn-apply font-grotesk">Apply Now</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="kicker">LUMORA COLLEGE OF HIGHER EDUCATION • AUTONOMOUS</p>
+        <h1 class="hero-title font-grotesk">
+          MAKE<br>
+          <span class="highlight">YOUR YEARS</span><br>
+          COUNT.
+        </h1>
+        <p class="hero-desc font-serif">
+          Three years can change the way you think, the skills you build, and the future you imagine. Discover 24+ honours and professional degree streams.
+        </p>
+
+        <div class="hero-actions font-grotesk">
+          <a href="#academics" class="btn-outline">Explore Programmes <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#admissions" class="btn-apply">Admissions Open 2026-27</a>
+        </div>
+
+        <div class="stats-box font-grotesk">
+          <div><div class="stat-val" style="color: var(--lumora-yellow);">98%</div><div class="stat-lbl">Placement Rate</div></div>
+          <div><div class="stat-val" style="color: var(--lumora-purple);">32+</div><div class="stat-lbl">Honours Degrees</div></div>
+          <div><div class="stat-val" style="color: var(--lumora-pink);">₹38L</div><div class="stat-lbl">Highest CTC</div></div>
+          <div><div class="stat-val" style="color: var(--lumora-blue);">NAAC A+</div><div class="stat-lbl">Accreditation</div></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-card">
+          <div class="visual-icon" style="background: rgba(139, 92, 246, 0.3); color: var(--lumora-purple);">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="visual-info font-grotesk">
+            <h4>B.Sc Computer Science & AI</h4>
+            <p>3-Year Honours • 120 Seats</p>
+          </div>
+        </div>
+
+        <div class="visual-card">
+          <div class="visual-icon" style="background: rgba(244, 63, 94, 0.3); color: var(--lumora-pink);">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <div class="visual-info font-grotesk">
+            <h4>BBA FinTech & Analytics</h4>
+            <p>Autonomous • Dual Specialization</p>
+          </div>
+        </div>
+
+        <div class="visual-card">
+          <div class="visual-icon" style="background: rgba(245, 158, 11, 0.3); color: var(--lumora-yellow);">
+            <i class="fa-solid fa-flask-vial"></i>
+          </div>
+          <div class="visual-info font-grotesk">
+            <h4>B.Sc Molecular Biotechnology</h4>
+            <p>Advanced R&D Laboratory</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="academics">
+      <div class="section-header">
+        <span class="badge">ACADEMIC EXCELLENCE</span>
+        <h2 class="font-grotesk">Featured Degree Programmes</h2>
+        <p style="color: var(--lumora-muted);">Equipping students with future-ready skills, industry certifications, and corporate internships.</p>
+      </div>
+
+      <div class="programmes-grid font-grotesk">
+        <div class="prog-card">
+          <span class="badge">School of Technology</span>
+          <h3>B.Sc Data Science & AI</h3>
+          <p>Master Python, machine learning algorithms, big data pipelines, and deep neural networks with hands-on capstone projects.</p>
+          <a href="#admissions" class="btn-outline" style="padding: 8px 18px; font-size: 0.8rem;">View Curriculum</a>
+        </div>
+        <div class="prog-card">
+          <span class="badge" style="background: rgba(244, 63, 94, 0.2); color: var(--lumora-pink);">School of Business</span>
+          <h3>B.Com Global Finance & ACCA</h3>
+          <p>Integrated ACCA certification coaching, international accounting standards, and investment banking mentorship.</p>
+          <a href="#admissions" class="btn-outline" style="padding: 8px 18px; font-size: 0.8rem;">View Curriculum</a>
+        </div>
+        <div class="prog-card">
+          <span class="badge" style="background: rgba(56, 189, 248, 0.2); color: var(--lumora-blue);">School of Media</span>
+          <h3>B.A. Digital Media & Visual Arts</h3>
+          <p>Motion graphics, UI/UX interaction design, digital storytelling, and virtual production in high-tech studio labs.</p>
+          <a href="#admissions" class="btn-outline" style="padding: 8px 18px; font-size: 0.8rem;">View Curriculum</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

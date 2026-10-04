@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ottobon Templates Hub — Enterprise Template Dashboard</title>
+  <meta name="description" content="Explore, preview, and download 28+ professional Healthcare, University, College, and School website templates from a unified repository.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- JSZip & FileSaver for client-side offline downloads -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+
+  <!-- Top App Navigation Header -->
+  <header class="navbar" id="topNavbar">
+    <div class="nav-container">
+      
+      <!-- Brand Logo -->
+      <div class="brand-group">
+        <a href="#home" class="brand-logo" id="brandLogo">
+          <div class="logo-icon-wrap">
+            <i class="fa-solid fa-shapes"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">OTTOBON</span>
+            <span class="brand-sub">Templates Hub</span>
+          </div>
+        </a>
+        <span class="badge-repo-status" id="repoStatusBadge" title="Click to configure repository">
+          <i class="fa-brands fa-github"></i>
+          <span id="currentRepoLabel">ottobon/templates</span>
+          <i class="fa-solid fa-gear edit-repo-icon"></i>
+        </span>
+      </div>
+
+      <!-- Center Search Bar -->
+      <div class="nav-search-wrapper">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input 
+          type="text" 
+          id="globalSearchInput" 
+          placeholder="Search 28+ templates by name, tech stack, keyword... (Press / to focus)" 
+          autocomplete="off"
+        >
+        <span class="search-shortcut-hint">/</span>
+        <button class="clear-search-btn" id="clearSearchBtn" aria-label="Clear Search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Action Utilities -->
+      <div class="nav-actions">
+        <button class="btn btn-ghost" id="savedBookmarksBtn" title="View Bookmarked Templates">
+          <i class="fa-regular fa-bookmark"></i>
+          <span class="btn-text">Saved</span>
+          <span class="bookmark-counter" id="bookmarkCount">0</span>
+        </button>
+        <button class="btn btn-outline" id="repoSettingsBtn" title="Configure GitHub Repo">
+          <i class="fa-solid fa-sliders"></i>
+          <span class="btn-text">Repo Settings</span>
+        </button>
+        <button class="btn btn-primary" id="downloadFullRepoBtn" title="Download the entire repository as a ZIP">
+          <i class="fa-solid fa-cloud-arrow-down"></i>
+          <span class="btn-text">Download Full Repo</span>
+        </button>
+      </div>
+      
+    </div>
+  </header>
+
+  <!-- Notification Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Hero & Statistics Banner -->
+  <section class="hero-section" id="home">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="tag-pulse"></span>
+          <span>Unified Repository Directory</span>
+        </div>
+        <h1 class="hero-title">
+          Explore, Preview & Download <span class="highlight-blue">Production Templates</span>
+        </h1>
+        <p class="hero-desc">
+          Browse through our curated collection of Next.js 16, Vite, React 19, and modern HTML5 templates.
+          Inspect interactive previews across desktop, tablet, and mobile views, and download any individual template repository in one click.
+        </p>
+
+        <!-- Category Quick Switcher Chips -->
+        <div class="quick-chips-bar" id="quickChipsBar">
+          <button class="chip-item active" data-category="all">
+            <i class="fa-solid fa-layer-group"></i> All Templates (<span id="countAll">28</span>)
+          </button>
+          <button class="chip-item" data-category="Healthcare">
+            <i class="fa-solid fa-heart-pulse"></i> Healthcare & Hospitals (<span id="countHealth">9</span>)
+          </button>
+          <button class="chip-item" data-category="Degree & College">
+            <i class="fa-solid fa-graduation-cap"></i> Degree & University (<span id="countCollege">11</span>)
+          </button>
+          <button class="chip-item" data-category="School">
+            <i class="fa-solid fa-school"></i> Schools & Academies (<span id="countSchool">8</span>)
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon blue"><i class="fa-solid fa-folder-tree"></i></div>
+          <div class="metric-info">
+            <span class="metric-value" id="statTotalTemplates">28</span>
+            <span class="metric-label">Templates Ready</span>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon emerald"><i class="fa-solid fa-hospital"></i></div>
+          <div class="metric-info">
+            <span class="metric-value">9</span>
+            <span class="metric-label">Healthcare Solutions</span>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon indigo"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="metric-info">
+            <span class="metric-value">19</span>
+            <span class="metric-label">Education Portals</span>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon amber"><i class="fa-solid fa-code-fork"></i></div>
+          <div class="metric-info">
+            <span class="metric-value">5</span>
+            <span class="metric-label">Contributors</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Application Body -->
+  <main class="main-layout" id="mainContent">
+    <div class="layout-container">
+      
+      <!-- Filter & Search Sidebar -->
+      <aside class="sidebar-filters" id="sidebarFilters">
+        <div class="sidebar-card">
+          
+          <div class="sidebar-header">
+            <h3><i class="fa-solid fa-filter"></i> Filters</h3>
+            <button class="reset-filter-btn" id="resetFiltersBtn">Reset All</button>
+          </div>
+
+          <!-- Category Filter Group -->
+          <div class="filter-group">
+            <label class="filter-heading">Categories</label>
+            <div class="filter-options">
+              <label class="radio-label">
+                <input type="radio" name="categoryFilter" value="all" checked>
+                <span class="custom-radio"></span>
+                <span class="option-text">All Categories</span>
+                <span class="option-count" id="optCountAll">28</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="categoryFilter" value="Healthcare">
+                <span class="custom-radio"></span>
+                <span class="option-text">Healthcare & Clinics</span>
+                <span class="option-count" id="optCountHealth">9</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="categoryFilter" value="Degree & College">
+                <span class="custom-radio"></span>
+                <span class="option-text">Degree & University</span>
+                <span class="option-count" id="optCountCollege">11</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="categoryFilter" value="School">
+                <span class="custom-radio"></span>
+                <span class="option-text">Schools & Academies</span>
+                <span class="option-count" id="optCountSchool">8</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Tech Stack Filter Group -->
+          <div class="filter-group">
+            <label class="filter-heading">Technology Stack</label>
+            <div class="filter-options" id="stackFilterOptions">
+              <label class="checkbox-label">
+                <input type="checkbox" name="stackFilter" value="Next.js">
+                <span class="custom-checkbox"></span>
+                <span class="option-text">Next.js 16</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="stackFilter" value="Vite">
+                <span class="custom-checkbox"></span>
+                <span class="option-text">Vite + React</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="stackFilter" value="Tailwind">
+                <span class="custom-checkbox"></span>
+                <span class="option-text">Tailwind CSS</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="stackFilter" value="HTML5">
+                <span class="custom-checkbox"></span>
+                <span class="option-text">Vanilla HTML5 / CSS</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="stackFilter" value="TypeScript">
+                <span class="custom-checkbox"></span>
+                <span class="option-text">TypeScript</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Contributor / Author Filter Group -->
+          <div class="filter-group">
+            <label class="filter-heading">Contributors</label>
+            <div class="filter-options" id="authorFilterOptions">
+              <label class="checkbox-label">
+                <input type="checkbox" name="authorFilter" value="Akbar">
+                <span class="custom-checkbox"></span>
+                <span class="option-text">Akbar</span>
+                <span class="option-count">2</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="authorFilter" value="Disha">
+                <span class="custom-checkbox"></span>
+                <span class="option-text">Disha</span>
+                <span class="option-count">6</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="authorFilter" value="Poorvisha">
+                <span class="custom-checkbox"></span>
+                <span class="option-text">Poorvisha</span>
+                <span class="option-count">7</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="authorFilter" value="Sathvika">
+                <span class="custom-checkbox"></span>
+                <span class="option-text">Sathvika</span>
+                <span class="option-count">7</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="authorFilter" value="Sravani">
+                <span class="custom-checkbox"></span>
+                <span class="option-text">Sravani</span>
+                <span class="option-count">6</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Repository Helper Card -->
+          <div class="sidebar-help-box">
+            <div class="help-box-header">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>One Repo Architecture</span>
+            </div>
+            <p>
+              All templates are organized in subdirectories. When you click <strong>Download</strong>, you can download just that template folder or the full repository!
+            </p>
+            <div class="quick-git-box">
+              <code>git clone <span class="git-url-preview">https://github.com/ottobon/templates</span></code>
+              <button class="copy-git-btn" id="copyGitCloneQuick" title="Copy git clone command">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- Main Template Grid Area -->
+      <section class="templates-view-area">
+        
+        <!-- Controls Bar (Sort, View Mode, Count) -->
+        <div class="grid-controls-bar">
+          <div class="controls-left">
+            <h2 class="section-title">
+              Available Templates <span class="results-badge" id="resultsCount">28</span>
+            </h2>
+            <div class="active-filter-tags" id="activeFilterTags"></div>
+          </div>
+
+          <div class="controls-right">
+            <!-- Sort dropdown -->
+            <div class="sort-wrapper">
+              <label for="sortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort:</label>
+              <select id="sortSelect" class="form-select">
+                <option value="featured">Featured First</option>
+                <option value="name-asc">Name: A to Z</option>
+                <option value="name-desc">Name: Z to A</option>
+                <option value="author">By Contributor</option>
+                <option value="bookmarks">Most Saved</option>
+              </select>
+            </div>
+
+            <!-- View Layout Toggles -->
+            <div class="view-toggles" id="viewToggles">
+              <button class="view-btn active" data-view="grid" title="Grid View" id="viewGridBtn">
+                <i class="fa-solid fa-table-cells-large"></i>
+              </button>
+              <button class="view-btn" data-view="compact" title="Compact View" id="viewCompactBtn">
+                <i class="fa-solid fa-list"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Templates Grid Container -->
+        <div class="templates-grid" id="templatesGrid">
+          <!-- Dynamically populated by app.js -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+          <div class="empty-illustration">
+            <i class="fa-solid fa-folder-open"></i>
+          </div>
+          <h3>No Matching Templates Found</h3>
+          <p>We couldn't find any templates matching your search criteria. Try clearing some filters or searching for different keywords.</p>
+          <button class="btn btn-primary" id="emptyResetBtn">
+            <i class="fa-solid fa-rotate-left"></i> Reset All Filters
+          </button>
+        </div>
+
+      </section>
+      
+    </div>
+  </main>
+
+  <!-- Interactive Live Preview Modal -->
+  <div class="modal-backdrop" id="previewModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      
+      <!-- Modal Top Bar -->
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-category-pill" id="modalCategoryBadge">Healthcare</span>
+          <h2 class="modal-title" id="modalTemplateName">Template Preview</h2>
+          <span class="modal-author-tag" id="modalAuthorTag">By Contributor</span>
+        </div>
+
+        <!-- Viewport Switcher Controls -->
+        <div class="device-switcher" id="deviceSwitcher">
+          <button class="device-btn active" data-device="desktop" title="Desktop View (100%)">
+            <i class="fa-solid fa-desktop"></i>
+            <span>Desktop</span>
+          </button>
+          <button class="device-btn" data-device="tablet" title="Tablet View (768px)">
+            <i class="fa-solid fa-tablet-screen-button"></i>
+            <span>Tablet</span>
+          </button>
+          <button class="device-btn" data-device="mobile" title="Mobile View (375px)">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <span>Mobile</span>
+          </button>
+        </div>
+
+        <!-- Modal Actions -->
+        <div class="modal-top-actions">
+          <a href="#" target="_blank" class="btn btn-sm btn-outline" id="modalOpenExternalBtn" title="Open in new window">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span class="action-label">Open Full</span>
+          </a>
+          <button class="btn btn-sm btn-primary" id="modalDownloadBtn" title="Download this template">
+            <i class="fa-solid fa-download"></i>
+            <span class="action-label">Download ZIP</span>
+          </button>
+          <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Preview Modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Main Area (Iframe + Sidebar) -->
+      <div class="modal-body">
+        
+        <!-- Preview Canvas Container -->
+        <div class="preview-canvas-wrapper" id="previewCanvasWrapper">
+          <div class="device-frame" id="deviceFrame">
+            <!-- Simulated Browser Address Bar -->
+            <div class="mock-browser-bar">
+              <div class="mock-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="mock-url-field">
+                <i class="fa-solid fa-lock"></i>
+                <span class="mock-url-text" id="mockBrowserUrl">https://preview.ottobon.local/template</span>
+              </div>
+              <div class="mock-actions">
+                <div class="mock-mode-switch" id="mockModeSwitch">
+                  <button class="mock-mode-btn active" id="btnPreviewStatic" title="Instant Visual Preview">
+                    <i class="fa-solid fa-eye"></i> <span>Preview</span>
+                  </button>
+                  <button class="mock-mode-btn" id="btnPreviewDevServer" title="Switch to local dev server (npm run dev)">
+                    <i class="fa-solid fa-bolt"></i> <span>Dev Server</span>
+                  </button>
+                </div>
+                <button class="mock-refresh-btn" id="previewRefreshBtn" title="Reload Preview">
+                  <i class="fa-solid fa-rotate-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- The Iframe Window -->
+            <div class="iframe-container" id="iframeContainer">
+              <iframe id="previewIframe" src="about:blank" title="Live Template Preview" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+              
+              <!-- Fallback Simulated Live Viewer for Frameworks (Next.js / Vite) -->
+              <div class="framework-preview-screen" id="frameworkPreviewScreen" style="display: none;">
+                <!-- Dynamically populated -->
+              </div>
+              
+              <!-- Loading overlay -->
+              <div class="preview-loading" id="previewLoading">
+                <div class="spinner"></div>
+                <span>Loading template preview...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Specs / Download Options Drawer -->
+        <aside class="modal-specs-sidebar">
+          <div class="specs-section">
+            <h4 class="specs-heading">About This Template</h4>
+            <p class="specs-desc" id="modalDescription">Detailed template description goes here.</p>
+          </div>
+
+          <div class="specs-section">
+            <h4 class="specs-heading">Technology & Features</h4>
+            <div class="specs-tags-cloud" id="modalTechTags">
+              <!-- Dynamically populated -->
+            </div>
+            <ul class="specs-feature-list" id="modalFeaturesList">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+
+          <div class="specs-section">
+            <h4 class="specs-heading">Folder Location in Repo</h4>
+            <div class="path-badge-box">
+              <i class="fa-regular fa-folder-open"></i>
+              <code id="modalFolderPath">akbar/Healthcare-Templates/HTD-1</code>
+            </div>
+          </div>
+
+          <div class="specs-section">
+            <h4 class="specs-heading">Quick Start</h4>
+            <div class="code-terminal-box">
+              <button class="copy-terminal-btn" id="copyTerminalBtn" title="Copy CLI Commands">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+              <pre><code id="modalRunCode"># Clone repository
+git clone https://github.com/ottobon/templates
+cd templates/path
+npm install
+npm run dev</code></pre>
+            </div>
+          </div>
+
+          <div class="specs-download-actions">
+            <button class="btn btn-primary btn-block btn-lg" id="modalDirectDownloadBtn">
+              <i class="fa-solid fa-file-zipper"></i>
+              <span>Download Template Folder (ZIP)</span>
+            </button>
+            <button class="btn btn-outline btn-block" id="modalRepoDownloadBtn">
+              <i class="fa-brands fa-github"></i>
+              <span>Download Entire GitHub Repo (ZIP)</span>
+            </button>
+          </div>
+        </aside>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Download Method Selection Modal -->
+  <div class="modal-backdrop" id="downloadModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 class="modal-title" id="downloadModalTitle">Download Template</h3>
+        </div>
+        <button class="modal-close-btn" id="downloadModalCloseBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-content-pad">
+        <p class="modal-intro" id="downloadModalIntro">Choose how you'd like to get this template:</p>
+        
+        <div class="download-options-list">
+          
+          <!-- Option 1: Direct Folder ZIP (via GitHub Directory Downloader API) -->
+          <div class="download-opt-card" id="optFolderZip">
+            <div class="opt-icon blue"><i class="fa-solid fa-folder-arrow-down"></i></div>
+            <div class="opt-text">
+              <h4>Download Template Folder (ZIP)</h4>
+              <p>Downloads only this template folder directly as a clean `.zip` archive.</p>
+            </div>
+            <i class="fa-solid fa-chevron-right chevron-icon"></i>
+          </div>
+
+          <!-- Option 2: Full Repo ZIP -->
+          <div class="download-opt-card" id="optFullRepoZip">
+            <div class="opt-icon emerald"><i class="fa-solid fa-box-archive"></i></div>
+            <div class="opt-text">
+              <h4>Download Entire Repository (ZIP)</h4>
+              <p>Gets all 28 templates in one master package from GitHub.</p>
+            </div>
+            <i class="fa-solid fa-chevron-right chevron-icon"></i>
+          </div>
+
+          <!-- Option 3: Git Clone -->
+          <div class="download-opt-card" id="optGitClone">
+            <div class="opt-icon indigo"><i class="fa-solid fa-terminal"></i></div>
+            <div class="opt-text">
+              <h4>Clone Repository via Git</h4>
+              <p>Copy the command to clone and checkout this repository locally.</p>
+            </div>
+            <i class="fa-solid fa-chevron-right chevron-icon"></i>
+          </div>
+
+          <!-- Option 4: View on GitHub -->
+          <a href="#" target="_blank" class="download-opt-card" id="optViewGithub">
+            <div class="opt-icon slate"><i class="fa-brands fa-github"></i></div>
+            <div class="opt-text">
+              <h4>Open Folder on GitHub</h4>
+              <p>Browse code, commit history, and files directly on GitHub.</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square chevron-icon"></i>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Repository Configuration Modal -->
+  <div class="modal-backdrop" id="repoSettingsModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 class="modal-title"><i class="fa-solid fa-gear"></i> Repository Configuration</h3>
+        </div>
+        <button class="modal-close-btn" id="repoSettingsCloseBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-content-pad">
+        <p class="modal-intro">
+          Specify your GitHub repository details below. All download links, clone commands, and directory zip services will automatically adapt to your repo.
+        </p>
+
+        <form id="repoSettingsForm">
+          <div class="form-group">
+            <label for="cfgRepoUrl">GitHub Repository URL</label>
+            <input type="url" id="cfgRepoUrl" class="form-input" placeholder="https://github.com/username/repository" required>
+            <span class="form-hint">Example: <code>https://github.com/ottobon/templates</code></span>
+          </div>
+
+          <div class="form-group">
+            <label for="cfgBranch">Default Branch</label>
+            <input type="text" id="cfgBranch" class="form-input" placeholder="main" value="main" required>
+            <span class="form-hint">Usually <code>main</code> or <code>master</code></span>
+          </div>
+
+          <div class="form-group">
+            <label for="cfgLocalPort">Local Launcher Port (Optional)</label>
+            <input type="number" id="cfgLocalPort" class="form-input" placeholder="3000" value="3000">
+            <span class="form-hint">Used when running locally via <code>node server.js</code></span>
+          </div>
+
+          <div class="modal-actions-bar">
+            <button type="button" class="btn btn-outline" id="resetRepoDefaultsBtn">Reset to Default</button>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> Save Settings</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <i class="fa-solid fa-shapes"></i>
+          <span>OTTOBON TEMPLATES REPOSITORY</span>
+        </div>
+        <p>Enterprise website template hub for healthcare, degree colleges, and school portals.</p>
+      </div>
+      <div class="footer-right">
+        <span>Organized across 5 team spaces: Akbar, Disha, Poorvisha, Sathvika, Sravani</span>
+        <div class="footer-links">
+          <a href="#home">Back to Top ↑</a>
+          <a href="#" id="footerConfigLink">Repo Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Application -->
+  <script src="app.js"></script>
+</body>
+</html>

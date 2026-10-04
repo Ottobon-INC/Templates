@@ -1,0 +1,22 @@
+{
+  "name": "school-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx serve -l 3000",
+    "build": "tailwindcss -i ./input.css -o ./tailwind.css",
+    "watch": "tailwindcss -i ./input.css -o ./tailwind.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28"
+  }
+}

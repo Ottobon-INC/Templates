@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizon Academy - Keep Learning on Track | Empowering Curious Minds</title>
+  <meta name="description" content="Welcome to Horizon Academy. Where reliable access to passionate educators and innovative curriculum empowers students to discover, excel, and stay on track.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23196058'/><circle cx='50' cy='50' r='20' fill='%23F59323'/></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER / NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <!-- Brand Logo -->
+      <a href="#" class="logo-link" id="brand-logo" aria-label="Horizon Academy Home">
+        <svg class="logo-icon-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#196058" stroke-width="3" transform="rotate(-30 24 24)" />
+          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#F59323" stroke-width="3" transform="rotate(30 24 24)" />
+          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#124B45" stroke-width="3" transform="rotate(90 24 24)" />
+          <circle cx="24" cy="24" r="5" fill="#F59323" />
+        </svg>
+        <span class="logo-text">Horizon <span>School</span></span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#features" class="nav-link">About Us</a></li>
+          <li><a href="#why-us" class="nav-link">Why Us</a></li>
+          <li><a href="#academics" class="nav-link">Academics</a></li>
+          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="nav-actions">
+        <button class="btn-primary js-open-modal" id="btn-header-appointment">Make an Appointment</button>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>✨</span> Inspiring Young Minds • Shaping Future Leaders
+          </div>
+
+          <h1 class="hero-title">
+            Keep <span class="highlight-wrap"><span class="highlight-brush">Learning</span></span><br>
+            on Track
+            <!-- Hand-drawn curved doodle arrow -->
+            <svg class="doodle-arrow-hero" viewBox="0 0 50 50" fill="none">
+              <path d="M5 25 C15 5, 40 10, 42 32 M42 32 L34 26 M42 32 L46 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </h1>
+
+          <p class="hero-subtext">
+            When schools and communities have reliable access to substitute teachers and students have the freedom to explore, choose, and thrive, learning never stops.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn-primary js-open-modal" id="btn-hero-start">Get Started</button>
+            <a href="#academics" class="btn-secondary">Explore Programs</a>
+          </div>
+
+          <!-- Floating Mini Feature Cards matching template -->
+          <div class="hero-features">
+            <div class="mini-card" id="card-certified-teachers">
+              <img src="assets/images/teacher.jpg" alt="Certified Educator" class="mini-card-avatar">
+              <div class="mini-card-info">
+                <h4>Best Certified Teachers Worldwide</h4>
+                <div class="mini-card-badge">210+</div>
+                <p>Experts already joined us</p>
+              </div>
+            </div>
+
+            <div class="mini-card" id="card-school-transform">
+              <img src="assets/images/classroom.jpg" alt="School Classroom" class="mini-card-avatar">
+              <div class="mini-card-info">
+                <h4>Transforming schools & substitute teachers</h4>
+                <div style="color: #196058; font-size: 1.3rem;">✳</div>
+                <p>Award-winning learning models</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Composition -->
+        <div class="hero-composition">
+          <div class="comp-backdrop">
+            <!-- Teal rounded geometric backdrop cards with chalk doodle textures -->
+            <div class="block-teal-main">
+              <div class="chalk-doodle-bg"></div>
+              <!-- Math and Science chalkboard doodle accents -->
+              <svg class="chalk-icon-float" style="top: 20px; left: 24px; width: 44px;" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" fill="none">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 3a9 9 0 0 0 0 18M3 12h18"/>
+              </svg>
+              <svg class="chalk-icon-float" style="bottom: 30px; right: 28px; width: 40px;" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" fill="none">
+                <path d="M10 2v7.31M14 2v7.31M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"/>
+              </svg>
+              <svg class="chalk-icon-float" style="top: 140px; right: 20px; width: 34px;" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" fill="none">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <div class="block-teal-pill">
+              <div class="chalk-doodle-bg"></div>
+            </div>
+
+            <!-- Hand-drawn sun ray doodle -->
+            <svg class="hero-sun-doodle" viewBox="0 0 60 60" fill="none">
+              <path d="M15 15 L5 5 M30 10 L30 0 M45 15 L55 5" stroke="#F59323" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <!-- Main Hero Boy Student Image -->
+          <img src="assets/images/student_boy.jpg" alt="Smiling student boy holding a stack of books at Horizon Academy" class="hero-student-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: FEATURES / SOLUTION
+         "An Easier Way to be a Substitute and Find a School"
+         ========================================================================== -->
+    <section class="section-features" id="features">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-features-header">
+          <div>
+            <h2 class="section-title">
+              An Easier Way to be a<br>
+              Substitute and Find a School
+              <!-- Curved loop doodle arrow -->
+              <svg style="width: 44px; height: 44px; color: #196058; display: inline-block; vertical-align: middle; margin-left: 10px;" viewBox="0 0 50 50" fill="none">
+                <path d="M10 20 C20 40, 35 42, 45 22 M45 22 L38 25 M45 22 L44 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </h2>
+          </div>
+          <div>
+            <p class="section-subtext">
+              When schools and districts have reliable access to substitute teachers and subs have the freedom to choose what and when they teach, more classes are covered and student learning stays on track.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 Feature Cards matching template -->
+        <div class="cards-grid-3">
+          <!-- Card 1 -->
+          <div class="feature-pill-card">
+            <div class="feature-card-media">
+              <img src="assets/images/card_teacher_guide.jpg" alt="Dedicated teacher guiding student in class" class="feature-card-img">
+            </div>
+            <div>
+              <h3 class="feature-card-title">
+                Teacher absences<br>
+                <span class="highlight-text-amber">disrupt</span> student learning
+              </h3>
+              <p class="feature-card-desc">
+                When schools and districts have reliable access to teachers, things go well.
+              </p>
+            </div>
+            <div class="card-doodle-footer">
+              <!-- Hand-drawn organic spiral doodle -->
+              <svg width="48" height="48" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 25 C23.5 25 22 23.5 22 22 C22 19.5 24.5 17.5 27 17.5 C30.5 17.5 33 20 33 23.5 C33 28 29.5 31.5 25 31.5 C19.5 31.5 15 27 15 21.5 C15 14.5 21 9 28 9 C36 9 42 15.5 42 23.5 C42 32.5 34.5 40 25 40 C14 40 6 32 6 21" stroke="#196058" stroke-width="2.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-pill-card">
+            <div class="feature-card-media">
+              <img src="assets/images/card_connect_subs.jpg" alt="Educators collaborating and planning lessons" class="feature-card-img">
+              <div class="card-media-badge" title="Horizon Connected Network">
+                <svg width="22" height="22" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="20" r="17" stroke="#196058" stroke-width="2.5"/>
+                  <ellipse cx="20" cy="20" rx="8.5" ry="17" stroke="#196058" stroke-width="2.3"/>
+                  <line x1="3" y1="20" x2="37" y2="20" stroke="#196058" stroke-width="2.3"/>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="feature-card-title">
+                A better way to <span class="highlight-text-amber">connect</span><br>
+                subs and schools
+              </h3>
+              <p class="feature-card-desc">
+                When educational institutions and regions consistently have dependable access to qualified educators.
+              </p>
+            </div>
+            <div class="card-doodle-footer">
+              <!-- Clean outline Globe Icon -->
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="17" stroke="#196058" stroke-width="2.3"/>
+                <ellipse cx="20" cy="20" rx="8.5" ry="17" stroke="#196058" stroke-width="2.1"/>
+                <line x1="3" y1="20" x2="37" y2="20" stroke="#196058" stroke-width="2.1"/>
+                <line x1="6" y1="12" x2="34" y2="12" stroke="#196058" stroke-width="1.9"/>
+                <line x1="6" y1="28" x2="34" y2="28" stroke="#196058" stroke-width="1.9"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-pill-card">
+            <div class="feature-card-media">
+              <img src="assets/images/card_student_track.jpg" alt="Student smiling proudly with completed project" class="feature-card-img">
+            </div>
+            <div>
+              <h3 class="feature-card-title">
+                Student learning stays<br>
+                <span class="highlight-text-amber">on track</span> to meet target
+              </h3>
+              <p class="feature-card-desc">
+                When communities and students benefit from consistent, high-quality educators.
+              </p>
+            </div>
+            <div class="card-doodle-footer">
+              <!-- Clean Concentric Target Bullseye Doodle -->
+              <svg width="48" height="48" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="19" stroke="#196058" stroke-width="2.4"/>
+                <circle cx="25" cy="25" r="11.5" stroke="#196058" stroke-width="2.4"/>
+                <circle cx="25" cy="25" r="4" fill="#196058"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: WHY CHOOSE Horizon Academy (BENTO GRID STATS)
+         ========================================================================== -->
+    <section class="section-why" id="why-us">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="why-header">
+          <div>
+            <h2 class="section-title">
+              Why <span class="highlight-wrap"><span class="highlight-brush">Choose</span></span> Our<br>
+              Services? <span class="sparkle-icon">✦</span>
+            </h2>
+          </div>
+          <div>
+            <p class="section-subtext">
+              When schools and districts have reliable access to substitute teachers and subs have the freedom to choose what and when they teach, more classes are covered and student learning stays on track.
+              <!-- Looping arrow doodle -->
+              <svg style="width: 46px; height: 32px; color: #196058; display: inline-block; vertical-align: middle; margin-left: 8px;" viewBox="0 0 50 30" fill="none">
+                <path d="M5 15 C15 30, 35 28, 44 8 M44 8 L36 10 M44 8 L42 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </p>
+          </div>
+        </div>
+
+        <!-- Bento Layout with Student Girl & Stat Blocks -->
+        <div class="why-bento-layout">
+          <!-- Left: Student Girl with backdrop shapes -->
+          <div class="why-left-student">
+            <div class="girl-backdrop-1"></div>
+            <div class="girl-backdrop-2"></div>
+            <img src="assets/images/student_girl.jpg" alt="Horizon Academy Student with Books and Globe" class="girl-student-img">
+          </div>
+
+          <!-- Right: Bento Tiles Grid -->
+          <div class="bento-stats-grid">
+            <!-- Orange Tile: 3k Teachers -->
+            <div class="bento-tile tile-orange">
+              <div class="stat-num js-counter" data-target="3" data-suffix="k">3k</div>
+              <div class="stat-label">Highly Trained Teachers & Mentors</div>
+            </div>
+
+            <!-- Teal Decorative Tile -->
+            <div class="bento-tile tile-decorative-doodle">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+              <div>
+                <p>Global Curriculum</p>
+                <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">Future-Ready Skills</span>
+              </div>
+            </div>
+
+            <!-- Orange Tile: 300+ Study Centers -->
+            <div class="bento-tile tile-orange">
+              <div class="stat-num js-counter" data-target="300" data-suffix="+">300+</div>
+              <div class="stat-label">Study Centers & Smart Labs Worldwide</div>
+            </div>
+
+            <!-- Dark Teal Tile with Science Doodle -->
+            <div class="bento-tile tile-teal">
+              <div class="stat-num js-counter" data-target="48" data-suffix="+">48+</div>
+              <div class="stat-label">National & Global Education Awards</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: ACADEMIC PATHWAYS & PROGRAMS
+         ========================================================================== -->
+    <section class="section-academics" id="academics">
+      <div class="container">
+        <div class="text-center">
+          <div class="hero-badge" style="margin-bottom: 12px;">
+            <span>📚</span> Academic Excellence
+          </div>
+          <h2 class="section-title">
+            Tailored Pathways for <span class="highlight-wrap"><span class="highlight-brush">Every Age</span></span>
+          </h2>
+          <p class="section-subtext">
+            Explore how Horizon Academy nurtures student curiosity from foundational early learning through advanced collegiate preparation.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="programs-tabs">
+          <button class="tab-btn active" data-filter="all">All Programs</button>
+          <button class="tab-btn" data-filter="elementary">Elementary (K-5)</button>
+          <button class="tab-btn" data-filter="middle">Middle School (6-8)</button>
+          <button class="tab-btn" data-filter="high">High School & STEM (9-12)</button>
+        </div>
+
+        <!-- Program Cards -->
+        <div class="programs-grid">
+          <!-- Card 1 -->
+          <div class="program-card" data-category="elementary">
+            <span class="program-badge">Kindergarten - Grade 5</span>
+            <h3>Foundational Discovery</h3>
+            <p>Cultivating a lifelong passion for reading, mathematics, and inquiry-based science through playful experiential learning.</p>
+            <ul class="program-list">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Phonics & Creative Storytelling</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Early Math & Logic Puzzles</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Nature & Interactive Science Labs</li>
+            </ul>
+            <button class="btn-secondary js-open-modal" style="width: 100%;">Learn More</button>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="program-card" data-category="middle">
+            <span class="program-badge">Grades 6 - 8</span>
+            <h3>Inquiry & Exploratory Arts</h3>
+            <p>Developing critical thinking, collaborative team problem-solving, and cross-disciplinary projects that inspire self-confidence.</p>
+            <ul class="program-list">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Hands-On Robotics & Coding</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> World Civilizations & Geography</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Performing Arts & Orchestra</li>
+            </ul>
+            <button class="btn-secondary js-open-modal" style="width: 100%;">Learn More</button>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="program-card" data-category="high">
+            <span class="program-badge">Grades 9 - 12</span>
+            <h3>Advanced STEM & Leadership</h3>
+            <p>Rigorous pre-university academic pathways with AP coursework, entrepreneurial labs, and personalized college counseling.</p>
+            <ul class="program-list">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> AI, Bio-Tech & Applied Physics</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Advanced Placement (AP) Honors</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 1-on-1 College Advisory Mentorship</li>
+            </ul>
+            <button class="btn-secondary js-open-modal" style="width: 100%;">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: TESTIMONIALS
+         ========================================================================== -->
+    <section class="section-testimonials">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">
+            Loved by <span class="highlight-wrap"><span class="highlight-brush">Parents</span></span> & Students
+          </h2>
+          <p class="section-subtext" style="max-width: 580px; margin: 12px auto 0;">
+            Hear authentic experiences from families whose children have discovered joy and academic success at Horizon Academy.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Review 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="stars-rating">★★★★★</div>
+              <p class="quote-text">
+                "Horizon Academy transformed how our son views education. The substitute teachers and faculty are consistently engaging and truly know how to keep every child motivated."
+              </p>
+            </div>
+            <div class="parent-info">
+              <div class="parent-avatar">SC</div>
+              <div class="parent-details">
+                <h5>Sarah Jenkins</h5>
+                <p>Parent of 4th Grader</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="stars-rating">★★★★★</div>
+              <p class="quote-text">
+                "The balance between STEM innovation, arts, and personalized attention is exceptional. Whenever a teacher is away, the replacement is just as stellar. Truly top tier."
+              </p>
+            </div>
+            <div class="parent-info">
+              <div class="parent-avatar">MR</div>
+              <div class="parent-details">
+                <h5>Michael Reynolds</h5>
+                <p>Parent of 8th Grader</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="stars-rating">★★★★★</div>
+              <p class="quote-text">
+                "Finding a school where curiosity is celebrated every single day has been a blessing. The atmosphere is warm, modern, and inspiring!"
+              </p>
+            </div>
+            <div class="parent-info">
+              <div class="parent-avatar">AL</div>
+              <div class="parent-details">
+                <h5>Amara Lindqvist</h5>
+                <p>Parent of 6th & 11th Graders</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CALL TO ACTION BANNER
+         ========================================================================== -->
+    <section class="cta-banner-section" id="contact">
+      <div class="container">
+        <div class="cta-banner-box">
+          <div class="cta-banner-content">
+            <h2>Ready to Join Horizon Academy?</h2>
+            <p>Schedule a campus tour or speak with our admissions advisors to see how our curriculum keeps learning on track for your child.</p>
+          </div>
+          <div class="cta-banner-actions">
+            <button class="btn-primary js-open-modal" style="background-color: #F59323; font-size: 1.05rem; padding: 15px 34px;">
+              Book a Campus Tour
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <span class="logo-text">Horizon <span>School</span></span>
+          <p>Inspiring students, empowering teachers, and fostering an environment where every child's potential is unlocked.</p>
+          <div style="color: #93A6A0; font-size: 0.9rem;">
+            📍 100 Learning Way, Academic District<br>
+            📞 +1 (800) 555-Horizon<br>
+            ✉️ admissions@Horizonschool.edu
+          </div>
+        </div>
+
+        <!-- Academics Links -->
+        <div class="footer-col">
+          <h4>Academics</h4>
+          <ul class="footer-links">
+            <li><a href="#academics">Elementary School</a></li>
+            <li><a href="#academics">Middle School</a></li>
+            <li><a href="#academics">High School STEM</a></li>
+            <li><a href="#academics">Arts & Athletics</a></li>
+            <li><a href="#academics">Summer Enrichment</a></li>
+          </ul>
+        </div>
+
+        <!-- School Life Links -->
+        <div class="footer-col">
+          <h4>School Life</h4>
+          <ul class="footer-links">
+            <li><a href="#features">About Our Faculty</a></li>
+            <li><a href="#why-us">Campus Facilities</a></li>
+            <li><a href="#why-us">Student Support</a></li>
+            <li><a href="#testimonials">Community Reviews</a></li>
+            <li><a href="#" class="js-open-modal">Admissions Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="footer-col">
+          <h4>Stay Connected</h4>
+          <p style="font-size: 0.88rem; color: #93A6A0; margin-bottom: 12px;">Subscribe for school news, academic schedules, and open house events.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Horizon Academy updates!'); this.reset();">
+            <input type="email" placeholder="Your email address" required class="newsletter-input" aria-label="Email address for newsletter">
+            <button type="submit" class="btn-primary" style="padding: 10px 20px;">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Horizon Academy. Open-Source Academic Template. Free to use and customize.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: #798D87;">Privacy Policy</a>
+          <a href="#" style="color: #798D87;">Terms of Service</a>
+          <a href="#" style="color: #798D87;">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: MAKE AN APPOINTMENT / SCHEDULE TOUR
+       ========================================================================== -->
+  <div class="modal-backdrop" id="appointmentModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modalTitle">Make an Appointment</h3>
+        <button class="modal-close-btn" id="closeModalBtn" aria-label="Close appointment modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <p style="font-size: 0.92rem; color: #5F6E6A; margin-bottom: 22px;">
+          Book a personalized meeting or campus tour with our Horizon Academy admissions counselors.
+        </p>
+
+        <form id="appointmentForm">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="parentName">Parent / Guardian Name</label>
+              <input type="text" id="parentName" class="form-control" placeholder="e.g. Eleanor Vance" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="studentName">Student Name</label>
+              <input type="text" id="studentName" class="form-control" placeholder="e.g. Leo Vance" required>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" class="form-control" placeholder="parent@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactPhone">Phone Number</label>
+              <input type="tel" id="contactPhone" class="form-control" placeholder="+1 (555) 000-0000" required>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="gradeLevel">Grade Level of Interest</label>
+              <select id="gradeLevel" class="form-control" required>
+                <option value="">Select Grade</option>
+                <option value="kindergarten">Kindergarten / Early Years</option>
+                <option value="elementary">Elementary School (Grades 1-5)</option>
+                <option value="middle">Middle School (Grades 6-8)</option>
+                <option value="high">High School (Grades 9-12)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="visitDate">Preferred Date</label>
+              <input type="date" id="visitDate" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="visitNotes">Any Specific Inquiries or Interests?</label>
+            <textarea id="visitNotes" class="form-control" rows="3" placeholder="Tell us about your child's interests, hobbies, or questions..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%; font-size: 1rem; padding: 14px;">
+            Confirm Appointment
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification on Submission -->
+  <div class="toast-notice" id="toastNotice" role="alert" aria-live="polite">
+    <div style="font-size: 1.3rem;">🎉</div>
+    <div class="toast-msg">Your appointment has been booked successfully!</div>
+  </div>
+
+  <!-- JavaScript -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

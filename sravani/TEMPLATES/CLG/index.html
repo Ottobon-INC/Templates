@@ -1,0 +1,1769 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Green Valley Junior College - GVJC | Excellence in Higher Education</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Green Valley Junior College - Inspiring student success, comprehensive degree pathways, vibrant campus culture, and personalized career mentorship.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23172b54'/><text x='50' y='65' font-size='45' font-weight='bold' text-anchor='middle' fill='%23f6a800'>GV</text></svg>" />
+
+<!-- Public Open Source Fonts & CDNs (100% Free & Copyright-Clean) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+/* 1. Theme Presets - Default: Green Valley Emerald & Gold */
+:root, [data-theme="emerald"] {
+  --primary-blue: #0b4635;
+  --dark-blue: #062b21;
+  --accent-yellow: #f59e0b;
+  --accent-yellow-hover: #d97706;
+  --dark-bg: #071c15;
+  --dark-card: #0f2e24;
+  --light-gray: #f0f7f4;
+  --theme-name: 'Green Valley Emerald';
+}
+
+[data-theme="navy"] {
+  --primary-blue: #172b54;
+  --dark-blue: #0f1d38;
+  --accent-yellow: #f6a800;
+  --accent-yellow-hover: #df9800;
+  --dark-bg: #111827;
+  --dark-card: #222222;
+  --light-gray: #f0f0f0;
+  --theme-name: 'Oxford Navy & Amber';
+}
+
+[data-theme="crimson"] {
+  --primary-blue: #6b1426;
+  --dark-blue: #450a17;
+  --accent-yellow: #f59e0b;
+  --accent-yellow-hover: #d97706;
+  --dark-bg: #1a080d;
+  --dark-card: #2c0f16;
+  --light-gray: #faf2f4;
+  --theme-name: 'Royal Crimson Gold';
+}
+
+[data-theme="midnight"] {
+  --primary-blue: #0f172a;
+  --dark-blue: #020617;
+  --accent-yellow: #06b6d4;
+  --accent-yellow-hover: #0891b2;
+  --dark-bg: #090d16;
+  --dark-card: #131c2e;
+  --light-gray: #f1f5f9;
+  --theme-name: 'Midnight Teal';
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #333333;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+/* Base Utility Classes */
+.bg-primary {
+  background-color: var(--primary-blue) !important;
+}
+.bg-dark {
+  background-color: var(--dark-bg) !important;
+}
+.bg-222222 {
+  background-color: var(--dark-card) !important;
+}
+.text-primary {
+  color: var(--primary-blue) !important;
+}
+
+/* Header Styles */
+.header {
+  background-color: var(--primary-blue);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.h-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.h-student-staff-gifts ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.h-student-staff-gifts a {
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.h-student-staff-gifts a:hover {
+  color: var(--accent-yellow);
+}
+.h-apply-search-burger ul {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Button Styles */
+.btn-yellow {
+  background-color: var(--accent-yellow);
+  color: #111827;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  padding: 12px 28px;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+.btn-yellow:hover {
+  background-color: var(--accent-yellow-hover);
+  color: #000;
+  transform: translateY(-1px);
+}
+.btn-outline-primary {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 0 24px;
+  border-radius: 4px;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+}
+.btn-outline-primary:hover {
+  background-color: #ffffff;
+  color: var(--primary-blue);
+}
+.btn-simple-arrow {
+  color: var(--accent-yellow);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+.btn-simple-arrow:hover {
+  color: #ffffff;
+  gap: 12px;
+}
+.btn-simple-arrow.hover-yellow:hover {
+  color: var(--accent-yellow);
+}
+
+/* Burger Menu Item */
+.burger-menu-icon {
+  background: var(--accent-yellow);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s;
+}
+.burger-menu-icon:hover {
+  background-color: var(--accent-yellow-hover);
+}
+.burger-menu-item {
+  width: 22px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.burger-menu-item span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #111827;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+.burger-menu-item.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.burger-menu-item.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger-menu-item.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Search Icon Circle */
+.search-icon {
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.2s;
+}
+.search-icon:hover {
+  background: #f1f5f9;
+  color: #000;
+}
+.search-field {
+  display: none;
+  position: absolute;
+  right: 60px;
+  top: 75px;
+  z-index: 1000;
+  background: #ffffff;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  border-radius: 4px;
+}
+.search-field.d-block {
+  display: block;
+}
+
+/* Full Screen Mega Menu */
+.full-screen-menu-section {
+  display: none;
+  position: fixed;
+  top: 84px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow-y: auto;
+  background-color: var(--dark-bg);
+  padding: 40px 0 80px;
+}
+.full-screen-menu-section.is-active {
+  display: block;
+}
+.student-staff-block {
+  display: block;
+  background: #1e293b;
+  border: 1px solid #334155;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.student-staff-block:hover {
+  border-color: var(--accent-yellow);
+  color: #ffffff;
+}
+.student-staff-block .image {
+  height: 140px;
+  overflow: hidden;
+}
+.student-staff-block .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.student-staff-block:hover .image img {
+  transform: scale(1.05);
+}
+.student-staff-detail {
+  padding: 16px;
+}
+.student-staff-detail .title {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.student-staff-detail .detail p {
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+}
+.custom-navigation-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.custom-navigation-menu li {
+  margin-bottom: 14px;
+}
+.custom-navigation-menu a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: color 0.2s;
+}
+.custom-navigation-menu a:hover {
+  color: var(--accent-yellow);
+}
+.custom-navigation-menu span.fa, .custom-navigation-menu span.fas {
+  color: var(--accent-yellow);
+}
+
+/* Hero Banner */
+.main-banner-section {
+  position: relative;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-blue);
+  overflow: hidden;
+}
+.main-banner-image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+/* Hero Cinematic Motion */
+@keyframes heroKenBurns {
+  0% {
+    transform: scale(1.0) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-1.8%, -1.2%);
+  }
+  100% {
+    transform: scale(1.04) translate(1.2%, -0.8%);
+  }
+}
+
+.hero-motion-active #homepage-hero {
+  animation: heroKenBurns 18s ease-in-out infinite alternate !important;
+  transform-origin: center right;
+  will-change: transform;
+}
+
+/* Headline Shimmer */
+.shimmer-text {
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 65%, #f6a800 82%, #ffffff 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 8s linear infinite;
+}
+
+@keyframes textShimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -150% 0; }
+}
+
+/* Motion Control Badge */
+.motion-toggle-badge {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  z-index: 30;
+  background: rgba(17, 24, 39, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s;
+}
+.motion-toggle-badge:hover {
+  background: rgba(17, 24, 39, 0.95);
+  border-color: var(--accent-yellow);
+  color: var(--accent-yellow);
+}
+
+/* Video Modal */
+.video-modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.video-modal-backdrop.is-open {
+  display: flex;
+}
+.video-modal-card {
+  background: #0f1d38;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 860px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* Hero Background Live Video */
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 1;
+}
+
+/* Hero Caption Highlight Card & Typography */
+.hero-caption-highlight {
+  background: rgba(7, 28, 21, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 36px 38px 30px;
+  border-radius: 16px;
+  border-left: 5px solid var(--accent-yellow);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  max-width: 640px;
+}
+[data-theme="navy"] .hero-caption-highlight {
+  background: rgba(15, 29, 56, 0.88);
+}
+[data-theme="crimson"] .hero-caption-highlight {
+  background: rgba(44, 15, 22, 0.88);
+}
+[data-theme="midnight"] .hero-caption-highlight {
+  background: rgba(15, 23, 42, 0.88);
+}
+
+.hero-highlighted-title {
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  font-size: clamp(2.6rem, 5.2vw, 4.4rem);
+  line-height: 1.05;
+  font-weight: 800;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.95);
+  margin-bottom: 18px;
+}
+.hero-highlighted-sub {
+  font-size: clamp(1.1rem, 2vw, 1.35rem) !important;
+  font-weight: 500 !important;
+  color: #f1f5f9 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+  margin-bottom: 26px !important;
+  line-height: 1.5 !important;
+}
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 158, 11, 0.22);
+  color: var(--accent-yellow);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.banner-detail .detail p {
+  color: #ffffff;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 400;
+  margin-bottom: 30px;
+  max-width: 580px;
+}
+.scroll-to-section {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+.scroll-to-section:hover {
+  color: var(--accent-yellow);
+}
+.ask-petey-floating {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  z-index: 30;
+  background-color: var(--accent-yellow);
+  color: #111827;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+.ask-petey-floating:hover {
+  background-color: var(--accent-yellow-hover);
+  color: #000;
+  transform: scale(1.03);
+}
+
+/* Explore Section */
+.explore-section {
+  padding: 70px 0;
+  color: #ffffff;
+}
+.explore-section h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.explore-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.explore-filter .or {
+  font-weight: 700;
+  color: #94a3b8;
+  font-size: 14px;
+}
+.explore-filter .form-select {
+  width: auto;
+  min-width: 320px;
+  background-color: #1e293b;
+  color: #ffffff;
+  border: 1px solid #334155;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* How to Get Started */
+.home-3-column-highlight {
+  padding: 80px 0;
+}
+.sup-text {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-yellow);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.title-block {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.get-started-block {
+  display: block;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  height: 100%;
+  transition: all 0.25s;
+}
+.get-started-block:hover {
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.get-started-block .title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.get-started-block .detail p {
+  font-size: 14px;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+/* Why Section */
+.why-mjc-section {
+  padding: 90px 0;
+}
+.why-mjc-main-detail .title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.why-mjc-main-detail .detail {
+  font-size: 17px;
+  color: #475569;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+.proof-point-blocks {
+  background: #f8fafc;
+  border-top: 4px solid var(--accent-yellow);
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  height: 100%;
+}
+.proof-point-blocks .point-value p {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+  line-height: 1;
+}
+.proof-point-blocks .title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Announcement Row */
+.column-2-image-annoucement {
+  background-color: var(--dark-card);
+  color: #ffffff;
+}
+.priority-registration-detail {
+  padding: 60px 40px;
+}
+.priority-registration-detail h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.priority-registration-detail p {
+  font-size: 16px;
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+.priority-registration-detail a {
+  color: var(--accent-yellow);
+  text-decoration: underline;
+}
+
+/* What's Happening */
+.card-3-section-bg {
+  position: relative;
+  padding: 90px 0;
+  color: #ffffff;
+}
+.feed-items-block {
+  display: block;
+  background: #1e293b;
+  border: 1px solid #334155;
+  text-decoration: none;
+  color: #ffffff;
+  margin-bottom: 24px;
+  overflow: hidden;
+  transition: all 0.25s;
+}
+.feed-items-block:hover {
+  border-color: var(--accent-yellow);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+.feed-items-block .image {
+  height: 170px;
+  overflow: hidden;
+}
+.feed-items-block .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.feed-items-block:hover .image img {
+  transform: scale(1.06);
+}
+.feed-items-detail {
+  padding: 20px;
+}
+.feed-items-detail .title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.readmore-link span {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-yellow);
+  text-transform: uppercase;
+}
+
+/* Connect With Us */
+.personal-info {
+  background: #ffffff;
+  border-left: 4px solid var(--primary-blue);
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  height: 100%;
+}
+.personal-info .section-title {
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.personal-info .title {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+.personal-info a {
+  color: #334155;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.personal-info a:hover {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  color: #e2e8f0;
+}
+.f-top {
+  padding: 70px 0;
+  background-color: var(--primary-blue);
+}
+.f-address p {
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+.f-address a {
+  color: var(--accent-yellow);
+  text-decoration: none;
+}
+.f-inner-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.f-inner-block li {
+  margin-bottom: 10px;
+}
+.f-inner-block a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+.f-inner-block a:hover {
+  color: var(--accent-yellow);
+}
+.footer-content p {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+.social-icons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+.social-icons a {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.social-icons a:hover {
+  background: var(--accent-yellow);
+  color: #111827;
+}
+.f-bottom {
+  padding: 24px 0;
+  background-color: var(--dark-bg);
+  font-size: 13px;
+  color: #94a3b8;
+}
+.f-privacy-policy ul, .f-copyright ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+.f-privacy-policy a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+.f-privacy-policy a:hover {
+  color: #ffffff;
+}
+
+/* Floating Palette Switcher */
+.palette-switcher-dock {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9999;
+  background: rgba(15, 29, 56, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+.palette-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 0;
+  outline: none;
+}
+.palette-dot:hover {
+  transform: scale(1.2);
+}
+.palette-dot.active {
+  box-shadow: 0 0 0 2px var(--accent-yellow);
+  transform: scale(1.15);
+}
+.dot-emerald { background: linear-gradient(135deg, #0b4635 50%, #f59e0b 50%); }
+.dot-navy { background: linear-gradient(135deg, #172b54 50%, #f6a800 50%); }
+.dot-crimson { background: linear-gradient(135deg, #6b1426 50%, #f59e0b 50%); }
+.dot-midnight { background: linear-gradient(135deg, #0f172a 50%, #06b6d4 50%); }
+</style>
+</head>
+<body>
+
+<a href="#content-start" class="skipnav" tabindex="0" title="Skip to Page Content">Skip to page content</a>
+
+<!-- 1. HEADER SECTION -->
+<header class="header bg-primary">
+  <div class="container-fluid px-4 px-lg-5">
+    <div class="h-content">
+      
+      <!-- Logo -->
+      <div class="h-left">
+        <div class="h-logo">
+          <a href="/" style="text-decoration: none; display: flex; align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 60" style="height: 48px; width: auto;">
+              <text x="0" y="42" font-family="'Oswald', sans-serif" font-weight="900" font-style="italic" font-size="44" fill="#ffffff" letter-spacing="-1">GVJC</text>
+              <line x1="102" y1="12" x2="102" y2="48" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+              <text x="114" y="28" font-family="'Oswald', sans-serif" font-weight="700" font-style="italic" font-size="17" fill="#ffffff" letter-spacing="1">GREEN VALLEY</text>
+              <text x="114" y="46" font-family="'Oswald', sans-serif" font-weight="600" font-size="12" fill="#cbd5e1" letter-spacing="2.5">JUNIOR COLLEGE</text>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Controls -->
+      <!-- Right Controls: Single Sleek Horizontal Row -->
+      <div class="h-right">
+        <div class="h-apply-search-burger">
+          <ul class="d-flex align-items-center mb-0 gap-3">
+            <li>
+              <a class="btn btn-outline-primary" href="#content-start" role="button" id="button-apply" aria-label="apply button">Apply</a>
+            </li>
+            <li>
+              <a class="btn btn-warning fw-bold text-dark d-none d-sm-inline-flex align-items-center gap-2" href="../index.html" role="button" id="button-templates-hub" style="font-size: 13px; padding: 0 16px; height: 44px; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                <i class="fa-solid fa-shapes"></i> Templates Hub
+              </a>
+            </li>
+            
+            <li class="h-search-box position-relative">
+              <a href="#" class="search-icon" aria-label="search-icon" title="Search" tabindex="0">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+              <div class="search-field" id="search-container">
+                <form method="get" action="#" onsubmit="alert('Searching Green Valley Junior College catalog...'); return false;" class="d-flex gap-2">
+                  <input class="form-control" type="text" placeholder="Search courses, faculty, events…" id="searchbox" name="q" style="min-width: 240px;">
+                  <button type="submit" class="btn btn-dark" id="button-search">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </li>
+
+            <li class="burger-menu">
+              <button class="burger-menu-icon" id="burger-menu-toggle" aria-controls="main-menu" aria-expanded="false" title="Show Main Navigation Menu" tabindex="0">
+                <div class="burger-menu-item">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- 2. FULL SCREEN MEGA MENU -->
+<div class="full-screen-menu-section bg-dark" id="main-menu">
+  <div class="container">
+    <div class="full-screen-menu-content">
+      <div class="row">
+        
+        <!-- Col 1: Student & Faculty Cards -->
+        <div class="order-1 order-md-1 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+          <div class="full-screen-menu-block menu-student-staff-block">
+            <div class="student-staff-corner d-none d-md-block">
+              
+              <a href="#content-start" class="student-staff-block">
+                <div class="image">
+                  <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Students leadership" class="img-fluid">
+                </div>
+                <div class="student-staff-detail">
+                  <div class="title">Current Students</div>
+                  <div class="detail"><p>Everything you need in one, convenient place (Schedules, Grades, Portals)</p></div>
+                  <div class="lets-go-link"><span class="btn btn-simple-arrow">LET'S GO &rarr;</span></div>
+                </div>
+              </a>
+
+              <a href="#content-start" class="student-staff-block">
+                <div class="image">
+                  <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" alt="Faculty and Staff" class="img-fluid">
+                </div>
+                <div class="student-staff-detail">
+                  <div class="title">Faculty &amp; Staff</div>
+                  <div class="detail"><p>Curriculum tools, employee directories, and departmental portals</p></div>
+                  <div class="lets-go-link"><span class="btn btn-simple-arrow">LET'S GO &rarr;</span></div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Categories -->
+        <div class="order-2 order-md-2 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <div class="full-screen-menu-block menu-navigation-block">
+            <nav class="navbar navbar-expand">
+              <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav flex-column w-100">
+                  
+                  <li class="nav-item dropdown mb-3">
+                    <a class="nav-link font-weight-bold text-white text-uppercase" href="#why-mjc">
+                      <i class="fa-solid fa-angle-right text-warning me-2"></i> About Green Valley Junior College
+                    </a>
+                  </li>
+
+                  <li class="nav-item dropdown mb-3">
+                    <a class="nav-link font-weight-bold text-white text-uppercase" href="#content-start">
+                      <i class="fa-solid fa-angle-right text-warning me-2"></i> Academics &amp; Degree Programs
+                    </a>
+                  </li>
+
+                  <li class="nav-item dropdown mb-3">
+                    <a class="nav-link font-weight-bold text-white text-uppercase" href="#content-start">
+                      <i class="fa-solid fa-angle-right text-warning me-2"></i> Admissions &amp; Financial Aid
+                    </a>
+                  </li>
+
+                  <li class="nav-item dropdown mb-3">
+                    <a class="nav-link font-weight-bold text-white text-uppercase" href="#priority-section">
+                      <i class="fa-solid fa-angle-right text-warning me-2"></i> Campus Life &amp; Student Resources
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Col 3: Quick Campus Directory Links -->
+        <div class="order-3 order-md-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+          <div class="full-screen-menu-block menu-custom-nav-block">
+            <div class="custom-navigation-menu">
+              <ul>
+                <li><a href="#content-start"><i class="fas fa-shopping-basket"></i><span>College Bookstore</span></a></li>
+                <li><a href="#connect-section"><i class="fas fa-map"></i><span>Campus Map</span></a></li>
+                <li><a href="#content-start"><i class="fas fa-laptop-code"></i><span>Digital Classroom</span></a></li>
+                <li><a href="#content-start"><i class="fas fa-search"></i><span>Class Schedule</span></a></li>
+                <li><a href="#connect-section"><i class="fas fa-envelope"></i><span>Webmail</span></a></li>
+                <li><a href="#connect-section"><i class="fas fa-address-book"></i><span>Faculty Directory</span></a></li>
+                <li><a href="#content-start"><i class="fas fa-calendar-alt"></i><span>Event Calendar</span></a></li>
+                <li><a href="#content-start"><i class="fas fa-book"></i><span>Central Library</span></a></li>
+                <li><a href="#content-start"><i class="fas fa-id-card"></i><span>Student Portal</span></a></li>
+              </ul>
+            </div>
+            
+            <div class="mobile-apply-button mt-4">
+              <a class="btn btn-yellow w-100 text-center" href="#content-start" role="button">Apply for Admission</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. HERO BANNER SECTION (With Cinematic Camera Motion & Celebration Animation) -->
+<div class="main-banner-section index-banner-section position-relative hero-motion-active" id="hero-banner-container">
+  
+  <!-- Motion Toggle Pill -->
+  <button class="motion-toggle-badge" id="btn-toggle-motion" title="Toggle ambient motion">
+    <i class="fa-solid fa-play text-warning"></i>
+    <span id="motion-text">Motion Active</span>
+  </button>
+
+  <!-- Royalty-Free High-Res Video with Natural Human Motion (Graduates Celebrating) -->
+  <div class="main-banner-image common-section-overlay" style="overflow: hidden;">
+    <video id="hero-live-video" class="hero-video-bg" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?auto=format&fit=crop&w=2200&q=85">
+      <source src="/videos/graduation-ceremony.webm" type="video/webm">
+    </video>
+    
+    <!-- Floating Celebration Sparkles / Confetti Motion Canvas -->
+    <canvas id="hero-particles" style="position: absolute; inset: 0; z-index: 2; pointer-events: none; width: 100%; height: 100%;"></canvas>
+
+    <!-- Dynamic Contrast Gradient Overlay Supporting All Themes -->
+    <div class="section-overlay" style="background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.3) 78%, rgba(0,0,0,0.15) 100%); z-index: 3;"></div>
+  </div>
+  
+  <div class="container-fluid px-4 px-lg-5 position-relative" style="z-index: 10;">
+    <div class="main-banner-content">
+      <div class="row">
+        <div class="col-md-9 col-lg-7 col-xl-6 col-xxl-6">
+          <div class="banner-detail hero-caption-highlight">
+            
+            <div class="hero-badge-pill">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>BIEAP Recognized &bull; 100% Pass Record</span>
+            </div>
+
+            <h1 class="text-uppercase shimmer-text hero-highlighted-title">
+              YOUR PATH TO <br /><span style="color: var(--accent-yellow); text-shadow: 0 0 25px rgba(245, 158, 11, 0.6);">SUCCESS</span>
+            </h1>
+
+            <div class="detail large-text">
+              <p class="hero-highlighted-sub">Start your new career journey at <strong class="text-white">Green Valley Junior College</strong></p>
+              <div class="banner-buttons d-flex flex-wrap align-items-center gap-3">
+                <a class="btn btn-yellow" href="#content-start" role="button">Apply</a>
+                <button class="btn btn-outline-primary d-inline-flex align-items-center gap-2" id="open-video-modal" type="button">
+                  <i class="fa-solid fa-circle-play text-warning"></i>
+                  <span>Watch Campus Film</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Down Button -->
+  <a href="#content-start" class="scroll-to-section">
+    <span>Scroll Down</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+
+  <!-- Floating Ask Counselor Button -->
+  <a href="#connect-section" class="ask-petey-floating">
+    <i class="fa-solid fa-comment"></i>
+    <span>Questions? Ask Counselor</span>
+  </a>
+
+</div>
+
+<!-- Interactive Video Player Modal -->
+<div class="video-modal-backdrop" id="video-modal">
+  <div class="video-modal-card">
+    <div class="d-flex justify-content-between align-items-center p-3 bg-dark border-bottom border-secondary text-white">
+      <div class="d-flex align-items-center gap-2">
+        <i class="fa-solid fa-film text-warning"></i>
+        <span class="fw-bold text-uppercase fs-6">Green Valley Junior College — Campus Experience Film</span>
+      </div>
+      <button type="button" class="btn-close btn-close-white" id="close-video-modal" aria-label="Close"></button>
+    </div>
+    
+    <div class="ratio ratio-16x9 bg-black">
+      <video id="campus-film-player" controls preload="metadata" poster="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Big_Buck_Bunny_4K.webm/Big_Buck_Bunny_4K.webm.480p.vp9.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="p-3 bg-dark text-white d-flex justify-content-between align-items-center">
+      <span class="small text-secondary">Discover academic pathways, athletic arenas, research labs, and vibrant student life.</span>
+      <a class="btn btn-yellow btn-sm" href="#content-start" onclick="$('#video-modal').removeClass('is-open');">Apply Now</a>
+    </div>
+  </div>
+</div>
+
+<div data-scroll-index="0"></div>
+
+<!-- 4. EXPLORE DEGREES SECTION -->
+<div>
+  <div class="explore-section bg-dark text-center" id="content-start">
+    <div class="container">
+      <div class="explore-content">
+        <h2>Explore our Degrees and Certificates</h2>
+        
+        <div class="explore-filter">
+          <a class="btn btn-yellow btn-lg" href="#priority-section" role="button">VIEW ALL</a>
+          <span class="or">OR</span>
+          
+          <div class="common-gray-select2">
+            <label for="select_pathways" class="sr-only">Pathways Select</label>
+            <select class="form-select" aria-label="Pathways selector" id="select_pathways">
+              <option selected="true">ACADEMIC SCHOOLS AT GREEN VALLEY JUNIOR COLLEGE</option>
+              <option value="/ag/">School of Agriculture &amp; Environmental Sciences</option>
+              <option value="/aph/">Arts, Performance &amp; Humanities</option>
+              <option value="/bss/">Behavioral &amp; Social Sciences</option>
+              <option value="/bc/">Business &amp; Computer Information Systems</option>
+              <option value="/hp/">Health Professions &amp; Nursing</option>
+              <option value="/it/">Industry, Technology &amp; Applied Trades</option>
+              <option value="/kpa/">Kinesiology &amp; Athletics</option>
+              <option value="/lae/">Language Arts &amp; Education</option>
+              <option value="/ps/">Public Safety &amp; Administration</option>
+              <option value="/sem/">Science, Engineering &amp; Mathematics</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. HOW TO GET STARTED SECTION -->
+  <div class="home-3-column-highlight wave-effect-section bg-primary">
+    <div class="container">
+      <div class="how-get-started-content">
+        <div class="row flex-row-reverse align-items-end">
+          
+          <!-- Cutout Student Photo -->
+          <div class="col-md-12 col-lg-12 col-xl-4 col-xxl-4 text-center">
+            <div class="get-started-image mb-4 mb-xl-0">
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=80" alt="Student receiving certificate" class="img-fluid rounded-3 shadow-lg">
+            </div>
+          </div>
+
+          <!-- 3 Highlight Columns -->
+          <div class="col-md-12 col-lg-12 col-xl-8 col-xxl-8">
+            <div class="get-started-detail">
+              <div class="sup-text">We make it easy!</div>
+              <div class="title-block">How to get started</div>
+              
+              <div class="get-started-list">
+                <div class="row g-4">
+                  
+                  <div class="col-sm-6 col-md-4">
+                    <a href="#content-start" class="get-started-block">
+                      <div class="title text-uppercase">The Admissions Process</div>
+                      <div class="detail">
+                        <p>Follow our step-by-step admission guide to submit your records and enroll.</p>
+                        <span class="btn btn-simple-arrow">Apply Now &rarr;</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-sm-6 col-md-4">
+                    <a href="#content-start" class="get-started-block">
+                      <div class="title text-uppercase">How to pay for college</div>
+                      <div class="detail">
+                        <p>Find out about tuition waivers, merit scholarships, and grant programs.</p>
+                        <span class="btn btn-simple-arrow">Paying for College &rarr;</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-sm-6 col-md-4">
+                    <a href="#content-start" class="get-started-block">
+                      <div class="title text-uppercase">Register for classes</div>
+                      <div class="detail">
+                        <p>Sign up for high-impact classes that will help you achieve your goals.</p>
+                        <span class="btn btn-simple-arrow">Register Now &rarr;</span>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. WHY SECTION -->
+<div class="why-mjc-section" id="why-mjc">
+  <div class="container">
+    <div class="why-mjc-content">
+      
+      <div class="why-mjc-main-detail text-center">
+        <div class="title">Why Green Valley Junior College?</div>
+        <div class="detail">
+          Founded with a passion for educational excellence, Green Valley Junior College has been serving students and surrounding communities with distinction. It is the mission of the college to empower students to discover opportunities and reach their career goals through open access and supportive higher education. As a trusted institution, Green Valley Junior College creates and promotes equity in education for every member of our diverse population. We are your community's college.
+        </div>
+      </div>
+      
+      <!-- 3 Proof Points -->
+      <div class="proof-point-section">
+        <div class="row justify-content-center">
+          <div class="col-md-12 col-lg-10">
+            <div class="proof-point-list">
+              <div class="row g-4">
+                
+                <div class="col-sm-6 col-md-4">
+                  <div class="proof-point-blocks">
+                    <div class="point-value"><p>215</p></div>
+                    <div class="title text-uppercase">Certificates and Degrees offered in 64 subjects</div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                  <div class="proof-point-blocks">
+                    <div class="point-value"><p>$15M</p></div>
+                    <div class="title text-uppercase">Saved by students in Zero-Cost Textbook &amp; Aid Programs</div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                  <div class="proof-point-blocks">
+                    <div class="point-value"><p>27,270</p></div>
+                    <div class="title text-uppercase">Students Served in the 2025 - 2026 Academic Year</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 7. PRIORITY REGISTRATION ANNOUNCEMENT -->
+<div class="column-2-image-annoucement bg-222222" id="priority-section">
+  <div class="priority-registration-content container-fluid px-0">
+    <div class="row m-0 align-items-center">
+      
+      <div class="col-12 col-md-6 p-0" style="height: 480px; overflow: hidden;">
+        <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=80" alt="Students in technical laboratory" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+
+      <div class="col-12 col-md-6 p-0">
+        <div class="priority-registration-detail">
+          <h2>Fall Semester Admissions</h2>
+          <div class="detail large-text mt-4">
+            <p>
+              Explore class schedules using our <a href="#connect-section">Interactive Campus Directory</a>.<br><br>
+              <a href="#connect-section">Free campus transit services</a> operate between instructional sites daily.<br><br>
+              Registration is open now to all new and continuing Green Valley Junior College students. <a href="#content-start">Enroll in your classes today!</a>
+            </p>
+            <div class="register-button mt-4">
+              <a class="btn btn-yellow btn-lg" href="#content-start" role="button">Register Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 8. WHAT'S HAPPENING SECTION -->
+<div class="card-3-section-bg" style="background: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;">
+  <div class="section-overlay" style="background: var(--primary-blue); mix-blend-mode: multiply; opacity: 0.94;"></div>
+  
+  <div class="container position-relative" style="z-index: 10;">
+    <div class="whats-happening-description">
+      
+      <div class="main-title text-center mb-5">
+        <h2 class="title-block">What's happening at Green Valley Junior College?</h2>
+      </div>
+
+      <div class="whats-happening-content">
+        <div class="row g-4">
+          
+          <div class="col-sm-6 col-lg-3">
+            <a href="#content-start" class="feed-items-block">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="Academic calendar dates" class="img-fluid" />
+              </div>
+              <div class="feed-items-detail">
+                <div class="title">Spring Semester Degree Transfer Filing Deadline</div>
+                <div class="readmore-link"><span>Read More &rarr;</span></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <a href="#content-start" class="feed-items-block">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="Campus festival event" class="img-fluid" />
+              </div>
+              <div class="feed-items-detail">
+                <div class="title">Annual Green Valley Music Festival and College Night</div>
+                <div class="readmore-link"><span>Read More &rarr;</span></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <a href="#content-start" class="feed-items-block">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80" alt="Alumni gathering" class="img-fluid" />
+              </div>
+              <div class="feed-items-detail">
+                <div class="title">Annual Foundation Gala: Supporting Student Scholarships</div>
+                <div class="readmore-link"><span>Read More &rarr;</span></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <a href="#content-start" class="feed-items-block">
+              <div class="image">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Campus technology labs" class="img-fluid" />
+              </div>
+              <div class="feed-items-detail">
+                <div class="title">New Digital Library Terminals Open for Student Research</div>
+                <div class="readmore-link"><span>Read More &rarr;</span></div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="readmore-button text-center mt-5">
+          <a href="#content-start" class="btn btn-simple-arrow hover-yellow fs-6"><span>More News &rarr;</span></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 9. CONNECT WITH US SECTION -->
+<div style="background-color: var(--light-gray);" id="connect-section">
+  <div class="container py-5">
+    <h2 class="text-center fw-bold text-uppercase mb-5 text-primary">Connect With Us</h2>
+    
+    <div class="row g-4">
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="personal-info">
+          <div class="section-title text-primary">Counseling</div>
+          <span class="title">Academic &amp; Career Advising</span>
+          <div><a href="tel:5554736080"><i class="fa-solid fa-phone me-2 text-primary"></i>(555) 473-6080</a></div>
+          <div class="mt-1"><a href="mailto:counseling@greenvalley.edu"><i class="fa-solid fa-envelope me-2 text-primary"></i>counseling@greenvalley.edu</a></div>
+          <div class="mt-3"><a href="#content-start" class="fw-bold text-primary">Counseling Portal &rarr;</a></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="personal-info">
+          <div class="section-title text-primary">Enrollment Services</div>
+          <span class="title">Apply and Sign Up for Classes</span>
+          <div><a href="tel:5554736853"><i class="fa-solid fa-phone me-2 text-primary"></i>(555) 473-6853</a></div>
+          <div class="mt-1"><a href="mailto:admissions@greenvalley.edu"><i class="fa-solid fa-envelope me-2 text-primary"></i>admissions@greenvalley.edu</a></div>
+          <div class="mt-3"><a href="#content-start" class="fw-bold text-primary">Admissions Desk &rarr;</a></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="personal-info">
+          <div class="section-title text-primary">Financial Aid</div>
+          <span class="title">Scholarships &amp; Tuition Grants</span>
+          <div><a href="tel:5554737700"><i class="fa-solid fa-phone me-2 text-primary"></i>(555) 473-7700</a></div>
+          <div class="mt-1"><a href="mailto:finaid@greenvalley.edu"><i class="fa-solid fa-envelope me-2 text-primary"></i>finaid@greenvalley.edu</a></div>
+          <div class="mt-3"><a href="#content-start" class="fw-bold text-primary">Financial Aid Portal &rarr;</a></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="personal-info">
+          <div class="section-title text-primary">Outreach &amp; Tours</div>
+          <span class="title">Campus Visits &amp; Community</span>
+          <div><a href="tel:5554737713"><i class="fa-solid fa-phone me-2 text-primary"></i>(555) 473-7713</a></div>
+          <div class="mt-1"><a href="mailto:outreach@greenvalley.edu"><i class="fa-solid fa-envelope me-2 text-primary"></i>outreach@greenvalley.edu</a></div>
+          <div class="mt-3"><a href="#content-start" class="fw-bold text-primary">Schedule a Tour &rarr;</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 10. FOOTER -->
+<footer class="footer">
+  <div class="f-top bg-primary">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Logo & Address -->
+        <div class="col-md-12 col-lg-3">
+          <div class="f-block f-logo-address">
+            <div class="f-logo mb-3">
+              <a href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 60" style="height: 48px; width: auto;">
+                  <text x="0" y="42" font-family="'Oswald', sans-serif" font-weight="900" font-style="italic" font-size="44" fill="#ffffff" letter-spacing="-1">GVJC</text>
+                  <line x1="102" y1="12" x2="102" y2="48" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+                  <text x="114" y="28" font-family="'Oswald', sans-serif" font-weight="700" font-style="italic" font-size="17" fill="#ffffff" letter-spacing="1">GREEN VALLEY</text>
+                  <text x="114" y="46" font-family="'Oswald', sans-serif" font-weight="600" font-size="12" fill="#cbd5e1" letter-spacing="2.5">JUNIOR COLLEGE</text>
+                </svg>
+              </a>
+            </div>
+            
+            <div class="f-address">
+              <p>
+                <span>General Inquiries: <a href="tel:5554736550">(555) 473-6550</a><br></span>
+                <span>Campus Safety: <a href="tel:5554736351">(555) 473-6351</a><br></span>
+                <span><a href="mailto:info@greenvalley.edu">info@greenvalley.edu</a></span>
+              </p>
+              <p>
+                742 Green Valley Parkway<br>
+                Academic Hills, CA 94025
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Links & Policy -->
+        <div class="col-md-12 col-lg-6">
+          <div class="row g-4 mb-4">
+            
+            <div class="col-sm-4">
+              <div class="f-inner-block">
+                <ul>
+                  <li><a href="#why-mjc">Accreditation</a></li>
+                  <li><a href="#why-mjc">Equity &amp; Title IX</a></li>
+                  <li><a href="#connect-section">Website Feedback</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="f-inner-block">
+                <ul>
+                  <li><a href="#connect-section">Campus Safety</a></li>
+                  <li><a href="#connect-section">Student Grievances</a></li>
+                  <li><a href="#content-start">Transportation</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="f-inner-block">
+                <ul>
+                  <li><a href="#connect-section">Employment</a></li>
+                  <li><a href="#content-start">Student Parent Support</a></li>
+                  <li><a href="#why-mjc">Governance</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="footer-content border-top border-white border-opacity-10 pt-3">
+            <p>
+              It is the policy of Green Valley Community College District not to discriminate on the basis of race,
+              color, national origin, sex, gender identity, sexual orientation, disability, or religion in its educational
+              programs and institutional employment practices.
+            </p>
+          </div>
+        </div>
+
+        <!-- District Emblem & Social Icons -->
+        <div class="col-md-12 col-lg-3">
+          <div class="f-block f-logo-social-icons">
+            <div class="p-3 border border-white border-opacity-25 rounded mb-4 text-center text-lg-start">
+              <span class="d-block text-warning fw-bold text-uppercase fs-6" style="font-family: 'Oswald', sans-serif;">Green Valley District</span>
+              <span class="small text-white-50">Higher Education System</span>
+            </div>
+
+            <div class="social-icons">
+              <ul class="justify-content-center justify-content-lg-start">
+                <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="f-bottom bg-dark">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div class="f-privacy-policy">
+          <ul>
+            <li><a href="#why-gvjc">Privacy Policy</a></li>
+            <li><a href="#why-gvjc">Accessibility Standards</a></li>
+          </ul>
+        </div>
+        <div class="f-copyright">
+          <span>&copy; 2026 Green Valley Junior College. Open-source educational template — free to use and customize.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Palette Switcher Dock (Clean dots without text label) -->
+<div class="palette-switcher-dock" id="palette-dock" title="Color Themes">
+  <button type="button" class="palette-dot dot-emerald active" data-theme="emerald" title="Green Valley Emerald & Gold (Default)"></button>
+  <button type="button" class="palette-dot dot-navy" data-theme="navy" title="Oxford Navy & Amber"></button>
+  <button type="button" class="palette-dot dot-crimson" data-theme="crimson" title="Royal Crimson & Gold"></button>
+  <button type="button" class="palette-dot dot-midnight" data-theme="midnight" title="Midnight Slate & Cyan"></button>
+</div>
+
+<!-- Scripts (Open Source CDNs) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  // Burger Menu Toggle
+  $('#burger-menu-toggle, .open-menu-link').click(function(e) {
+    e.preventDefault();
+    $('#main-menu').toggleClass('is-active');
+    $('.burger-menu-item').toggleClass('open');
+  });
+
+  // Search Box Toggle
+  $('.search-icon').click(function(e) {
+    e.preventDefault();
+    $('#search-container').toggleClass('d-block');
+  });
+
+  // Smooth Scroll
+  $('a[href^="#"]').on('click', function(e) {
+    var target = $(this.getAttribute('href'));
+    if(target.length) {
+      e.preventDefault();
+      $('#main-menu').removeClass('is-active');
+      $('.burger-menu-item').removeClass('open');
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top - 80
+      }, 600);
+    }
+  });
+
+  // Video Modal Open / Close
+  $('#open-video-modal').click(function(e) {
+    e.preventDefault();
+    $('#video-modal').addClass('is-open');
+    var vid = document.getElementById('campus-film-player');
+    if (vid) vid.play();
+  });
+
+  $('#close-video-modal, #video-modal').click(function(e) {
+    if (e.target === this) {
+      $('#video-modal').removeClass('is-open');
+      var vid = document.getElementById('campus-film-player');
+      if (vid) vid.pause();
+    }
+  });
+
+  // Hero Live Video Autoplay & Motion Toggle
+  var motionActive = true;
+  var heroVideo = document.getElementById('hero-live-video');
+
+  function tryPlayHeroVideo() {
+    if (heroVideo && motionActive) {
+      var playPromise = heroVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(function(error) {
+          // Auto-play was prevented by browser policy
+        });
+      }
+    }
+  }
+  tryPlayHeroVideo();
+  $(document).one('click scroll touchstart', tryPlayHeroVideo);
+
+  $('#btn-toggle-motion').click(function() {
+    motionActive = !motionActive;
+    if (motionActive) {
+      $('#hero-banner-container').addClass('hero-motion-active');
+      $('#motion-text').text('Motion Active');
+      $(this).find('i').removeClass('fa-pause').addClass('fa-play');
+      if (heroVideo) heroVideo.play().catch(function(){});
+    } else {
+      $('#hero-banner-container').removeClass('hero-motion-active');
+      $('#motion-text').text('Motion Paused');
+      $(this).find('i').removeClass('fa-play').addClass('fa-pause');
+      if (heroVideo) heroVideo.pause();
+    }
+  });
+
+  // Ambient Celebration Confetti / Sparkles Particle Motion
+  (function initHeroParticles() {
+    var canvas = document.getElementById('hero-particles');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var particles = [];
+    var width = 0, height = 0;
+
+    function resize() {
+      width = canvas.width = canvas.offsetWidth || window.innerWidth;
+      height = canvas.height = canvas.offsetHeight || 640;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    var colors = [
+      'rgba(246, 168, 0, 0.75)',  // Golden
+      'rgba(255, 255, 255, 0.8)', // White
+      'rgba(56, 189, 248, 0.6)',  // Sky blue
+      'rgba(245, 158, 11, 0.6)'   // Amber
+    ];
+
+    for (var i = 0; i < 45; i++) {
+      particles.push({
+        x: Math.random() * (width || 1200),
+        y: Math.random() * (height || 640),
+        size: Math.random() * 3.5 + 1.2,
+        speedX: (Math.random() - 0.2) * 0.7,
+        speedY: -(Math.random() * 0.8 + 0.35),
+        color: colors[Math.floor(Math.random() * colors.length)],
+        rotation: Math.random() * 360,
+        rotSpeed: (Math.random() - 0.5) * 2
+      });
+    }
+
+    function animate() {
+      if (motionActive && ctx) {
+        ctx.clearRect(0, 0, width, height);
+        for (var i = 0; i < particles.length; i++) {
+          var p = particles[i];
+          p.x += p.speedX;
+          p.y += p.speedY;
+          p.rotation += p.rotSpeed;
+
+          if (p.y < -15) {
+            p.y = height + 15;
+            p.x = Math.random() * width;
+          }
+          if (p.x > width + 15) p.x = -15;
+          if (p.x < -15) p.x = width + 15;
+
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rotation * Math.PI) / 180);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 1.5);
+          ctx.restore();
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+    animate();
+  })();
+
+  // Live Palette Switcher Handler
+  $('.palette-dot').click(function(e) {
+    e.preventDefault();
+    var selectedTheme = $(this).attr('data-theme');
+    $('html').attr('data-theme', selectedTheme);
+    $('.palette-dot').removeClass('active');
+    $(this).addClass('active');
+    try {
+      localStorage.setItem('gvjc-color-theme', selectedTheme);
+    } catch(err) {}
+  });
+
+  // Load saved theme or default to emerald
+  try {
+    var storedTheme = localStorage.getItem('gvjc-color-theme') || 'emerald';
+    $('html').attr('data-theme', storedTheme);
+    $('.palette-dot').removeClass('active');
+    $('.palette-dot[data-theme="' + storedTheme + '"]').addClass('active');
+  } catch(err) {}
+});
+</script>
+
+</body>
+</html>

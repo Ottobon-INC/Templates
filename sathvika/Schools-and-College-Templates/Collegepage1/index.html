@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Intermediate College Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon">🛡️</div>
+        <h2>Excel Jr. College</h2>
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#campus">Campus</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="#" onclick="openApplyModal(event)" class="btn-primary">Apply Now &rarr;</a>
+      </div>
+    </header>
+
+    <!-- Section 1: Hero -->
+    <section
+      class="hero"
+      id="home"
+      style="
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      "
+    >
+      <video
+        src="From Klickpin.com- Cozy Hair Care Tips for 2026-pin-id-327777679155370678.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 0;
+        "
+      ></video>
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.25);
+          z-index: 1;
+        "
+      ></div>
+
+      <div
+        class="hero-container"
+        style="
+          position: relative;
+          z-index: 2;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding-top: 60px;
+        "
+      >
+        <div
+          class="hero-content fade-in-up"
+          style="max-width: 800px; margin: 0 auto"
+        >
+          <span
+            class="badge"
+            style="
+              color: #fff;
+              background: rgba(255, 255, 255, 0.2);
+              padding: 5px 15px;
+              border-radius: 20px;
+            "
+            >LEARN • GROW • BUILD YOUR FUTURE</span
+          >
+          <h1 style="color: #fff; text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5)">
+            Your Dream<br />Education Starts<br /><span
+              class="highlight-text"
+              style="color: var(--accent-green)"
+              >Here</span
+            >
+          </h1>
+          <p
+            style="
+              color: #eee;
+              text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+              font-size: 1.2rem;
+            "
+          >
+            We provide world-class intermediate education, modern learning
+            environments, and a supportive community to help you achieve your
+            goals.
+          </p>
+          <div class="hero-buttons" style="justify-content: center">
+            <a href="#courses" class="btn-primary">Explore Courses &rarr;</a>
+            <a href="#campus" class="btn-outline-light">Watch Campus Tour</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Courses (With Flip Animation) -->
+    <section class="courses-section" id="courses">
+      <div
+        class="section-title fade-in-up"
+        style="text-align: center; margin: 0 auto 4rem auto; max-width: 800px"
+      >
+        <span class="small-title">OUR COURSES</span>
+        <h2>Find the Right Path<br />for Your Future</h2>
+        <p style="max-width: 800px; margin: 0 auto">
+          Flexible learning options, expert guidance, and industry-relevant
+          curriculum to help you succeed.
+        </p>
+      </div>
+
+      <div class="courses-grid">
+        <!-- Course 1: MPC -->
+        <div class="flip-card fade-in-up">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div
+                class="card-img"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80&quot;);
+                "
+              ></div>
+              <div class="card-content">
+                <div class="icon-circle">⚙️</div>
+                <h3>MPC (Maths, Physics, Chem)</h3>
+                <p>Build innovative solutions for a connected world.</p>
+                <span class="explore-text">Explore &rarr;</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h3>MPC (Engineering Track)</h3>
+              <p>
+                Perfect for students aiming for IIT-JEE, NITs, and top
+                engineering colleges. Intensive coaching provided.
+              </p>
+              <a href="#" onclick="openApplyModal(event)" class="btn-primary btn-small">Apply Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2: BiPC -->
+        <div class="flip-card fade-in-up" style="animation-delay: 0.1s">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div
+                class="card-img"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80&quot;);
+                "
+              ></div>
+              <div class="card-content">
+                <div class="icon-circle">🧬</div>
+                <h3>BiPC (Biology, Physics, Chem)</h3>
+                <p>Advance healthcare and improve lives.</p>
+                <span class="explore-text">Explore &rarr;</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h3>BiPC (Medical Track)</h3>
+              <p>
+                Specialized NEET coaching with state-of-the-art laboratories and
+                expert faculty to secure your medical seat.
+              </p>
+              <a href="#" onclick="openApplyModal(event)" class="btn-primary btn-small">Apply Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3: MEC -->
+        <div class="flip-card fade-in-up" style="animation-delay: 0.2s">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div
+                class="card-img"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80&quot;);
+                "
+              ></div>
+              <div class="card-content">
+                <div class="icon-circle">📊</div>
+                <h3>MEC (Maths, Eco, Commerce)</h3>
+                <p>Develop leadership skills and business acumen.</p>
+                <span class="explore-text">Explore &rarr;</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h3>MEC (CA/Business Track)</h3>
+              <p>
+                Integrated coaching for CA Foundation, CS, and top commerce
+                universities. Learn from finance experts.
+              </p>
+              <a href="#" onclick="openApplyModal(event)" class="btn-primary btn-small">Apply Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 4: CEC -->
+        <div class="flip-card fade-in-up" style="animation-delay: 0.3s">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div
+                class="card-img"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80&quot;);
+                "
+              ></div>
+              <div class="card-content">
+                <div class="icon-circle">💼</div>
+                <h3>CEC (Commerce, Eco, Civics)</h3>
+                <p>Understand commerce, societies, and global change.</p>
+                <span class="explore-text">Explore &rarr;</span>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h3>CEC (Arts & Commerce Track)</h3>
+              <p>
+                Build a strong foundation for Civil Services, Law, and
+                Management degrees with our specialized curriculum.
+              </p>
+              <a href="#" onclick="openApplyModal(event)" class="btn-primary btn-small">Apply Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Campus Section -->
+    <section
+      class="campus-features-section"
+      id="campus"
+      style="padding: 6rem 5%; background: var(--white); text-align: center"
+    >
+      <div
+        class="section-title fade-in-up"
+        style="max-width: 800px; margin: 0 auto 4rem auto"
+      >
+        <span class="small-title">OUR CAMPUS</span>
+        <h2>Experience Campus Life</h2>
+        <p style="color: var(--text-muted); margin-top: 1rem">
+          Our campus is designed to foster learning, creativity, and personal
+          growth. With state-of-the-art facilities and a vibrant student
+          community, we provide an unparalleled educational experience.
+        </p>
+      </div>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 2rem;
+          max-width: 1200px;
+          margin: 0 auto;
+        "
+      >
+        <div
+          class="fade-in-up"
+          style="
+            padding: 2.5rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+          "
+        >
+          <div style="font-size: 2.5rem; margin-bottom: 1.5rem">📚</div>
+          <h3
+            style="
+              color: var(--primary-green);
+              margin-bottom: 1rem;
+              font-size: 1.3rem;
+            "
+          >
+            Digital Library
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem">
+            Access to thousands of e-books, research papers, and quiet study
+            zones to help you focus and excel in your academics.
+          </p>
+        </div>
+        <div
+          class="fade-in-up"
+          style="
+            padding: 2.5rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+            animation-delay: 0.1s;
+          "
+        >
+          <div style="font-size: 2.5rem; margin-bottom: 1.5rem">🔬</div>
+          <h3
+            style="
+              color: var(--primary-green);
+              margin-bottom: 1rem;
+              font-size: 1.3rem;
+            "
+          >
+            Advanced Labs
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem">
+            Fully equipped Physics, Chemistry, and Biology laboratories for
+            practical, hands-on learning with modern apparatus.
+          </p>
+        </div>
+        <div
+          class="fade-in-up"
+          style="
+            padding: 2.5rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+            animation-delay: 0.2s;
+          "
+        >
+          <div style="font-size: 2.5rem; margin-bottom: 1.5rem">⚽</div>
+          <h3
+            style="
+              color: var(--primary-green);
+              margin-bottom: 1rem;
+              font-size: 1.3rem;
+            "
+          >
+            Sports Complex
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem">
+            Indoor and outdoor sports facilities to keep our students physically
+            active, healthy, and competitive.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: About Us -->
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <div class="about-content fade-in-up">
+          <div
+            class="about-header-text"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              margin-bottom: 1rem;
+            "
+          >
+            <div
+              style="
+                width: 40px;
+                height: 2px;
+                background-color: var(--primary-green);
+              "
+            ></div>
+            <span
+              class="small-title"
+              style="color: var(--primary-green); margin: 0"
+              >ABOUT OUR COLLEGE</span
+            >
+          </div>
+          <h2
+            style="
+              font-size: 3.5rem;
+              line-height: 1.1;
+              margin-bottom: 1.5rem;
+              color: var(--text-dark);
+            "
+          >
+            A Place to Learn,<br />Grow and
+            <span
+              style="
+                color: var(--primary-green);
+                font-style: italic;
+                font-family: &quot;Times New Roman&quot;, serif;
+              "
+              >Belong</span
+            >
+          </h2>
+          <p style="color: var(--text-dark); margin-bottom: 2rem">
+            At Excel Jr. College, we believe education is more than just passing
+            exams — it's a journey of self-discovery, innovation, and purpose.
+            Our diverse community, world-class faculty, and modern facilities
+            create the perfect environment for your success.
+          </p>
+
+          <a
+            href="#" onclick="openApplyModal(event)"
+            class="btn-primary"
+            style="margin-bottom: 3rem; display: inline-block"
+            >Learn More About Us &rarr;</a
+          >
+
+          <div
+            class="about-stats"
+            style="
+              display: flex;
+              gap: 2rem;
+              border-top: 1px solid rgba(0, 0, 0, 0.1);
+              padding-top: 2rem;
+            "
+          >
+            <div style="display: flex; align-items: flex-start; gap: 10px">
+              <span style="font-size: 1.8rem; color: var(--primary-green)"
+                >🎓</span
+              >
+              <div>
+                <h4
+                  style="font-size: 1.3rem; color: var(--text-dark); margin: 0"
+                >
+                  20+
+                </h4>
+                <p
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--text-muted);
+                    margin: 0;
+                    text-transform: uppercase;
+                  "
+                >
+                  Years of Excellence
+                </p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 10px">
+              <span style="font-size: 1.8rem; color: var(--primary-green)"
+                >👥</span
+              >
+              <div>
+                <h4
+                  style="font-size: 1.3rem; color: var(--text-dark); margin: 0"
+                >
+                  10,000+
+                </h4>
+                <p
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--text-muted);
+                    margin: 0;
+                    text-transform: uppercase;
+                  "
+                >
+                  Happy Students
+                </p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 10px">
+              <span style="font-size: 1.8rem; color: var(--primary-green)"
+                >📖</span
+              >
+              <div>
+                <h4
+                  style="font-size: 1.3rem; color: var(--text-dark); margin: 0"
+                >
+                  50+
+                </h4>
+                <p
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--text-muted);
+                    margin: 0;
+                    text-transform: uppercase;
+                  "
+                >
+                  Academic Programs
+                </p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 10px">
+              <span style="font-size: 1.8rem; color: var(--primary-green)"
+                >⭐</span
+              >
+              <div>
+                <h4
+                  style="font-size: 1.3rem; color: var(--text-dark); margin: 0"
+                >
+                  95%
+                </h4>
+                <p
+                  style="
+                    font-size: 0.75rem;
+                    color: var(--text-muted);
+                    margin: 0;
+                    text-transform: uppercase;
+                  "
+                >
+                  Career Success
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="about-images fade-in-up"
+          style="animation-delay: 0.2s; position: relative"
+        >
+          <div
+            style="
+              position: absolute;
+              top: -10px;
+              right: 0px;
+              font-family: &quot;Brush Script MT&quot;, cursive, serif;
+              color: var(--primary-green);
+              font-size: 2rem;
+              transform: rotate(-12deg);
+              z-index: 10;
+            "
+          >
+            More than<br />just a college
+          </div>
+          <div
+            class="img-large parallax-slow"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80&quot;);
+              width: 90%;
+              height: 480px;
+              border-radius: 40px;
+              margin-left: auto;
+              margin-right: 0;
+              display: flex;
+              align-items: flex-end;
+              justify-content: center;
+              padding-bottom: 25px;
+              box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <button
+              style="
+                background: white;
+                border: none;
+                padding: 12px 24px;
+                border-radius: 30px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-weight: 600;
+                font-size: 1rem;
+                color: var(--text-dark);
+                cursor: pointer;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+              "
+            >
+
+              Explore Our Campus
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Call to Action / Footer -->
+    <section class="final-cta" id="admissions">
+      <div
+        class="cta-bg parallax-fast"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80&quot;);
+        "
+      ></div>
+      <div class="cta-overlay"></div>
+      <div class="cta-content fade-in-up">
+        <h2>Ready to Start Your Journey<br />at Excel College?</h2>
+        <p>
+          Get in touch with our admission team and take the first step towards a
+          brighter future.
+        </p>
+        <a href="#" onclick="openApplyModal(event)" class="btn-primary btn-large">Apply Now &rarr;</a>
+      </div>
+    </section>
+
+    <footer id="contact" class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">🛡️</div>
+            <h2 style="color: white">Excel Jr. College</h2>
+          </div>
+          <p>Empowering the next generation of leaders and innovators.</p>
+          <div class="social-links">
+            <a href="#">Fb</a>
+            <a href="#">Tw</a>
+            <a href="#">In</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#courses">Courses</a></li>
+              <li><a href="#" onclick="openApplyModal(event)">Admissions</a></li>
+              <li><a href="#campus">Campus Life</a></li>
+            </ul>
+          </div>
+          <div class="link-group">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>📞 +91 98765 43210</li>
+              <li>✉️ info@excelcollege.edu</li>
+              <li>📍 123 Education Hub, Hyderabad</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Excel Jr. College. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Apply Modal -->
+    <div id="applyModal" class="apply-modal">
+      <div class="apply-modal-content">
+        <span class="apply-modal-close" onclick="closeApplyModal()">&times;</span>
+        <h2 style="margin-bottom: 20px;">Apply Now</h2>
+        <form onsubmit="submitApplyForm(event)">
+          <div class="form-group" style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Name</label>
+            <input type="text" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+          </div>
+          <div class="form-group" style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Email</label>
+            <input type="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+          </div>
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Phone Number</label>
+            <input type="tel" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openApplyModal(e) {
+        e.preventDefault();
+        document.getElementById('applyModal').style.display = 'flex';
+      }
+      function closeApplyModal() {
+        document.getElementById('applyModal').style.display = 'none';
+      }
+      function submitApplyForm(e) {
+        e.preventDefault();
+        alert("Application submitted successfully!");
+        closeApplyModal();
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
